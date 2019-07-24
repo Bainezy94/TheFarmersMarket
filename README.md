@@ -1,5 +1,5 @@
 # Farmer's Markets
-TEST
+
 An app built on Rails by [David Baine](https://github.com/Bainezy94), [Jo Dunham](https://github.com/Rainbow-Ninja), [Ewe Lin Loo](https://github.com/elloo).
 
 **Farmers Markets:** <URL HERE>
