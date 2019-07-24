@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  farmer: one
+  profile: one
+  product: one
+  volume: MyString
+
+two:
+  farmer: two
+  profile: two
+  product: two
+  volume: MyString

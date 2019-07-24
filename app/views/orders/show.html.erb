@@ -1,0 +1,23 @@
+
+<p>
+  <strong>Farmer:</strong>
+  <%= @order.farmer %>
+</p>
+
+<p>
+  <strong>Profile:</strong>
+  <%= @order.profile %>
+</p>
+
+<p>
+  <strong>Product:</strong>
+  <%= @order.product %>
+</p>
+
+<p>
+  <strong>Volume:</strong>
+  <%= @order.volume %>
+</p>
+
+<%= link_to 'Edit', edit_order_path(@order) %> |
+<%= link_to 'Back', orders_path %>

@@ -1,0 +1,28 @@
+
+<p>
+  <strong>Profile:</strong>
+  <%= @farmers_profile.profile %>
+</p>
+
+<p>
+  <strong>Image:</strong>
+  <%= @farmers_profile.image %>
+</p>
+
+<p>
+  <strong>Bio:</strong>
+  <%= @farmers_profile.bio %>
+</p>
+
+<p>
+  <strong>Market:</strong>
+  <%= @farmers_profile.market %>
+</p>
+
+<p>
+  <strong>Stall name:</strong>
+  <%= @farmers_profile.stall_name %>
+</p>
+
+<%= link_to 'Edit', edit_farmers_profile_path(@farmers_profile) %> |
+<%= link_to 'Back', farmers_profiles_path %>

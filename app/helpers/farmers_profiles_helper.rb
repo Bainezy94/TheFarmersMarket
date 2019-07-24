@@ -1,0 +1,2 @@
+module FarmersProfilesHelper
+end

@@ -1,0 +1,23 @@
+
+<p>
+  <strong>Name:</strong>
+  <%= @market.name %>
+</p>
+
+<p>
+  <strong>Location:</strong>
+  <%= @market.location %>
+</p>
+
+<p>
+  <strong>Bio:</strong>
+  <%= @market.bio %>
+</p>
+
+<p>
+  <strong>Opening hours:</strong>
+  <%= @market.opening_hours %>
+</p>
+
+<%= link_to 'Edit', edit_market_path(@market) %> |
+<%= link_to 'Back', markets_path %>
