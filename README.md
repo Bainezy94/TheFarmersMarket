@@ -1,5 +1,7 @@
 # Farmer's Markets
 
+An app built on Rails by [David Baine](https://github.com/Bainezy94), [Jo Dunham](https://github.com/Rainbow-Ninja), [Ewe Lin Loo](https://github.com/elloo).
+
 **Farmers Markets:** <URL HERE>
 
 **GitHub:** <URL HERE>
@@ -8,7 +10,7 @@
 
 ### Problem Definition / Purpose
 
-
+- Online shopping at local fresh food markets
 
 ### Functionality / Features
 
