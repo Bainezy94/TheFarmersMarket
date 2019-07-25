@@ -28,3 +28,23 @@ Market.create([{
 }])
 
 p "Created #{Market.count} markets."
+
+Profile.create([{
+    name: "Jo Bloggs", phone_number: "9589 0748", email: "Farmer_Jo@bigfarm.com"
+},
+{
+    name: "John McIntosh", phone_number: "0407 123 645", email: "Farmer_John@fresheggs.com"
+},
+{
+    name: "Asher Michaels", phone_number: "0415 688 721", email: "ash@yahoo.com.au", image: "https://www.pinterest.com.au/pin/301107925086810349/"
+},
+{
+    name: "Jo", phone_number: "0402 123 336", email: "scaffelpike@yahoo.com.au", image: "https://www.pinterest.com.au/pin/301107925086810342/"
+}])
+
+Farmer.create([{
+    bio: "We have the freshest lettuce around, picked fresh the morning of the markets", market_id: 1, profile_id: 1, stall_name: "Farmer Jo's Big Farm", image: "http://kitchenconfidante.com/simple-sundays-scenes-from-the-ferry-plaza-farmers-market"
+},
+{
+    bio: "Best eggs in all of Sydney!", market_id: 1, profile_id: 2, stall_name: "Farmer John's Chooks", image: "https://www.pinterest.com.au/pin/301107925086810233/"
+}])
