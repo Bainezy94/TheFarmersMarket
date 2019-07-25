@@ -15,6 +15,7 @@ class FarmersProfilesController < ApplicationController
   # GET /farmers_profiles/new
   def new
     @farmers_profile = FarmersProfile.new
+    @market_options = Market.all
   end
 
   # GET /farmers_profiles/1/edit
@@ -24,7 +25,9 @@ class FarmersProfilesController < ApplicationController
   # POST /farmers_profiles
   # POST /farmers_profiles.json
   def create
+    # @market_options = Market.all
     @farmers_profile = FarmersProfile.new(farmers_profile_params)
+    @farmer_profile.user_id = current_user.id
 
     respond_to do |format|
       if @farmers_profile.save

@@ -18,7 +18,7 @@
 
   <div class="field">
     <%= form.label :image %>
-    <%= form.text_field :image %>
+    <%= form.file_field :image, multiple: true %>
   </div>
 
   <div class="field">
@@ -26,9 +26,10 @@
     <%= form.text_area :bio %>
   </div>
 
+  <%# drop down box with all available markets as a choice %>
   <div class="field">
     <%= form.label :market_id %>
-    <%= form.text_field :market_id %>
+    <%= form.select :market_id, Market.all.collect {|market| [market.name, market.id]} %>
   </div>
 
   <div class="field">
