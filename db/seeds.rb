@@ -9,7 +9,7 @@
 Market.destroy_all
 # User.destroy_all
 Profile.destroy_all
-# Farmer.destroy_all
+FarmersProfile.destroy_all
 
 Market.create([{ 
     name: "Tramsheds Growers Markets", location: "1 Dalgal Way, Forest Lodge NSW 2037", bio: "Sydney, meet the newest market on the block and trust us, you’re going to want to get yourself here stat. FYI, this one is super spesh because they’ve teamed up with Bodega 1904 to put together a market on a whole other level.", opening_hours: "Every Sunday, 8am-2pm"
@@ -62,11 +62,11 @@ Profile.create([{
 
 p "Created #{Profile.count} profiles."
 
-Farmer.create([{
-    bio: "We have the freshest lettuce around, picked fresh the morning of the markets", market_id: 1, profile_id: 1, stall_name: "Farmer Jo's Big Farm", image: "http://kitchenconfidante.com/simple-sundays-scenes-from-the-ferry-plaza-farmers-market"
+FarmersProfile.create([{
+    bio: "We have the freshest lettuce around, picked fresh the morning of the markets", market_id: 1, profile_id: 1, stall_name: "Farmer Jo's Big Farm", images: "http://kitchenconfidante.com/simple-sundays-scenes-from-the-ferry-plaza-farmers-market"
 },
 {
-    bio: "Best eggs in all of Sydney!", market_id: 1, profile_id: 2, stall_name: "Farmer John's Chooks", image: "https://www.pinterest.com.au/pin/301107925086810233/"
+    bio: "Best eggs in all of Sydney!", market_id: 1, profile_id: 2, stall_name: "Farmer John's Chooks", images: "https://www.pinterest.com.au/pin/301107925086810233/"
 }])
 
-p "Created #{Farmer.count} farmers."
+p "Created #{FarmersProfile.count} farmers."
