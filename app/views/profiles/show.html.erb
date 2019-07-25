@@ -6,7 +6,9 @@
 
 <p>
   <strong>Avatar:</strong>
-  <%= @profile.avatar %>
+  <% if @profile.avatar.present? %>
+    <%= @profile.avatar %>
+  <% end %>
 </p>
 
 <p>
