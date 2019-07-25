@@ -26,8 +26,16 @@ class FarmersProfilesController < ApplicationController
   # POST /farmers_profiles.json
   def create
     # @market_options = Market.all
+    puts "##########################################################"
+    puts farmers_profile_params
+    puts current_user.id
+    puts "##########################################################"
     @farmers_profile = FarmersProfile.new(farmers_profile_params)
-    @farmer_profile.user_id = current_user.id
+    puts "------------------------------------------------------------------"
+    #there are no profiles just yet hence nothing in there!!
+    puts @farmers_profile.profile
+    puts "------------------------------------------------------------------"
+    @farmers_profile.profile.user_id = current_user.id
 
     respond_to do |format|
       if @farmers_profile.save
@@ -72,6 +80,6 @@ class FarmersProfilesController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def farmers_profile_params
-      params.require(:farmers_profile).permit(:profile_id, :image, :bio, :market_id, :stall_name)
+      params.require(:farmers_profile).permit(:profile_id, :images, :bio, :market_id, :stall_name)
     end
 end
