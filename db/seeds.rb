@@ -7,6 +7,9 @@
 #   Character.create(name: 'Luke', movie: movies.first)
 
 Market.destroy_all
+# User.destroy_all
+Profile.destroy_all
+FarmersProfile.destroy_all
 
 Market.create([{ 
     name: "Tramsheds Growers Markets", location: "1 Dalgal Way, Forest Lodge NSW 2037", bio: "Sydney, meet the newest market on the block and trust us, you’re going to want to get yourself here stat. FYI, this one is super spesh because they’ve teamed up with Bodega 1904 to put together a market on a whole other level.", opening_hours: "Every Sunday, 8am-2pm"
@@ -28,3 +31,42 @@ Market.create([{
 }])
 
 p "Created #{Market.count} markets."
+
+User.create([{
+    id: 1, email: "ewelin@test.com", encrypted_password: "123456"
+}, 
+{
+    id: 2, email: "dave@test.com", encrypted_password: "123456"
+},
+{
+    id: 3, email: "jo@test.com", encrypted_password: "123456"
+},
+{
+    id: 4, email: "pete@test.com", encrypted_password: "123456"
+}])
+
+p "Created #{User.count} users."
+
+Profile.create([{
+    name: "Jo Bloggs", phone_number: "9589 0748", email: "Farmer_Jo@bigfarm.com"
+},
+{
+    name: "John McIntosh", phone_number: "0407 123 645", email: "Farmer_John@fresheggs.com"
+},
+{
+    name: "Asher Michaels", phone_number: "0415 688 721", email: "ash@yahoo.com.au", avatar: "https://www.pinterest.com.au/pin/301107925086810349/"
+},
+{
+    name: "Jo", phone_number: "0402 123 336", email: "scaffelpike@yahoo.com.au", avatar: "https://www.pinterest.com.au/pin/301107925086810342/"
+}])
+
+p "Created #{Profile.count} profiles."
+
+FarmersProfile.create([{
+    bio: "We have the freshest lettuce around, picked fresh the morning of the markets", market_id: 1, profile_id: 1, stall_name: "Farmer Jo's Big Farm", images: "http://kitchenconfidante.com/simple-sundays-scenes-from-the-ferry-plaza-farmers-market"
+},
+{
+    bio: "Best eggs in all of Sydney!", market_id: 1, profile_id: 2, stall_name: "Farmer John's Chooks", images: "https://www.pinterest.com.au/pin/301107925086810233/"
+}])
+
+p "Created #{FarmersProfile.count} farmers."
