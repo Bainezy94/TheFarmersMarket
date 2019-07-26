@@ -10,20 +10,17 @@
       </ul>
     </div>
   <% end %>
-
+ 
   <div class="field">
     <%= form.label :farmer_id %>
-    <%= form.text_field :farmer_id %>
-  </div>
-
-  <div class="field">
-    <%= form.label :profile_id %>
-    <%= form.text_field :profile_id %>
+    <%#= form.text_field :farmer_id %>
+    <%= form.select :farmer_id, FarmersProfile.all.collect {|farmer| [farmer.stall_name, farmer.id]} %>
   </div>
 
   <div class="field">
     <%= form.label :product_id %>
-    <%= form.text_field :product_id %>
+    <%#= form.text_field :product_id %>
+    <%= form.select :product_id, Product.all.collect {|product| [product.name, product.id]} %>
   </div>
 
   <div class="field">
