@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_07_23_053909) do
+ActiveRecord::Schema.define(version: 2019_07_25_060701) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -25,6 +25,18 @@ ActiveRecord::Schema.define(version: 2019_07_23_053909) do
     t.datetime "updated_at", null: false
     t.index ["market_id"], name: "index_farmers_on_market_id"
     t.index ["profile_id"], name: "index_farmers_on_profile_id"
+  end
+
+  create_table "farmers_profiles", force: :cascade do |t|
+    t.bigint "profile_id"
+    t.string "images"
+    t.text "bio"
+    t.bigint "market_id"
+    t.string "stall_name"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["market_id"], name: "index_farmers_profiles_on_market_id"
+    t.index ["profile_id"], name: "index_farmers_profiles_on_profile_id"
   end
 
   create_table "markets", force: :cascade do |t|
@@ -70,6 +82,8 @@ ActiveRecord::Schema.define(version: 2019_07_23_053909) do
     t.string "email"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.bigint "user_id"
+    t.index ["user_id"], name: "index_profiles_on_user_id"
   end
 
   create_table "reviews", force: :cascade do |t|
@@ -97,10 +111,13 @@ ActiveRecord::Schema.define(version: 2019_07_23_053909) do
 
   add_foreign_key "farmers", "markets"
   add_foreign_key "farmers", "profiles"
+  add_foreign_key "farmers_profiles", "markets"
+  add_foreign_key "farmers_profiles", "profiles"
   add_foreign_key "orders", "farmers"
   add_foreign_key "orders", "products"
   add_foreign_key "orders", "profiles"
   add_foreign_key "products", "farmers"
+  add_foreign_key "profiles", "users"
   add_foreign_key "reviews", "farmers"
   add_foreign_key "reviews", "profiles"
 end
