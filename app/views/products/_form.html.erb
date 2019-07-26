@@ -12,8 +12,8 @@
   <% end %>
 
   <div class="field">
-    <%= form.label :farmer_id %>
-    <%= form.text_field :farmer_id %>
+    <%= form.label :farmers_profile_id %>
+    <%= form.text_field :farmers_profile_id %>
   </div>
 
   <div class="field">
@@ -40,7 +40,7 @@
     <%= form.label :picked_date %>
     <%= form.date_select :picked_date %>
   </div>
-
+ 
   <div class="field">
     <%= form.label :active %>
     <%= form.check_box :active %>
@@ -49,6 +49,11 @@
   <div class="field">
     <%= form.label :amount_available %>
     <%= form.text_field :amount_available %>
+  </div>
+
+   <div class="field">
+    <%= form.label :unit %>
+    <%= form.text_field :unit %>
   </div>
 
   <div class="actions">
