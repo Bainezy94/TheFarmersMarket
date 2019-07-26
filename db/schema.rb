@@ -10,22 +10,10 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_07_25_060701) do
+ActiveRecord::Schema.define(version: 2019_07_26_063929) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
-
-  create_table "farmers", force: :cascade do |t|
-    t.bigint "profile_id"
-    t.string "image"
-    t.text "bio"
-    t.bigint "market_id"
-    t.string "stall_name"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-    t.index ["market_id"], name: "index_farmers_on_market_id"
-    t.index ["profile_id"], name: "index_farmers_on_profile_id"
-  end
 
   create_table "farmers_profiles", force: :cascade do |t|
     t.bigint "profile_id"
@@ -49,19 +37,18 @@ ActiveRecord::Schema.define(version: 2019_07_25_060701) do
   end
 
   create_table "orders", force: :cascade do |t|
-    t.bigint "farmer_id"
     t.bigint "profile_id"
     t.bigint "product_id"
     t.string "volume"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.index ["farmer_id"], name: "index_orders_on_farmer_id"
+    t.bigint "farmers_profile_id"
+    t.index ["farmers_profile_id"], name: "index_orders_on_farmers_profile_id"
     t.index ["product_id"], name: "index_orders_on_product_id"
     t.index ["profile_id"], name: "index_orders_on_profile_id"
   end
 
   create_table "products", force: :cascade do |t|
-    t.bigint "farmer_id"
     t.string "name"
     t.string "image"
     t.text "description"
@@ -72,7 +59,8 @@ ActiveRecord::Schema.define(version: 2019_07_25_060701) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.string "unit"
-    t.index ["farmer_id"], name: "index_products_on_farmer_id"
+    t.bigint "farmers_profile_id"
+    t.index ["farmers_profile_id"], name: "index_products_on_farmers_profile_id"
   end
 
   create_table "profiles", force: :cascade do |t|
@@ -88,12 +76,12 @@ ActiveRecord::Schema.define(version: 2019_07_25_060701) do
 
   create_table "reviews", force: :cascade do |t|
     t.bigint "profile_id"
-    t.bigint "farmer_id"
     t.string "rating"
     t.text "comment"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.index ["farmer_id"], name: "index_reviews_on_farmer_id"
+    t.bigint "farmers_profile_id"
+    t.index ["farmers_profile_id"], name: "index_reviews_on_farmers_profile_id"
     t.index ["profile_id"], name: "index_reviews_on_profile_id"
   end
 
@@ -109,15 +97,13 @@ ActiveRecord::Schema.define(version: 2019_07_25_060701) do
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
   end
 
-  add_foreign_key "farmers", "markets"
-  add_foreign_key "farmers", "profiles"
   add_foreign_key "farmers_profiles", "markets"
   add_foreign_key "farmers_profiles", "profiles"
-  add_foreign_key "orders", "farmers"
+  add_foreign_key "orders", "farmers_profiles"
   add_foreign_key "orders", "products"
   add_foreign_key "orders", "profiles"
-  add_foreign_key "products", "farmers"
+  add_foreign_key "products", "farmers_profiles"
   add_foreign_key "profiles", "users"
-  add_foreign_key "reviews", "farmers"
+  add_foreign_key "reviews", "farmers_profiles"
   add_foreign_key "reviews", "profiles"
 end
