@@ -20,7 +20,9 @@
   <div class="field">
     <%= form.label :product_id %>
     <%#= form.text_field :product_id %>
+    <%# WAIT!! Will only want products from specified farmer showing!! %>
     <%= form.select :product_id, Product.all.collect {|product| [product.name, product.id]} %>
+    <%# Also want option to add several products!! %>
   </div>
 
   <div class="field">
