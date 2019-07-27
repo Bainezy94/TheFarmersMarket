@@ -27,12 +27,10 @@ class ProductsController < ApplicationController
     @product = Product.new(product_params)
     @product.farmers_profile_id = current_user.id
     @product.save
-
-    puts "%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%"
+    puts "#####################################"
     puts product_params
-    puts current_user.id
-    puts @product.farmers_profile_id
-    puts "%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%"
+    puts "#####################################"
+    # coming up with an error saying "farmer must exist". When checking all the params are coming through as expected and farmers_profile is saved. Im wondering if this is throw back to our previous problem where the models were wrong since its saying farmer and not farmers_profile. The schema is correct. Im not sure where the error is coming from
 
     respond_to do |format|
       if @product.save
