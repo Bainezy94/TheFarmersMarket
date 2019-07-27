@@ -12,18 +12,13 @@
   <% end %>
 
   <div class="field">
-    <%= form.label :farmers_profile_id %>
-    <%= form.text_field :farmers_profile_id %>
-  </div>
-
-  <div class="field">
     <%= form.label :name %>
     <%= form.text_field :name %>
   </div>
 
   <div class="field">
     <%= form.label :image %>
-    <%= form.text_field :image %>
+    <%= form.file_field :image %>
   </div>
 
   <div class="field">
@@ -37,13 +32,8 @@
   </div>
 
   <div class="field">
-    <%= form.label :picked_date %>
-    <%= form.date_select :picked_date %>
-  </div>
- 
-  <div class="field">
-    <%= form.label :active %>
-    <%= form.check_box :active %>
+    <%= form.label :unit %>
+    <%= form.select :unit, collection: ["kg", "250g", "punnet", "each", "bushel"] %>
   </div>
 
   <div class="field">
@@ -51,9 +41,14 @@
     <%= form.text_field :amount_available %>
   </div>
 
-   <div class="field">
-    <%= form.label :unit %>
-    <%= form.text_field :unit %>
+  <div class="field">
+    <%= form.label :picked_date %>
+    <%= form.date_select :picked_date %>
+  </div>
+ 
+  <div class="field">
+    <%= form.label :active %>
+    <%= form.check_box :active %>
   </div>
 
   <div class="actions">
