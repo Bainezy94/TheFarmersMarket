@@ -26,15 +26,8 @@ class FarmersProfilesController < ApplicationController
   # POST /farmers_profiles.json
   def create
     # @market_options = Market.all
-    puts "##########################################################"
-    puts farmers_profile_params
-    puts current_user.id
-    puts "##########################################################"
     @farmers_profile = FarmersProfile.new(farmers_profile_params)
-    puts "------------------------------------------------------------------"
-    #there are no profiles just yet hence nothing in there!!
-    puts @farmers_profile.profile
-    puts "------------------------------------------------------------------"
+    #got to make sure only farmers can do this, not just any profile
     @farmers_profile.profile.user_id = current_user.id
 
     respond_to do |format|
