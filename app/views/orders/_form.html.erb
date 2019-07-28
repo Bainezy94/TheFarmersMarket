@@ -12,9 +12,9 @@
   <% end %>
  
   <div class="field">
-    <%= form.label :farmer_id %>
+    <%= form.label :farmers_profile_id %>
     <%#= form.text_field :farmer_id %>
-    <%= form.select :farmer_id, FarmersProfile.all.collect {|farmer| [farmer.stall_name, farmer.id]} %>
+    <%= form.select :farmers_profile_id, FarmersProfile.all.collect {|farmer| [farmer.stall_name, farmer.id]} %>
   </div>
 
   <div class="field">
