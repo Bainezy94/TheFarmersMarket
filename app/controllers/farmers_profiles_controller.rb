@@ -15,6 +15,7 @@ class FarmersProfilesController < ApplicationController
   # GET /farmers_profiles/new
   def new
     @farmers_profile = FarmersProfile.new
+    @market_options = Market.all
   end
 
   # GET /farmers_profiles/1/edit
@@ -25,6 +26,8 @@ class FarmersProfilesController < ApplicationController
   # POST /farmers_profiles.json
   def create
     @farmers_profile = FarmersProfile.new(farmers_profile_params)
+    @farmers_profile.profile_id = current_user.profile.id
+    @farmers_profile.save    
 
     respond_to do |format|
       if @farmers_profile.save
@@ -69,6 +72,6 @@ class FarmersProfilesController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def farmers_profile_params
-      params.require(:farmers_profile).permit(:profile_id, :image, :bio, :market_id, :stall_name)
+      params.require(:farmers_profile).permit(:profile_id, :images, :bio, :market_id, :stall_name)
     end
 end

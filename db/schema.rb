@@ -10,21 +10,21 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_07_23_053909) do
+ActiveRecord::Schema.define(version: 2019_07_29_001757) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
-  create_table "farmers", force: :cascade do |t|
+  create_table "farmers_profiles", force: :cascade do |t|
     t.bigint "profile_id"
-    t.string "image"
+    t.string "images"
     t.text "bio"
     t.bigint "market_id"
     t.string "stall_name"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.index ["market_id"], name: "index_farmers_on_market_id"
-    t.index ["profile_id"], name: "index_farmers_on_profile_id"
+    t.index ["market_id"], name: "index_farmers_profiles_on_market_id"
+    t.index ["profile_id"], name: "index_farmers_profiles_on_profile_id"
   end
 
   create_table "markets", force: :cascade do |t|
@@ -37,19 +37,18 @@ ActiveRecord::Schema.define(version: 2019_07_23_053909) do
   end
 
   create_table "orders", force: :cascade do |t|
-    t.bigint "farmer_id"
     t.bigint "profile_id"
     t.bigint "product_id"
     t.string "volume"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.index ["farmer_id"], name: "index_orders_on_farmer_id"
+    t.bigint "farmers_profile_id"
+    t.index ["farmers_profile_id"], name: "index_orders_on_farmers_profile_id"
     t.index ["product_id"], name: "index_orders_on_product_id"
     t.index ["profile_id"], name: "index_orders_on_profile_id"
   end
 
   create_table "products", force: :cascade do |t|
-    t.bigint "farmer_id"
     t.string "name"
     t.string "image"
     t.text "description"
@@ -60,26 +59,28 @@ ActiveRecord::Schema.define(version: 2019_07_23_053909) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.string "unit"
-    t.index ["farmer_id"], name: "index_products_on_farmer_id"
+    t.bigint "farmers_profile_id"
+    t.index ["farmers_profile_id"], name: "index_products_on_farmers_profile_id"
   end
 
   create_table "profiles", force: :cascade do |t|
     t.string "name"
     t.string "avatar"
     t.string "phone_number"
-    t.string "email"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.bigint "user_id"
+    t.index ["user_id"], name: "index_profiles_on_user_id"
   end
 
   create_table "reviews", force: :cascade do |t|
     t.bigint "profile_id"
-    t.bigint "farmer_id"
     t.string "rating"
     t.text "comment"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.index ["farmer_id"], name: "index_reviews_on_farmer_id"
+    t.bigint "farmers_profile_id"
+    t.index ["farmers_profile_id"], name: "index_reviews_on_farmers_profile_id"
     t.index ["profile_id"], name: "index_reviews_on_profile_id"
   end
 
@@ -95,12 +96,13 @@ ActiveRecord::Schema.define(version: 2019_07_23_053909) do
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
   end
 
-  add_foreign_key "farmers", "markets"
-  add_foreign_key "farmers", "profiles"
-  add_foreign_key "orders", "farmers"
+  add_foreign_key "farmers_profiles", "markets"
+  add_foreign_key "farmers_profiles", "profiles"
+  add_foreign_key "orders", "farmers_profiles"
   add_foreign_key "orders", "products"
   add_foreign_key "orders", "profiles"
-  add_foreign_key "products", "farmers"
-  add_foreign_key "reviews", "farmers"
+  add_foreign_key "products", "farmers_profiles"
+  add_foreign_key "profiles", "users"
+  add_foreign_key "reviews", "farmers_profiles"
   add_foreign_key "reviews", "profiles"
 end

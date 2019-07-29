@@ -6,7 +6,10 @@
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
 
-Market.destroy_all
+# Market.destroy_all
+# # User.destroy_all
+# Profile.destroy_all
+# FarmersProfile.destroy_all
 
 Market.create([{ 
     name: "Tramsheds Growers Markets", location: "1 Dalgal Way, Forest Lodge NSW 2037", bio: "Sydney, meet the newest market on the block and trust us, you’re going to want to get yourself here stat. FYI, this one is super spesh because they’ve teamed up with Bodega 1904 to put together a market on a whole other level.", opening_hours: "Every Sunday, 8am-2pm"
@@ -28,3 +31,42 @@ Market.create([{
 }])
 
 p "Created #{Market.count} markets."
+
+User.create([{
+    email: "ewelin@test.com", encrypted_password: "123456"
+}, 
+{
+    email: "dave@test.com", encrypted_password: "123456"
+},
+{
+    email: "jo@test.com", encrypted_password: "123456"
+},
+{
+    email: "pete@test.com", encrypted_password: "123456"
+}])
+
+p "Created #{User.count} users."
+
+Profile.create([{
+    id: User.first.id, name: "Jo Bloggs", phone_number: "9589 0748"
+},
+{
+    id: User.second.id, name: "John McIntosh", phone_number: "0407 123 645"
+},
+{
+    id: User.third.id, name: "Asher Michaels", phone_number: "0415 688 721", avatar: "https://www.pinterest.com.au/pin/301107925086810349/"
+},
+{
+    id: Profile.fourth.id, name: "Jo", phone_number: "0402 123 336", avatar: "https://www.pinterest.com.au/pin/301107925086810342/"
+}])
+
+p "Created #{Profile.count} profiles."
+
+FarmersProfile.create([{
+    bio: "We have the freshest lettuce around, picked fresh the morning of the markets", market_id: Market.first.id, profile_id: Profile.second.id, stall_name: "Farmer Jo's Big Farm", images: "http://kitchenconfidante.com/simple-sundays-scenes-from-the-ferry-plaza-farmers-market"
+},
+{
+    bio: "Best eggs in all of Sydney!", market_id: Market.first.id, profile_id: Profile.first.id, stall_name: "Farmer John's Chooks", images: "https://www.pinterest.com.au/pin/301107925086810233/"
+}])
+
+p "Created #{FarmersProfile.count} farmers."
