@@ -17,11 +17,6 @@
     <%= form.select :farmers_profile_id, FarmersProfile.all.collect {|farmer| [farmer.stall_name, farmer.id]} %>
   </div>
 
-    <%= form.label :farmers_profile_id %>
-    <%#= form.text_field :farmer_id %>
-    <%= form.select :farmers_profile_id, FarmersProfile.all.collect {|farmer| [farmer.stall_name, farmer.id]} %>
-  </div>
-
 <%# need something here allowing for as many products as wanted also only offer that from the farmer selected something like:
 Product.farmer(order_params(name: order_params.name))?? %>
   <div class="field">
