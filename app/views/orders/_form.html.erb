@@ -12,11 +12,24 @@
   <% end %>
  
   <div class="field">
+<<<<<<< HEAD
+    <%= form.label :farmer_profile_id %>
+    <%#= form.text_field :farmer_id %>
+    <%# need to change this so only farmers from the right market come up %>
+=======
     <%= form.label :farmers_profile_id %>
     <%#= form.text_field :farmer_id %>
+>>>>>>> 03ee36a6785e84955261fd36ee83cc5669bead05
     <%= form.select :farmers_profile_id, FarmersProfile.all.collect {|farmer| [farmer.stall_name, farmer.id]} %>
   </div>
 
+  <%# <div class="field">
+    <%= form.label :profile_id %>
+    <%#= form.text_field :profile_id %>
+  <%#</div> %>
+
+<%# need something here allowing for as many products as wanted also only offer that from the farmer selected something like:
+Product.farmer(order_params(name: order_params.name))?? %>
   <div class="field">
     <%= form.label :product_id %>
     <%#= form.text_field :product_id %>
@@ -25,6 +38,7 @@
     <%# Also want option to add several products!! %>
   </div>
 
+<%# need something to display measurement - kg, punnet, single item, g etc %>
   <div class="field">
     <%= form.label :volume %>
     <%= form.text_field :volume %>
