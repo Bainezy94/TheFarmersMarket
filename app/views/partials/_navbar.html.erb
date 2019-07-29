@@ -1,14 +1,14 @@
 <div class="navbar-fixed">
     <nav>
         <div class="nav-wrapper blue-grey darken-3">
-            <a href="/home/page" class="brand-logo">FarmersMarkets</a>
+            <a href="/home/page" class="brand-logo">Sleepy Farmers</a>
             <a href="#" data-target="slide-out" class="sidenav-trigger"><i class="material-icons">menu</i></a>
             <ul id="nav-mobile" class="right hide-on-med-and-down">
 
-                <li><a href="/orders"><i class="material-icons left">movie_filter</i>Orders</a></li>
-                <li><a href="/products"><i class="material-icons left">access_time</i>Products</a></li>
-                <li><a href="/farmers_profiles"><i class="material-icons left">access_time</i>Farmers</a></li>
-                <li><a href="/markets"><i class="material-icons left">access_time</i>Markets</a></li>
+                <li><a href="/orders"><i class="material-icons left">local_atm</i>Orders</a></li>
+                <li><a href="/products"><i class="material-icons left">ballot</i>Products</a></li>
+                <li><a href="/farmers_profiles"><i class="material-icons left">local_florist</i>Farmers</a></li>
+                <li><a href="/markets"><i class="material-icons left">store</i>Markets</a></li>
 
                 <% if user_signed_in? %>
                     <li><a class="dropdown-trigger" href="#!" data-target="dropdown1">Account<i class="material-icons right">arrow_drop_down</i></a></li>
@@ -33,10 +33,10 @@
 
 <%# Mobile Nav Bar %>
 <ul class="sidenav" id="slide-out">
-    <li><a href="/orders"><i class="material-icons left">movie_filter</i>Orders</a></li>
-    <li><a href="/products"><i class="material-icons left">access_time</i>Products</a></li>
-    <li><a href="/farmers_profiles"><i class="material-icons left">access_time</i>Farmers</a></li>
-    <li><a href="/markets"><i class="material-icons left">access_time</i>Markets</a></li>
+    <li><a href="/orders"><i class="material-icons left">local_atm</i>Orders</a></li>
+    <li><a href="/products"><i class="material-icons left">ballot</i>Products</a></li>
+    <li><a href="/farmers_profiles"><i class="material-icons left">local_florist</i>Farmers</a></li>
+    <li><a href="/markets"><i class="material-icons left">store</i>Markets</a></li>
 
     <% if user_signed_in? %>
         <li><%= link_to current_user.email, edit_user_registration_path, :class => 'navbar-link' %></li>
