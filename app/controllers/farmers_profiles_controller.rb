@@ -31,11 +31,15 @@ class FarmersProfilesController < ApplicationController
     puts current_user.id
     puts "##########################################################"
     @farmers_profile = FarmersProfile.new(farmers_profile_params)
+    @farmers_profile.profile_id = current_user.id
+    @farmers_profile.save
     puts "------------------------------------------------------------------"
     #there are no profiles just yet hence nothing in there!!
-    puts @farmers_profile.profile
+    puts @farmers_profile.profile_id
+    puts @farmers_profile.market_id
+    puts @farmers_profile.id
     puts "------------------------------------------------------------------"
-    @farmers_profile.profile.user_id = current_user.id
+    
 
     respond_to do |format|
       if @farmers_profile.save

@@ -33,40 +33,40 @@ Market.create([{
 p "Created #{Market.count} markets."
 
 User.create([{
-    id: 1, email: "ewelin@test.com", encrypted_password: "123456"
+    email: "ewelin@test.com", encrypted_password: "123456"
 }, 
 {
-    id: 2, email: "dave@test.com", encrypted_password: "123456"
+    email: "dave@test.com", encrypted_password: "123456"
 },
 {
-    id: 3, email: "jo@test.com", encrypted_password: "123456"
+    email: "jo@test.com", encrypted_password: "123456"
 },
 {
-    id: 4, email: "pete@test.com", encrypted_password: "123456"
+    email: "pete@test.com", encrypted_password: "123456"
 }])
 
 p "Created #{User.count} users."
 
 Profile.create([{
-    name: "Jo Bloggs", phone_number: "9589 0748", email: "Farmer_Jo@bigfarm.com"
+    id: User.first.id, name: "Jo Bloggs", phone_number: "9589 0748"
 },
 {
-    name: "John McIntosh", phone_number: "0407 123 645", email: "Farmer_John@fresheggs.com"
+    id: User.second.id, name: "John McIntosh", phone_number: "0407 123 645"
 },
 {
-    name: "Asher Michaels", phone_number: "0415 688 721", email: "ash@yahoo.com.au", avatar: "https://www.pinterest.com.au/pin/301107925086810349/"
+    id: User.third.id, name: "Asher Michaels", phone_number: "0415 688 721", avatar: "https://www.pinterest.com.au/pin/301107925086810349/"
 },
 {
-    name: "Jo", phone_number: "0402 123 336", email: "scaffelpike@yahoo.com.au", avatar: "https://www.pinterest.com.au/pin/301107925086810342/"
+    id: Profile.fourth.id, name: "Jo", phone_number: "0402 123 336", avatar: "https://www.pinterest.com.au/pin/301107925086810342/"
 }])
 
 p "Created #{Profile.count} profiles."
 
 FarmersProfile.create([{
-    bio: "We have the freshest lettuce around, picked fresh the morning of the markets", market_id: 1, profile_id: 1, stall_name: "Farmer Jo's Big Farm", images: "http://kitchenconfidante.com/simple-sundays-scenes-from-the-ferry-plaza-farmers-market"
+    bio: "We have the freshest lettuce around, picked fresh the morning of the markets", market_id: Market.first.id, profile_id: Profile.second.id, stall_name: "Farmer Jo's Big Farm", images: "http://kitchenconfidante.com/simple-sundays-scenes-from-the-ferry-plaza-farmers-market"
 },
 {
-    bio: "Best eggs in all of Sydney!", market_id: 1, profile_id: 2, stall_name: "Farmer John's Chooks", images: "https://www.pinterest.com.au/pin/301107925086810233/"
+    bio: "Best eggs in all of Sydney!", market_id: Market.first.id, profile_id: Profile.first.id, stall_name: "Farmer John's Chooks", images: "https://www.pinterest.com.au/pin/301107925086810233/"
 }])
 
 p "Created #{FarmersProfile.count} farmers."
