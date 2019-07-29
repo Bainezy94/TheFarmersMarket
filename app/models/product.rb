@@ -1,3 +1,3 @@
 class Product < ApplicationRecord
-  belongs_to :farmer
+  belongs_to :farmers_profile
 end

@@ -12,9 +12,14 @@
   <% end %>
  
   <div class="field">
+<<<<<<< HEAD
     <%= form.label :farmer_profile_id %>
     <%#= form.text_field :farmer_id %>
     <%# need to change this so only farmers from the right market come up %>
+=======
+    <%= form.label :farmers_profile_id %>
+    <%#= form.text_field :farmer_id %>
+>>>>>>> 03ee36a6785e84955261fd36ee83cc5669bead05
     <%= form.select :farmers_profile_id, FarmersProfile.all.collect {|farmer| [farmer.stall_name, farmer.id]} %>
   </div>
 
