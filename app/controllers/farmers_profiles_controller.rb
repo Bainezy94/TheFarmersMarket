@@ -25,6 +25,7 @@ class FarmersProfilesController < ApplicationController
   # POST /farmers_profiles
   # POST /farmers_profiles.json
   def create
+<<<<<<< HEAD
     # @market_options = Market.all
     puts "##########################################################"
     puts farmers_profile_params
@@ -36,6 +37,11 @@ class FarmersProfilesController < ApplicationController
     puts @farmers_profile.profile
     puts "------------------------------------------------------------------"
     @farmers_profile.profile.user_id = current_user.id
+=======
+    @farmers_profile = FarmersProfile.new(farmers_profile_params)
+    @farmers_profile.profile_id = current_user.profile.id
+    @farmers_profile.save    
+>>>>>>> e7ded7886e4b780c16981088ed6b9479dfad24a2
 
     respond_to do |format|
       if @farmers_profile.save

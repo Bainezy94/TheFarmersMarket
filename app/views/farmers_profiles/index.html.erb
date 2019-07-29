@@ -17,7 +17,7 @@
     <% @farmers_profiles.each do |farmers_profile| %>
       <tr>
         <td><%= farmers_profile.profile %></td>
-        <td><%= farmers_profile.image %></td>
+        <td><%= farmers_profile.images.first %></td>
         <td><%= farmers_profile.bio %></td>
         <td><%= farmers_profile.market %></td>
         <td><%= farmers_profile.stall_name %></td>

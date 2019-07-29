@@ -1,4 +1,4 @@
 class Review < ApplicationRecord
   belongs_to :profile
-  belongs_to :farmer
+  belongs_to :farmers_profile
 end

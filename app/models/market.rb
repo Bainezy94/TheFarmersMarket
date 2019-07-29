@@ -1,3 +1,3 @@
 class Market < ApplicationRecord
-    has_many :farmers
+    has_many :farmers_profile
 end
