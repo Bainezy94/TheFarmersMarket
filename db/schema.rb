@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_07_29_054200) do
+ActiveRecord::Schema.define(version: 2019_07_29_062134) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -38,13 +38,11 @@ ActiveRecord::Schema.define(version: 2019_07_29_054200) do
 
   create_table "orders", force: :cascade do |t|
     t.bigint "profile_id"
-    t.bigint "product_id"
     t.string "volume"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.bigint "farmers_profile_id"
     t.index ["farmers_profile_id"], name: "index_orders_on_farmers_profile_id"
-    t.index ["product_id"], name: "index_orders_on_product_id"
     t.index ["profile_id"], name: "index_orders_on_profile_id"
   end
 
@@ -108,7 +106,6 @@ ActiveRecord::Schema.define(version: 2019_07_29_054200) do
   add_foreign_key "farmers_profiles", "markets"
   add_foreign_key "farmers_profiles", "profiles"
   add_foreign_key "orders", "farmers_profiles"
-  add_foreign_key "orders", "products"
   add_foreign_key "orders", "profiles"
   add_foreign_key "orders_products", "orders"
   add_foreign_key "orders_products", "products"
