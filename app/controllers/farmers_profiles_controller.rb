@@ -25,21 +25,9 @@ class FarmersProfilesController < ApplicationController
   # POST /farmers_profiles
   # POST /farmers_profiles.json
   def create
-    # @market_options = Market.all
-    puts "##########################################################"
-    puts farmers_profile_params
-    puts current_user.id
-    puts "##########################################################"
     @farmers_profile = FarmersProfile.new(farmers_profile_params)
-    @farmers_profile.profile_id = current_user.id
-    @farmers_profile.save
-    puts "------------------------------------------------------------------"
-    #there are no profiles just yet hence nothing in there!!
-    puts @farmers_profile.profile_id
-    puts @farmers_profile.market_id
-    puts @farmers_profile.id
-    puts "------------------------------------------------------------------"
-    
+    @farmers_profile.profile_id = current_user.profile.id
+    @farmers_profile.save    
 
     respond_to do |format|
       if @farmers_profile.save

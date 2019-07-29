@@ -6,10 +6,10 @@
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
 
-Market.destroy_all
-# User.destroy_all
-Profile.destroy_all
-FarmersProfile.destroy_all
+# Market.destroy_all
+# # User.destroy_all
+# Profile.destroy_all
+# FarmersProfile.destroy_all
 
 Market.create([{ 
     name: "Tramsheds Growers Markets", location: "1 Dalgal Way, Forest Lodge NSW 2037", bio: "Sydney, meet the newest market on the block and trust us, you’re going to want to get yourself here stat. FYI, this one is super spesh because they’ve teamed up with Bodega 1904 to put together a market on a whole other level.", opening_hours: "Every Sunday, 8am-2pm"
