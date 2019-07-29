@@ -30,7 +30,7 @@ class FarmersProfilesController < ApplicationController
     puts farmers_profile_params
     puts current_user.id
     puts "##########################################################"
-    @farmers_profile = FarmersProfile.new(farmers_profile_params)
+    @farmers_profile = FarmersProfile.create(farmers_profile_params)
     puts "------------------------------------------------------------------"
     #there are no profiles just yet hence nothing in there!!
     puts @farmers_profile.profile
