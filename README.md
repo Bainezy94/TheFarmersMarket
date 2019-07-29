@@ -46,7 +46,11 @@ Farmer's markets are great places to find the best deals on fresh fruit and vege
 
 ### Process
 
-
+1. Brainstorming session: Project and problem space ideation
+2. Entity Relationship Diagram
+3. Wireframing
+4. Mood-boarding
+5. Style guide
 
 ### User Stories
 
@@ -135,7 +139,7 @@ HD - Designs a normalised schema (i.e. without data duplication) that facilitate
 
 Demonstrates a full understanding of the problems that exist in a relevant marketplace that needs disrupting
 
-### 3. Describe the project will you be conducting and how. your *App* will address the needs.
+### 3. Describe the project will you be conducting and how your *App* will address the needs.
 
 
 
