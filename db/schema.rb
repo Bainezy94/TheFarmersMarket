@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_07_29_001757) do
+ActiveRecord::Schema.define(version: 2019_07_29_054200) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -46,6 +46,15 @@ ActiveRecord::Schema.define(version: 2019_07_29_001757) do
     t.index ["farmers_profile_id"], name: "index_orders_on_farmers_profile_id"
     t.index ["product_id"], name: "index_orders_on_product_id"
     t.index ["profile_id"], name: "index_orders_on_profile_id"
+  end
+
+  create_table "orders_products", force: :cascade do |t|
+    t.bigint "order_id"
+    t.bigint "product_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["order_id"], name: "index_orders_products_on_order_id"
+    t.index ["product_id"], name: "index_orders_products_on_product_id"
   end
 
   create_table "products", force: :cascade do |t|
@@ -101,6 +110,8 @@ ActiveRecord::Schema.define(version: 2019_07_29_001757) do
   add_foreign_key "orders", "farmers_profiles"
   add_foreign_key "orders", "products"
   add_foreign_key "orders", "profiles"
+  add_foreign_key "orders_products", "orders"
+  add_foreign_key "orders_products", "products"
   add_foreign_key "products", "farmers_profiles"
   add_foreign_key "profiles", "users"
   add_foreign_key "reviews", "farmers_profiles"
