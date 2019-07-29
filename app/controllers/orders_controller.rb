@@ -15,6 +15,8 @@ class OrdersController < ApplicationController
   # GET /orders/new
   def new
     @order = Order.new
+    @product = Products.all
+    #need to add /kg or each etc
   end
 
   # GET /orders/1/edit

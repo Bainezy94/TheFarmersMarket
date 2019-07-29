@@ -13,7 +13,6 @@
  
   <div class="field">
     <%= form.label :farmers_profile_id %>
-    <%#= form.text_field :farmer_id %>
     <%= form.select :farmers_profile_id, FarmersProfile.all.collect {|farmer| [farmer.stall_name, farmer.id]} %>
   </div>
 
@@ -22,6 +21,9 @@ Product.farmer(order_params(name: order_params.name))?? %>
   <div class="field">
     <%= form.label :product_id %>
     <%# WAIT!! Will only want products from specified farmer showing!! %>
+
+    <%# #########Product.find_by(:farmers_profile_id => order[:farmers_profile_id] )######### %>
+    
     <%= form.select :product_id, Product.all.collect {|product| [product.name, product.id]} %>
   </div>
 
