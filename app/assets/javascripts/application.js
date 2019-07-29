@@ -14,3 +14,10 @@
 //= require activestorage
 //= require turbolinks
 //= require_tree .
+
+window.onload = () =>
+{
+    // Initiate all Materialize instances without options.
+    const allInstances = M.AutoInit();
+
+};

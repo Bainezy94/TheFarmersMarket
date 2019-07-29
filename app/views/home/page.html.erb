@@ -1,6 +1,11 @@
-<h1>Welcome to the Sleepy Farmers Markets</h1>
-<h4>Find the Farmer or Market that is right for you</h4>
-<%= link_to "Find my Farmer", farmers_profiles_path %>
-<%= link_to "Find my Market", markets_path %>
+<section id="home_page">
 
-<h1>Jo is Awesome!</h1>
+    <h1>Welcome to the Sleepy Farmers Markets</h1>
+    
+    <div id="home_buttons">
+        <h4>Find the Farmer or Market that is right for you</h4>
+        <%= link_to "Find Farmer", farmers_profiles_path, class: "waves-effect waves-light btn-large" %> 
+        <%= link_to "Find Market", markets_path, class: "waves-effect waves-light btn-large" %> 
+    </div>
+
+</section>
