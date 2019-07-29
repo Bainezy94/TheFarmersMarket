@@ -11,11 +11,7 @@ class ApplicationController < ActionController::Base
     def after_sign_in_path_for(profile)
 
         if (current_user.profile)
-            # if(params[:user][:user_type]=="buyer") || (params[:user][:user_type] == "returning_user")
-            #     root_path
-            # else
-            #     new_car_path
-            # end
+            root_path
         else
             # pass the user type to the profile controller to decide the redirection path for the seller and buyer
             new_profile_path(user_type: params[:user][:user_type]) || root_path
