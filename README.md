@@ -66,6 +66,8 @@ Farmer's markets are great places to find the best deals on fresh fruit and vege
 
 ### Database Entity Relationship Diagrams
 
+![ERD](docs/erd.png)
+
 D - ERD is complete with appropriately defined entities (models each serve a single purpose and appropriate fields). There may be a little duplication.
 
 HD - Meets D with no duplication and ideal definition of entities.
@@ -124,6 +126,7 @@ HD - Designs a normalised schema (i.e. without data duplication) that facilitate
 
 - Added more seed data
 - Worked on backend for farmer_profile
+- Worked more on documentation
 
 ### Trello Screenshots
 
