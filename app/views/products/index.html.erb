@@ -39,6 +39,6 @@
 
 <br>
 
-<% if current_user.farmers_profile %>
+<% if current_user.farmers_profile.id %>
   <%= link_to 'New Product', new_product_path %>
 <% end %>
