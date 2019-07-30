@@ -23,7 +23,6 @@ Product.farmer(order_params(name: order_params.name))?? %>
     <%# WAIT!! Will only want products from specified farmer showing!! %>
 
     <%# #########Product.find_by(:farmers_profile_id => order[:farmers_profile_id] )######### %>
-    
     <%= form.select :product_id, Product.all.collect {|product| [product.name, product.id]} %>
   </div>
 
