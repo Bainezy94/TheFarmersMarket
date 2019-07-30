@@ -5,6 +5,7 @@ ruby '2.6.3'
 
 # Custom Gems
 gem 'devise'
+gem 'simple_form'
 #
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
