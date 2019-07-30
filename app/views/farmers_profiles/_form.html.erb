@@ -1,3 +1,4 @@
+<<<<<<< Updated upstream
 <%= form_with(model: farmers_profile, local: true) do |form| %>
   <% if farmers_profile.errors.any? %>
     <div id="error_explanation">
@@ -43,3 +44,30 @@
     <%= form.submit %>
   </div>
 <% end %>
+=======
+<div class="row">
+    <%= simple_form_for @farmers_profile, :html => {class: "col s12"} do |f| %>
+
+        <%= f.error_notification %>
+        <%= f.error_notification message: f.object.errors[:base].to_sentence if f.object.errors[:base].present? %>
+    
+        <%= f.association :market,     wrapper_html: { class: "input-field col s6" }, required: true %>
+        <%= f.input       :stall_name, wrapper_html: { class: "input-field col s6" }, required: true %>
+        <%= f.input       :bio,        wrapper_html: { class: "input-field col s12" }, input_html: { class: "materialize-textarea" }, required: true %>
+        <div class="file-field input-field col s12">
+            <div class="btn">
+                <span>Poster</span>
+                <%= f.input :images, label: false %>
+            </div>
+            <div class="file-path-wrapper">
+                <input class="file-path validate" type="text">
+            </div>
+        </div>
+
+        <div class="col s12">
+            <%= f.button      :submit %>
+        </div>
+
+    <% end %>
+</div>
+>>>>>>> Stashed changes
