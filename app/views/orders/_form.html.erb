@@ -1,37 +1,16 @@
-<%= form_with(model: order, local: true) do |form| %>
-  <% if order.errors.any? %>
-    <div id="error_explanation">
-      <h2><%= pluralize(order.errors.count, "error") %> prohibited this order from being saved:</h2>
+<div class="row">
+    <%= simple_form_for @order, :html => {class: "col s12"} do |f| %>
 
-      <ul>
-        <% order.errors.full_messages.each do |message| %>
-          <li><%= message %></li>
-        <% end %>
-      </ul>
-    </div>
-  <% end %>
- 
-  <div class="field">
-    <%= form.label :farmers_profile_id %>
-    <%#= form.text_field :farmer_id %>
-    <%= form.select :farmers_profile_id, FarmersProfile.all.collect {|farmer| [farmer.stall_name, farmer.id]} %>
-  </div>
+        <%= f.error_notification %>
+        <%= f.error_notification message: f.object.errors[:base].to_sentence if f.object.errors[:base].present? %>
+    
+        <%= f.association :farmers_profile, wrapper_html: { class: "input-field col s6" }, required: true %>
+        <%= f.association :products,        wrapper_html: { class: "input-field col s6" }, required: true %>
+        <%= f.input       :volume,          wrapper_html: { class: "input-field col s6" }, input_html: { class: "materialize-textarea" }, required: true %>
 
-<%# need something here allowing for as many products as wanted also only offer that from the farmer selected something like:
-Product.farmer(order_params(name: order_params.name))?? %>
-  <div class="field">
-    <%= form.label :product_id %>
-    <%# WAIT!! Will only want products from specified farmer showing!! %>
-    <%= form.select :product_id, Product.all.collect {|product| [product.name, product.id]} %>
-  </div>
+        <div class="col s12">
+            <%= f.button      :submit %>
+        </div>
 
-<%# need something to display measurement - kg, punnet, single item, g etc %>
-  <div class="field">
-    <%= form.label :volume %>
-    <%= form.text_field :volume %>
-  </div>
-
-  <div class="actions">
-    <%= form.submit %>
-  </div>
-<% end %>
+    <% end %>
+</div>
