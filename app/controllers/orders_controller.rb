@@ -15,6 +15,8 @@ class OrdersController < ApplicationController
   # GET /orders/new
   def new
     @order = Order.new
+    @product = Product.all
+    #need to add /kg or each etc
   end
 
   # GET /orders/1/edit
@@ -24,6 +26,9 @@ class OrdersController < ApplicationController
   # POST /orders
   # POST /orders.json
   def create
+    puts "%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%"
+    puts order_params
+    puts "%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%"
     @order = Order.new(order_params)
     @order.profile_id = current_user.profile.id
 
@@ -70,6 +75,6 @@ class OrdersController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def order_params
-      params.require(:order).permit(:farmers_profile_id, :profile_id, :product_id, :volume)
+      params.require(:order).permit(:farmers_profile_id, :profile_id, :volume)
     end
 end
