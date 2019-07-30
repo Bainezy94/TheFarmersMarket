@@ -1,41 +1,6 @@
 <div class="row">
     <%= simple_form_for @order, :html => {class: "col s12"} do |f| %>
 
-<<<<<<< Updated upstream
-      <ul>
-        <% order.errors.full_messages.each do |message| %>
-          <li><%= message %></li>
-        <% end %>
-      </ul>
-    </div>
-  <% end %>
- 
-  <div class="field">
-    <%= form.label :farmers_profile_id %>
-    <%= form.select :farmers_profile_id, FarmersProfile.all.collect {|farmer| [farmer.stall_name, farmer.id]} %>
-  </div>
-
-<%# need something here allowing for as many products as wanted also only offer that from the farmer selected something like:
-Product.farmer(order_params(name: order_params.name))?? %>
-  <div class="field">
-    <%= form.label :product_id %>
-    <%# WAIT!! Will only want products from specified farmer showing!! %>
-
-    <%# #########Product.find_by(:farmers_profile_id => order[:farmers_profile_id] )######### %>
-    <%= form.select :product_id, Product.all.collect {|product| [product.name, product.id]} %>
-  </div>
-
-<%# need something to display measurement - kg, punnet, single item, g etc %>
-  <div class="field">
-    <%= form.label :volume %>
-    <%= form.text_field :volume %>
-  </div>
-
-  <div class="actions">
-    <%= form.submit %>
-  </div>
-<% end %>
-=======
         <%= f.error_notification %>
         <%= f.error_notification message: f.object.errors[:base].to_sentence if f.object.errors[:base].present? %>
     
@@ -49,4 +14,3 @@ Product.farmer(order_params(name: order_params.name))?? %>
 
     <% end %>
 </div>
->>>>>>> Stashed changes
