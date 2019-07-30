@@ -39,7 +39,7 @@ class FarmersProfilesController < ApplicationController
       end
     end
   end
-
+ 
   # PATCH/PUT /farmers_profiles/1
   # PATCH/PUT /farmers_profiles/1.json
   def update
