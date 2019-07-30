@@ -67,6 +67,10 @@ h2, h3, h4 {
     &:hover {
         background-color: #3a2611;
     }
+
+    &:focus {
+        background-color: #3a2611;
+    }
 }
 
 .btn-small {
