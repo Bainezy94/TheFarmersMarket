@@ -1,6 +1,6 @@
 # Sleepy Farmer's Markets
 
-An app built with Ruby on Rails by [David Baines](https://github.com/Bainezy94), [Jo Dunham](https://github.com/Rainbow-Ninja), [Ewe Lin Loo](https://github.com/elloo).
+An app built with Ruby on Rails by [David Baines](https://github.com/Bainezy94), [Jo Dunham](https://github.com/Rainbow-Ninja), and [Ewe Lin Loo](https://github.com/elloo).
 
 **Live deployment:** <URL HERE>
 
