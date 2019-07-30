@@ -16,10 +16,10 @@
   <tbody>
     <% @farmers_profiles.each do |farmers_profile| %>
       <tr>
-        <td><%= farmers_profile.profile %></td>
+        <td><%= farmers_profile.profile["name"] %></td>
         <td><%= farmers_profile.images %></td>
         <td><%= farmers_profile.bio %></td>
-        <td><%= farmers_profile.market %></td>
+        <td><%= farmers_profile.market["name"] %></td>
         <td><%= farmers_profile.stall_name %></td>
         <td><%= link_to 'Show', farmers_profile %></td>
         <td><%= link_to 'Edit', edit_farmers_profile_path(farmers_profile) %></td>
