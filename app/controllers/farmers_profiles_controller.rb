@@ -14,8 +14,16 @@ class FarmersProfilesController < ApplicationController
 
   # GET /farmers_profiles/new
   def new
-    @farmers_profile = FarmersProfile.new
-    @market_options = Market.all
+    if user_signed_in?
+      if current_user.profile  
+        @farmers_profile = FarmersProfile.new
+        @market_options = Market.all
+      else
+        redirect_to new_profile_path
+      end
+    else 
+      redirect_to new_user_session_path
+    end
   end
 
   # GET /farmers_profiles/1/edit

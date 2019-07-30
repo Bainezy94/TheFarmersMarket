@@ -31,4 +31,17 @@
 
 <br>
 
-<%= link_to 'New Farmers Profile', new_farmers_profile_path %>
+<% if user_signed_in? %>
+  <% @farm = FarmersProfile.all %>
+  <% counter = 0 %>
+  <% @farm.each do |farm| %>
+    <% if farm.profile_id == current_user.profile.id %>
+      <% break %>
+    <% else %>
+      <% counter += 1 %>
+    <% end %>
+    <% if counter == @farm.count %>
+      <%= link_to 'New Farmers Profile', new_farmers_profile_path %>
+    <% end %>
+  <% end %>
+<% end %>
