@@ -9,8 +9,8 @@
         <%= f.input       :bio,        wrapper_html: { class: "input-field col s12" }, input_html: { class: "materialize-textarea" }, required: true %>
         <div class="file-field input-field col s12">
             <div class="btn">
-                <span>Poster</span>
-                <%= f.input :images, label: false %>
+                <span>Picture</span>
+                <%= f.file_field :images, label: false %>
             </div>
             <div class="file-path-wrapper">
                 <input class="file-path validate" type="text">

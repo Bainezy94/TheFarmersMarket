@@ -25,7 +25,7 @@ class ProductsController < ApplicationController
   # POST /products.json
   def create
     @product = Product.new(product_params)
-    @product.farmers_profile_id = current_user.id
+    @product.farmers_profile_id = current_user.profile.id
     @product.save
    
    #this only saves if you are a farmer! Not just any profile! Need to ensure users who arent farmers cant do this!

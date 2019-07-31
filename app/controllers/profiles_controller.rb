@@ -28,6 +28,8 @@ class ProfilesController < ApplicationController
     @profile = Profile.new(profile_params)
     @profile.user_id = current_user.id
     @profile.save
+    current_user.update(role: 0)
+    # current_user.role = 0
 
     respond_to do |format|
       if @profile.save
