@@ -20,4 +20,12 @@ window.onload = () =>
     // Initiate all Materialize instances without options.
     M.AutoInit();
 
+    // Initiate Materialize Date picker instances with options.
+    const datepicker = document.querySelectorAll(".datepicker");
+    
+    M.Datepicker.init(datepicker, {
+        autoClose: true,
+        format: "dddd dd mmmm, yyyy"
+    });
+
 };
