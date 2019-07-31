@@ -36,6 +36,7 @@ class FarmersProfilesController < ApplicationController
     @farmers_profile = FarmersProfile.new(farmers_profile_params)
     @farmers_profile.profile_id = current_user.profile.id
     @farmers_profile.save    
+    current_user.update(role: 1)
 
     respond_to do |format|
       if @farmers_profile.save

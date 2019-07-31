@@ -35,13 +35,13 @@
   <% @farm = FarmersProfile.all %>
   <% counter = 0 %>
   <% @farm.each do |farm| %>
-    <% if farm.profile_id == current_user.profile.id %>
+    <% if current_user.profile.id == farm.profile_id %>
       <% break %>
     <% else %>
       <% counter += 1 %>
     <% end %>
     <% if counter == @farm.count %>
-      <%= link_to 'New Farmers Profile', new_farmers_profile_path %>
+      <%= link_to 'Sign up to be a Farmer', new_farmers_profile_path %>
     <% end %>
   <% end %>
 <% end %>
