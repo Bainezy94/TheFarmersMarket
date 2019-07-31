@@ -22,8 +22,10 @@
         <td><%= farmers_profile.market["name"] %></td>
         <td><%= farmers_profile.stall_name %></td>
         <td><%= link_to 'Show', farmers_profile %></td>
-        <td><%= link_to 'Edit', edit_farmers_profile_path(farmers_profile) %></td>
-        <td><%= link_to 'Destroy', farmers_profile, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <% if user_signed_in? && current_user.id == farmers_profile.profile.user.id %>
+          <td><%= link_to 'Edit', edit_farmers_profile_path(farmers_profile) %></td>
+          <td><%= link_to 'Destroy', farmers_profile, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <% end %>
       </tr>
     <% end %>
   </tbody>
@@ -31,17 +33,6 @@
 
 <br>
 
-<% if user_signed_in? %>
-  <% @farm = FarmersProfile.all %>
-  <% counter = 0 %>
-  <% @farm.each do |farm| %>
-    <% if current_user.profile.id == farm.profile_id %>
-      <% break %>
-    <% else %>
-      <% counter += 1 %>
-    <% end %>
-    <% if counter == @farm.count %>
-      <%= link_to 'Sign up to be a Farmer', new_farmers_profile_path %>
-    <% end %>
-  <% end %>
+<% if user_signed_in? && current_user.role == "buyer" %>
+  <%= link_to 'Sign up to be a Farmer', new_farmers_profile_path %>
 <% end %>
