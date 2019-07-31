@@ -7,6 +7,7 @@ ruby '2.6.3'
 gem 'devise'
 gem 'simple_form'
 gem 'aws-sdk-s3'
+gem 'geocoder'
 #
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
