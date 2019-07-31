@@ -11,7 +11,6 @@
         <%= f.input :unit,             wrapper_html: { class: "input-field col s6" },   required: true, collection: ["kg", "250g", "punnet", "each", "bushel"] %>
         <%= f.input :picked_date,      wrapper_html: { class: "input-field col s6"  }, required: true, input_html: { class: "datepicker no-autoinit" }, as: :string %>
         <%= f.input :active,           wrapper_html: { class: "col s6" }, as: :boolean %>
-        <%#= f.association :farmers_profile, wrapper_html: { class: "input-field col s6" }, required: true %>
 
         <div class="file-field input-field col s6">
             <div class="btn">
