@@ -27,15 +27,8 @@ class ProfilesController < ApplicationController
   def create
     @profile = Profile.new(profile_params)
     @profile.user_id = current_user.id
-    @profile.user.role = 0
-    puts "###############################################"
-    puts @profile.user.role
-    puts "###############################################"
     @profile.save
-    puts "###############################################"
-    puts @profile.user.role
-    puts "###############################################"
-    current_user.save
+    current_user.update(role: 0)
     # current_user.role = 0
 
     respond_to do |format|
