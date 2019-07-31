@@ -35,7 +35,7 @@
   <% @farm = FarmersProfile.all %>
   <% counter = 0 %>
   <% @farm.each do |farm| %>
-    <% if farm.profile_id == current_user.profile.id %>
+    <% if current_user.profile.id == farm.profile_id %>
       <% break %>
     <% else %>
       <% counter += 1 %>

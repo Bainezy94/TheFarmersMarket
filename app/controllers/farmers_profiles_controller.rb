@@ -33,6 +33,9 @@ class FarmersProfilesController < ApplicationController
   # POST /farmers_profiles
   # POST /farmers_profiles.json
   def create
+    puts "****************************************************************"
+    puts farmers_profile_params
+    puts "****************************************************************"
     @farmers_profile = FarmersProfile.new(farmers_profile_params)
     @farmers_profile.profile_id = current_user.profile.id
     @farmers_profile.save    
