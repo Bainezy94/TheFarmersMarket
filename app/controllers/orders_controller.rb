@@ -26,6 +26,9 @@ class OrdersController < ApplicationController
   # POST /orders
   # POST /orders.json
   def create
+    puts "%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%"
+    puts order_params
+    puts "%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%"
     @order = Order.new(order_params)
     @order.profile_id = current_user.profile.id
 
