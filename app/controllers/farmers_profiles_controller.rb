@@ -10,6 +10,7 @@ class FarmersProfilesController < ApplicationController
   # GET /farmers_profiles/1
   # GET /farmers_profiles/1.json
   def show
+    @products = Product.all
   end
 
   # GET /farmers_profiles/new
