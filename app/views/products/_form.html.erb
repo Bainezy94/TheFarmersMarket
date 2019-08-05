@@ -1,57 +1,29 @@
-<%= form_with(model: product, local: true) do |form| %>
-  <% if product.errors.any? %>
-    <div id="error_explanation">
-      <h2><%= pluralize(product.errors.count, "error") %> prohibited this product from being saved:</h2>
+<div class="row">
+    <%= simple_form_for @product, :html => {class: "col s12"} do |f| %>
 
-      <ul>
-      <% product.errors.full_messages.each do |message| %>
-        <li><%= message %></li>
-      <% end %>
-      </ul>
-    </div>
-  <% end %>
+        <%= f.error_notification %>
+        <%= f.error_notification message: f.object.errors[:base].to_sentence if f.object.errors[:base].present? %>
+    
+        <%= f.input :name,             wrapper_html: { class: "input-field col s6" },   required: true %>
+        <%= f.input :price,            wrapper_html: { class: "input-field col s6" },   required: true %>
+        <%= f.input :description,      wrapper_html: { class: "input-field col s12" }, input_html: { class: "materialize-textarea" } %>
+        <%= f.input :amount_available, wrapper_html: { class: "input-field col s6" },   required: true %>
+        <%= f.input :unit,             wrapper_html: { class: "input-field col s6" },   required: true, collection: ["kg", "250g", "punnet", "each", "bushel"] %>
+        <%= f.input :picked_date,      wrapper_html: { class: "input-field col s6"  }, required: true, input_html: { class: "datepicker no-autoinit" }, as: :string %>
+        <%= f.input :active,           wrapper_html: { class: "col s6" }, as: :boolean, checked_value: true %>
 
-  <div class="field">
-    <%= form.label :name %>
-    <%= form.text_field :name %>
-  </div>
+        <div class="file-field input-field col s6">
+            <div class="btn">
+                <span>Picture</span>
+                <%= f.file_field :image, label: false %>
+            </div>
+            <div class="file-path-wrapper">
+                <input class="file-path validate" type="text">
+            </div>
+        </div>
 
-  <div class="field">
-    <%= form.label :image %>
-    <%= form.file_field :image %>
-  </div>
-
-  <div class="field">
-    <%= form.label :description %>
-    <%= form.text_area :description %>
-  </div>
-
-  <div class="field">
-    <%= form.label :price %>
-    <%= form.text_field :price %>
-  </div>
-
-  <div class="field">
-    <%= form.label :unit %>
-    <%= form.select :unit, collection: ["kg", "250g", "punnet", "each", "bushel"] %>
-  </div>
-
-  <div class="field">
-    <%= form.label :amount_available %>
-    <%= form.text_field :amount_available %>
-  </div>
-
-  <div class="field">
-    <%= form.label :picked_date %>
-    <%= form.date_select :picked_date %>
-  </div>
- 
-  <div class="field">
-    <%= form.label :active %>
-    <%= form.check_box :active %>
-  </div>
-
-  <div class="actions">
-    <%= form.submit %>
-  </div>
-<% end %>
+        <div class="col s12">
+            <%= f.button      :submit %>
+        </div>
+    <% end %>
+</div>

@@ -1,37 +1,17 @@
-<%= form_with(model: market, local: true) do |form| %>
-  <% if market.errors.any? %>
-    <div id="error_explanation">
-      <h2><%= pluralize(market.errors.count, "error") %> prohibited this market from being saved:</h2>
+<div class="row">
+    <%= simple_form_for @market, :html => {class: "col s12"} do |f| %>
 
-      <ul>
-      <% market.errors.full_messages.each do |message| %>
-        <li><%= message %></li>
-      <% end %>
-      </ul>
-    </div>
-  <% end %>
+        <%= f.error_notification %>
+        <%= f.error_notification message: f.object.errors[:base].to_sentence if f.object.errors[:base].present? %>
+    
+        <%= f.input       :name,          wrapper_html: { class: "input-field col s6" }, required: true %>
+        <%= f.input       :opening_hours, wrapper_html: { class: "input-field col s6" },  input_html: { class: "materialize-textarea" }, required: true %>
+        <%= f.input       :location,      wrapper_html: { class: "input-field col s12" }, input_html: { class: "materialize-textarea" }, required: true %>
+        <%= f.input       :bio,           wrapper_html: { class: "input-field col s12" }, input_html: { class: "materialize-textarea" }, required: true %>
 
-  <div class="field">
-    <%= form.label :name %>
-    <%= form.text_field :name %>
-  </div>
+        <div class="col s12">
+            <%= f.button      :submit %>
+        </div>
 
-  <div class="field">
-    <%= form.label :location %>
-    <%= form.text_area :location %>
-  </div>
-
-  <div class="field">
-    <%= form.label :bio %>
-    <%= form.text_area :bio %>
-  </div>
-
-  <div class="field">
-    <%= form.label :opening_hours %>
-    <%= form.text_area :opening_hours %>
-  </div>
-
-  <div class="actions">
-    <%= form.submit %>
-  </div>
-<% end %>
+    <% end %>
+</div>

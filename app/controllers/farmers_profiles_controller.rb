@@ -10,12 +10,21 @@ class FarmersProfilesController < ApplicationController
   # GET /farmers_profiles/1
   # GET /farmers_profiles/1.json
   def show
+    @products = Product.all
   end
 
   # GET /farmers_profiles/new
   def new
-    @farmers_profile = FarmersProfile.new
-    @market_options = Market.all
+    if user_signed_in?
+      if current_user.profile  
+        @farmers_profile = FarmersProfile.new
+        @market_options = Market.all
+      else
+        redirect_to new_profile_path
+      end
+    else 
+      redirect_to new_user_session_path
+    end
   end
 
   # GET /farmers_profiles/1/edit
@@ -28,6 +37,7 @@ class FarmersProfilesController < ApplicationController
     @farmers_profile = FarmersProfile.new(farmers_profile_params)
     @farmers_profile.profile_id = current_user.profile.id
     @farmers_profile.save    
+    current_user.update(role: 1)
 
     respond_to do |format|
       if @farmers_profile.save
@@ -39,7 +49,7 @@ class FarmersProfilesController < ApplicationController
       end
     end
   end
-
+ 
   # PATCH/PUT /farmers_profiles/1
   # PATCH/PUT /farmers_profiles/1.json
   def update

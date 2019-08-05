@@ -1,6 +1,8 @@
 
 <h1>Markets</h1>
 
+<div id="marketsMap"></div>
+
 <table>
   <thead>
     <tr>
@@ -13,6 +15,7 @@
   </thead>
 
   <tbody>
+    <% locations = [] %>
     <% @markets.each do |market| %>
       <tr>
         <td><%= market.name %></td>
@@ -20,13 +23,28 @@
         <td><%= market.bio %></td>
         <td><%= market.opening_hours %></td>
         <td><%= link_to 'Show', market %></td>
-        <td><%= link_to 'Edit', edit_market_path(market) %></td>
-        <td><%= link_to 'Destroy', market, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+
+
+        <% if user_signed_in? && current_user.role == "admin" %>
+          <td><%= link_to 'Edit', edit_market_path(market) %></td>
+          <td><%= link_to 'Destroy', market, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <% end %>
       </tr>
+      <% loc = Geocoder.search(market.location) %>
+      <% lat = loc.first.coordinates.first%>
+      <% lng = loc.first.coordinates.second%>
+      <% currentLocation = [market.name, lat, lng] %>
+      <% locations << currentLocation %>
     <% end %>
   </tbody>
 </table>
 
 <br>
 
-<%= link_to 'New Market', new_market_path %>
+<% if user_signed_in? && current_user.role == "admin" %>
+  <%= link_to 'Add New Market', new_market_path %>
+<% end %>
+
+<script> 
+    marketsMap( [<%= raw locations.to_json %>] )
+</script>

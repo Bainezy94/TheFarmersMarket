@@ -1,45 +1,25 @@
-<%= form_with(model: farmers_profile, local: true) do |form| %>
-  <% if farmers_profile.errors.any? %>
-    <div id="error_explanation">
-      <h2><%= pluralize(farmers_profile.errors.count, "error") %> prohibited this farmers_profile from being saved:</h2>
+<div class="row">
+    <%= simple_form_for @farmers_profile, :html => {class: "col s12"} do |f| %>
 
-      <ul>
-      <% farmers_profile.errors.full_messages.each do |message| %>
-        <li><%= message %></li>
-      <% end %>
-      </ul>
-    </div>
-  <% end %>
+        <%= f.error_notification %>
+        <%= f.error_notification message: f.object.errors[:base].to_sentence if f.object.errors[:base].present? %>
+    
+        <%= f.association :market,     wrapper_html: { class: "input-field col s6" }, required: true %>
+        <%= f.input       :stall_name, wrapper_html: { class: "input-field col s6" }, required: true %>
+        <%= f.input       :bio,        wrapper_html: { class: "input-field col s12" }, input_html: { class: "materialize-textarea" }, required: true %>
+        <div class="file-field input-field col s12">
+            <div class="btn">
+                <span>Picture</span>
+                <%= f.file_field :images, label: false %>
+            </div>
+            <div class="file-path-wrapper">
+                <input class="file-path validate" type="text">
+            </div>
+        </div>
 
-<%# 
-  <div class="field">
-    <%= form.label :profile_id %>
-    <%#= form.text_field :profile_id %>
-  <%#</div> %>
+        <div class="col s12">
+            <%= f.button      :submit %>
+        </div>
 
-
-  <div class="field">
-    <%= form.label :images %>
-    <%= form.file_field :images, multiple: true %>
-  </div>
-
-  <div class="field">
-    <%= form.label :bio %>
-    <%= form.text_area :bio %>
-  </div>
-
-  <%# drop down box with all available markets as a choice %>
-  <div class="field">
-    <%= form.label :market_id %>
-    <%= form.select :market_id, Market.all.collect {|market| [market.name, market.id]} %>
-  </div>
-
-  <div class="field">
-    <%= form.label :stall_name %>
-    <%= form.text_field :stall_name %>
-  </div>
-
-  <div class="actions">
-    <%= form.submit %>
-  </div>
-<% end %>
+    <% end %>
+</div>
