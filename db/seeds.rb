@@ -7,7 +7,7 @@
 #   Character.create(name: 'Luke', movie: movies.first)
 
 # Market.destroy_all
-# # User.destroy_all
+# User.destroy_all
 # Profile.destroy_all
 # FarmersProfile.destroy_all
 
@@ -54,20 +54,29 @@ p "Created #{Market.count} markets."
 
 User.create([
     {
+        email: "admin@test.com", 
+        password: "123456",
+        role: 2
+    },
+    {
         email: "ewelin@test.com", 
-        encrypted_password: "123456"
+        password: "123456",
+        role: 1
     }, 
     {
         email: "dave@test.com", 
-        encrypted_password: "123456"
+        password: "123456",
+        role: 1
     },
     {
         email: "jo@test.com", 
-        encrypted_password: "123456"
+        password: "123456",
+        role: 0
     },
     {
         email: "pete@test.com", 
-        encrypted_password: "123456"
+        password: "123456",
+        role: 0
     }
 ])
 
@@ -75,22 +84,26 @@ p "Created #{User.count} users."
 
 Profile.create([
     {
-        name: "Jo Bloggs", 
-        phone_number: "9589 0748"
+        name: "Admin", 
+        phone_number: "9589 0748",
+        user_id: User.first.id
     },
     {
         name: "John McIntosh", 
-        phone_number: "0407 123 645"
+        phone_number: "0407 123 645",
+        user_id: User.second.id
     },
     {
         name: "Asher Michaels", 
         phone_number: "0415 688 721", 
-        avatar: "https://www.pinterest.com.au/pin/301107925086810349/"
+        avatar: "https://www.pinterest.com.au/pin/301107925086810349/",
+        user_id: User.third.id
     },
     {
         name: "Jo", 
         phone_number: "0402 123 336", 
-        avatar: "https://www.pinterest.com.au/pin/301107925086810342/"
+        avatar: "https://www.pinterest.com.au/pin/301107925086810342/",
+        user_id: User.fourth.id
     }
 ])
 
@@ -114,3 +127,49 @@ FarmersProfile.create([
 ])
 
 p "Created #{FarmersProfile.count} farmers."
+
+Product.create([
+    {
+        name: "herbs",
+        description: "The freshest herbs this side of the bridge",
+        price: "2.50",
+        picked_date: "",
+        active: true,
+        amount_available: 45,
+        unit: "each",
+        farmers_profile_id: FarmersProfile.first.id
+    },
+    {
+        name: "oranges",
+        description: "Juiciest oranges around",
+        price: "3",
+        picked_date: "",
+        active: true,
+        amount_available: 50,
+        unit: "kg",
+        farmers_profile_id: FarmersProfile.first.id
+    },
+    {
+        name: "apples",
+        description: "Crisp and juicy",
+        price: "2.50",
+        picked_date: "",
+        active: true,
+        amount_available: 35,
+        unit: "kg",
+        farmers_profile_id: FarmersProfile.second.id
+    },
+    {
+        name: "oranges",
+        description: "Great to eat or juice",
+        price: "2.50",
+        picked_date: "",
+        active: true,
+        amount_available: 45,
+        unit: "kg",
+        farmers_profile_id: FarmersProfile.second.id
+    }
+])
+
+
+p "Created #{Product.count} products."

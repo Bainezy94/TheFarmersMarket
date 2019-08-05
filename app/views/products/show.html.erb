@@ -11,7 +11,7 @@
 
 <p>
   <strong>Image:</strong>
-  <%= @product.image %>
+  <%= image_tag @product.image if @product.image.attached? %>
 </p>
 
 <p>

@@ -6,55 +6,39 @@
     <tr>
       <th>Farmer</th>
       <th>Name</th>
-      <th>Image</th>
       <th>Description</th>
       <th>Price</th>
       <th>Unit</th>
+      <th>Amount available</th>
       <th>Picked date</th>
       <th>Active</th>
-      <th>Amount available</th>
       <th colspan="3"></th>
     </tr>
   </thead>
 
   <tbody>
-    <% @products.each do |product| %>
-      <tr>
-      <% if product.active %>
-        <td><%= product.farmers_profile.stall_name %></td>
-        <td><%= product.name %></td>
-        <td><%= product.image %></td>
-        <td><%= product.description %></td>
-        <td><%= product.price %></td>
-        <td><%= product.unit %></td>
-        <td><%= product.picked_date %></td>
-        <%#= product.active %>
-        <td><%= product.amount_available %></td>
-        <td><%= link_to 'Show', product %></td>
-      <% end %>
-      <% if user_signed_in? %>
-        <% @farm = FarmersProfile.all %>
-          <% @farm.each do |farm| %>
-            <% if farm.profile_id == current_user.profile.id %>
-              <td><%= link_to 'Edit', edit_product_path(product) %></td>
-              <td><%= link_to 'Destroy', product, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-              <% break %>
+        <% @products.each do |product| %>
+            <% if current_user.profile.id == product.farmers_profile.id %>
+                <tr>
+                <td><%= product.farmers_profile.stall_name %></td>
+                <td><%= product.name %></td>
+                <td><%= product.description %></td>
+                <td>$<%= product.price %></td>
+                <td>/<%= product.unit %></td>
+                <td><%= product.amount_available %></td>
+                <td><%= product.picked_date %></td>
+                <td><%= product.active %></td>
+                <td><%= link_to 'Show', product %></td>
+                <td><%= link_to 'Edit', edit_product_path(product) %></td>
+                <td><%= link_to 'Destroy', product, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+                </tr>
             <% end %>
-          <% end %>
         <% end %>
-      </tr>
-    <% end %>
   </tbody>
 </table>
 
 <br>
 
-<% if user_signed_in? %>
-  <% @farm = FarmersProfile.all %>
-  <% @farm.each do |farm| %>
-    <% if farm.profile_id == current_user.profile.id %>
-      <%= link_to 'New Product', new_product_path %>
-      <% break %>
-    <% end %>
-  <% end %>
+<% if user_signed_in? && current_user.role == "farmer" %>
+  <%= link_to 'New Product', new_product_path %>
 <% end %>
