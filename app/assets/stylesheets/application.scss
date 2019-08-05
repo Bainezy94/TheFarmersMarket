@@ -1,0 +1,86 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, or any plugin's
+ * vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any other CSS/SCSS
+ * files in this directory. Styles in this file should be added after the last require_* statement.
+ * It is generally better to create a new file per style scope.
+ *
+ *= require_tree .
+ *= require_self
+ */
+
+:root {
+    --background-color: #FFFCED;
+    --theme-color: #A9D127;
+    --heading-color: #519900;
+    --sub-heading-color: #519900;
+    --text-color: #519900;
+    --seperator: solid 2px #605F63;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    background-color: var(--background-color);
+    color: var(--text-color);
+}
+
+.nav-wrapper {
+    padding-left: 20px;
+    background-color: var(--theme-color);
+}
+
+.page-footer {
+    background-color: var(--theme-color);
+}
+
+body > .container {
+    min-height: calc(100vh - 158px);
+}
+
+footer {
+    margin-top: 30px;
+}
+
+h1 {
+    display: inline-block;
+    margin: 2.8rem 30px 1.68rem 0;
+    color: var(--heading-color);
+}
+
+h2, h3, h4 {
+    color: var(--sub-heading-color);
+}
+
+.btn, .btn-large, .btn-small {
+    background-color: #4F3518;
+
+    &:hover {
+        background-color: #3a2611;
+    }
+
+    &:focus {
+        background-color: #3a2611;
+    }
+}
+
+.btn-small {
+    vertical-align: baseline;
+}
+
+a, .dropdown-content li > a {
+    color: #4F3518;
+}
+
+#marketsMap {
+    height: 400px;
+}

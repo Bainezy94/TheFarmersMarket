@@ -1,20 +1,27 @@
-# Farmer's Markets
+# Sleepy Farmer's Markets
 
-An app built on Rails by [David Baine](https://github.com/Bainezy94), [Jo Dunham](https://github.com/Rainbow-Ninja), [Ewe Lin Loo](https://github.com/elloo).
+An app built with Ruby on Rails by [David Baines](https://github.com/Bainezy94), [Jo Dunham](https://github.com/Rainbow-Ninja), and [Ewe Lin Loo](https://github.com/elloo).
 
-**Farmers Markets:** <URL HERE>
+**Live deployment:** <URL HERE>
 
-**GitHub:** <URL HERE>
+**GitHub:** [https://github.com/Bainezy94/TheFarmersMarket](https://github.com/Bainezy94/TheFarmersMarket)
 
 ## Project Description
 
 ### Problem Definition / Purpose
 
-- Online shopping at local fresh food markets
+Farmer's markets are great places to find the best deals on fresh fruit and vegetables. The drawback? Sacrificing quality weekend sleep to work through the tight crowds. Here's where **The Sleepy Farmer's Markets** comes in. With this app, buyers are able to pick-up fresh produce AND enjoy sleeping past peak hours!
 
 ### Functionality / Features
 
+##### For Buyers
 
+- Order fresh food in advance to be picked up at a priority queue
+
+##### For Farmers
+
+- See minimum demand for products in advance of sales periods
+- See total profits from online orders
 
 ### Screenshots
 
@@ -40,7 +47,16 @@ An app built on Rails by [David Baine](https://github.com/Bainezy94), [Jo Dunham
 
 ### Process
 
+1. Brainstorming session: Project and problem space ideation
+2. Entity Relationship Diagram
+3. Wireframing: Both low fidelity and hi fidelity wireframes
+4. Mood-boarding
 
+![First half of mood board](docs/moodboard_001.png)
+
+![Second half of mood board](docs/moodboard_002.png)
+
+1. Style guide
 
 ### User Stories
 
@@ -55,6 +71,8 @@ An app built on Rails by [David Baine](https://github.com/Bainezy94), [Jo Dunham
 
 
 ### Database Entity Relationship Diagrams
+
+![ERD](docs/erd.png)
 
 D - ERD is complete with appropriately defined entities (models each serve a single purpose and appropriate fields). There may be a little duplication.
 
@@ -76,7 +94,7 @@ HD - Designs a normalised schema (i.e. without data duplication) that facilitate
 
 ### Project Plan & Timeline
 
-#### Day 1: 23 July 2019
+#### Day 1: 23 July, 2019
 
 - App ideation
 - Basis of app (Models, scaffolding, etc)
@@ -86,28 +104,51 @@ HD - Designs a normalised schema (i.e. without data duplication) that facilitate
 - Setup Trello
 - Start documentation
 
-#### Day 2: 24 July 2019
+#### Day 2: 24 July, 2019
 
 - Update Trello with more user stories and different lists
 - Lo-fi Wireframes
 - Style guide
 - Headings and marking criteria notes to documentation
 
+#### Day 3: 25 July, 2019
+
+- Profile and user login
+- Farmer controllers and market selection
+- Seed data for farmers and profiles
+
+#### Day 4: July 26, 2019
+
+- Fixed models
+- Added drop-down menus for orders form
+- Navbar styling and paths
+
+#### Day 5: July 27, 2019
+
+- Created feature for farmers to add produce to their stall
+- Fixed more models issues
+
+#### Day 6: July 29, 2019
+
+- Added more seed data
+- Worked on backend for farmer_profile
+- Worked more on documentation
+
 ### Trello Screenshots
 
-
+![Beginning of Trello board](docs/trello_001.png)
 
 ## Short Answer Questions
 
 ### 1. What is the need (i.e. challenge) that you will be addressing in your project?
 
-
+There is a need to make shopping at farmer's markets more appealing. These markets offer fresh produce at excellent value however, they tend to be crowded and the best deals are sold out early. 
 
 ### 2. Identify the problem you’re trying to solve by building this particular marketplace *App*? Why is it a problem that needs solving?
 
 Demonstrates a full understanding of the problems that exist in a relevant marketplace that needs disrupting
 
-### 3. Describe the project will you be conducting and how. your *App* will address the needs.
+### 3. Describe the project will you be conducting and how your *App* will address the needs.
 
 
 

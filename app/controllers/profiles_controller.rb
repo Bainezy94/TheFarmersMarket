@@ -27,6 +27,9 @@ class ProfilesController < ApplicationController
   def create
     @profile = Profile.new(profile_params)
     @profile.user_id = current_user.id
+    @profile.save
+    current_user.update(role: 0)
+    # current_user.role = 0
 
     respond_to do |format|
       if @profile.save
@@ -71,6 +74,6 @@ class ProfilesController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def profile_params
-      params.require(:profile).permit(:name, :avatar, :phone_number, :email)
+      params.require(:profile).permit(:name, :avatar, :phone_number)
     end
 end

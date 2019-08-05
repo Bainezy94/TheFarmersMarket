@@ -1,5 +1,5 @@
 class Order < ApplicationRecord
-  belongs_to :farmer
+  belongs_to :farmers_profile
   belongs_to :profile
-  belongs_to :product
+  has_and_belongs_to_many :products, dependent: :destroy
 end
