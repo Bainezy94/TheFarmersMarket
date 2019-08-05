@@ -134,11 +134,31 @@ HD - Designs a normalised schema (i.e. without data duplication) that facilitate
 - Worked on frontend: 
   - Added Materialize
   - Navbar and icons
-  - Headers
+  - Header and footer
   - Margins
-  - Footer
   - Toasts
 - Added style guide
+
+#### Day 7: July 30, 2019
+
+- Integrated SimpleForm
+- Setup storage bucket
+- Updated order and product models
+- Updated permissions on some buttons to only be visible when signed in
+- Updated overall app styling
+- Add Stripe button
+- Added Geocoder gem
+- Fixed seeds file
+
+#### Day 8: July 31, 2019
+
+- Styled forms for markets and produce
+- Updated user model with role
+- Updated permissions for farmers around produce
+- Added roles data to seed file
+- Configured Geocoder
+- Installed active storage
+- Added mood board to README.md
 
 ### Trello Screenshots
 
