@@ -44,7 +44,7 @@ html {
 }
 
 body > .container {
-    min-height: calc(100vh - 94px);
+    min-height: calc(100vh - 158px);
 }
 
 footer {
@@ -79,4 +79,8 @@ h2, h3, h4 {
 
 a, .dropdown-content li > a {
     color: #4F3518;
+}
+
+#marketsMap {
+    height: 400px;
 }

@@ -8,6 +8,7 @@ gem 'devise'
 gem 'stripe', :git => 'https://github.com/stripe/stripe-ruby'
 gem 'simple_form'
 gem 'aws-sdk-s3'
+gem 'geocoder'
 #
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
