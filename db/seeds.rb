@@ -55,27 +55,27 @@ p "Created #{Market.count} markets."
 User.create([
     {
         email: "admin@test.com", 
-        encrypted_password: "123456",
+        password: "123456",
         role: 2
     },
     {
         email: "ewelin@test.com", 
-        encrypted_password: "123456",
+        password: "123456",
         role: 1
     }, 
     {
         email: "dave@test.com", 
-        encrypted_password: "123456",
+        password: "123456",
         role: 1
     },
     {
         email: "jo@test.com", 
-        encrypted_password: "123456",
+        password: "123456",
         role: 0
     },
     {
         email: "pete@test.com", 
-        encrypted_password: "123456",
+        password: "123456",
         role: 0
     }
 ])
@@ -172,4 +172,4 @@ Product.create([
 ])
 
 
-p "Created #{Product.count} profiles."
+p "Created #{Product.count} products."
