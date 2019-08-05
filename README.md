@@ -160,6 +160,13 @@ HD - Designs a normalised schema (i.e. without data duplication) that facilitate
 - Installed active storage
 - Added mood board to README.md
 
+#### Day 9: August 5, 2019
+
+- Completed maps functionality
+- Completed product seed data
+- Added permissions for several pages
+- Worked on order form
+
 ### Trello Screenshots
 
 ![Beginning of Trello board](docs/trello_001.png)
