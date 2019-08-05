@@ -4,8 +4,11 @@
     
     <div id="home_buttons">
         <h4>Find the Farmer or Market that is right for you</h4>
-        <%= link_to "Find Farmer", farmers_profiles_path, class: "waves-effect waves-light btn-large" %> 
-        <%= link_to "Find Market", markets_path, class: "waves-effect waves-light btn-large" %> 
+        <%= link_to "Shop by Farmer", farmers_profiles_path, class: "waves-effect waves-light btn-large" %> 
+        <%= link_to "Shop by Market", markets_path, class: "waves-effect waves-light btn-large" %>
+        <% if user_signed_in? && current_user.role == "farmer" %>
+            <%= link_to "Add Produce", new_product_path, class: "waves-effect waves-light btn-large" %> 
+        <% end %>
     </div>
 
 </section>
