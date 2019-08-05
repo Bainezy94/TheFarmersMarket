@@ -3,6 +3,6 @@ class User < ApplicationRecord
   # :confirmable, :lockable, :timeoutable, :trackable and :omniauthable
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :validatable
-  has_one :profile
+  has_one :profile, dependent: :destroy
   enum role: {buyer: 0, farmer: 1, admin: 2}
 end

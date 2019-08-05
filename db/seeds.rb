@@ -7,7 +7,7 @@
 #   Character.create(name: 'Luke', movie: movies.first)
 
 # Market.destroy_all
-# # User.destroy_all
+# User.destroy_all
 # Profile.destroy_all
 # FarmersProfile.destroy_all
 
@@ -54,6 +54,11 @@ p "Created #{Market.count} markets."
 
 User.create([
     {
+        email: "admin@test.com", 
+        encrypted_password: "123456",
+        role: 2
+    },
+    {
         email: "ewelin@test.com", 
         encrypted_password: "123456",
         role: 1
@@ -79,22 +84,26 @@ p "Created #{User.count} users."
 
 Profile.create([
     {
-        name: "Jo Bloggs", 
-        phone_number: "9589 0748"
+        name: "Admin", 
+        phone_number: "9589 0748",
+        user_id: User.first.id
     },
     {
         name: "John McIntosh", 
-        phone_number: "0407 123 645"
+        phone_number: "0407 123 645",
+        user_id: User.second.id
     },
     {
         name: "Asher Michaels", 
         phone_number: "0415 688 721", 
-        avatar: "https://www.pinterest.com.au/pin/301107925086810349/"
+        avatar: "https://www.pinterest.com.au/pin/301107925086810349/",
+        user_id: User.third.id
     },
     {
         name: "Jo", 
         phone_number: "0402 123 336", 
-        avatar: "https://www.pinterest.com.au/pin/301107925086810342/"
+        avatar: "https://www.pinterest.com.au/pin/301107925086810342/",
+        user_id: User.fourth.id
     }
 ])
 
