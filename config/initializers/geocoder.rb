@@ -4,7 +4,7 @@ Geocoder.configure(
   lookup: :google,            # name of geocoding service (symbol)
   language: :en,              # ISO-639 language code
   use_https: true,           # use HTTPS for lookup requests? (if supported)
-  api_key: "AIzaSyB29nEpBkhspPwZsrTPG0qNBZqKuRtf98k",               # API key for geocoding service
+  api_key: "AIzaSyDmwlb9Te36-Xs9_R0Pp1yk-4NT-aAjApY",               # API key for geocoding service
   units: :km,                 # :km for kilometers or :mi for miles
 #   ip_lookup: :ipinfo_io,      # name of IP address geocoding service (symbol)
 #   http_proxy: nil,            # HTTP proxy server (user:pass@host:port)
