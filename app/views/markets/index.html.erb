@@ -29,8 +29,8 @@
       <% loc = Geocoder.search(market.location) %>
       <% lat = loc.first.coordinates.first%>
       <% lng = loc.first.coordinates.second%>
-      <% currentLoction = [market.name, lat, lng] %>
-      <% locations << currentLoction %>
+      <% currentLocation = [market.name, lat, lng] %>
+      <% locations << currentLocation %>
     <% end %>
   </tbody>
 </table>
@@ -40,7 +40,6 @@
 <%# should probably only have admin adding markets %>
 <%= link_to 'New Market', new_market_path %>
 
-
 <script> 
-    test( "<%= locations %>" ) 
+    marketsMap( [<%= raw locations.to_json %>] )
 </script>
