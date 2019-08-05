@@ -137,7 +137,6 @@ HD - Designs a normalised schema (i.e. without data duplication) that facilitate
   - Header and footer
   - Margins
   - Toasts
-- Added style guide
 
 #### Day 7: July 30, 2019
 
