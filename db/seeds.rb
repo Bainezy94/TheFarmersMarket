@@ -7,7 +7,7 @@
 #   Character.create(name: 'Luke', movie: movies.first)
 
 # Market.destroy_all
-# # User.destroy_all
+# User.destroy_all
 # Profile.destroy_all
 # FarmersProfile.destroy_all
 
