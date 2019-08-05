@@ -28,7 +28,7 @@ function marketsMap(locationsJSON)
     var map = new google.maps.Map(document.getElementById('marketsMap'), 
     {
         zoom: 10,
-        center: new google.maps.LatLng(-33.92, 151.25),
+        center: new google.maps.LatLng(-33.900695, 151.107303),
         mapTypeId: google.maps.MapTypeId.ROADMAP
     });
 
