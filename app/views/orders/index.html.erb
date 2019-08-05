@@ -14,7 +14,7 @@
 
     <tbody>
       <% @orders.each do |order| %>
-        <% if order.profile_id = current_user.profile.id %>
+        <% if order.profile_id == current_user.profile.id %>
           <tr>
             <td><%= order.farmers_profile.stall_name %></td>
             <td><%= order.profile %></td>
@@ -24,8 +24,6 @@
             <td><%= link_to 'Edit', edit_order_path(order) %></td>
             <td><%= link_to 'Destroy', order, method: :delete, data: { confirm: 'Are you sure?' } %></td>
           </tr>
-        <% else %>
-          <p>You have no previous orders</p>
         <% end %>
       <% end %>
     </tbody>
