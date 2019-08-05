@@ -118,3 +118,63 @@ FarmersProfile.create([
 ])
 
 p "Created #{FarmersProfile.count} farmers."
+
+Product.create([
+    {
+        name: "herbs",
+        image:"",
+        description: "The freshest herbs this side of the bridge",
+        price: "2.50",
+        picked_date: "",
+        active: true,
+        amount_available: 45,
+        unit: "each",
+        farmers_profile_id: FarmersProfile.first.id
+    },
+    {
+        name: "strawberries",
+        image:"",
+        description: "The best, juiciest strawberries around",
+        price: "2.50",
+        picked_date: "",
+        active: true,
+        amount_available: 30,
+        unit: "punnet",
+        farmers_profile_id: FarmersProfile.first.id
+    },
+    {
+        name: "apples",
+        image:"",
+        description: "Red delicious and granny mays. Crisp and Juicy!",
+        price: "3",
+        picked_date: "",
+        active: true,
+        amount_available: 50,
+        unit: "kg",
+        farmers_profile_id: FarmersProfile.second.id
+    },
+    {
+        name: "oranges",
+        image:"",
+        description: "Juicy and plump",
+        price: "3",
+        picked_date: "",
+        active: true,
+        amount_available: 50,
+        unit: "kg",
+        farmers_profile_id: FarmersProfile.second.id
+    },
+    {
+        name: "oranges",
+        image:"",
+        description: "great as is or in juice",
+        price: "2.50",
+        picked_date: "",
+        active: true,
+        amount_available: 25,
+        unit: "kg",
+        farmers_profile_id: FarmersProfile.third.id
+    }
+])
+
+p "Created #{Product.count} profiles."
