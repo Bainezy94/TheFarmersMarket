@@ -55,22 +55,22 @@ p "Created #{Market.count} markets."
 User.create([
     {
         email: "ewelin@test.com", 
-        encrypted_password: "123456"
+        encrypted_password: "123456",
         role: 1
     }, 
     {
         email: "dave@test.com", 
-        encrypted_password: "123456"
+        encrypted_password: "123456",
         role: 1
     },
     {
         email: "jo@test.com", 
-        encrypted_password: "123456"
+        encrypted_password: "123456",
         role: 0
     },
     {
         email: "pete@test.com", 
-        encrypted_password: "123456"
+        encrypted_password: "123456",
         role: 0
     }
 ])
@@ -122,7 +122,6 @@ p "Created #{FarmersProfile.count} farmers."
 Product.create([
     {
         name: "herbs",
-        image:"",
         description: "The freshest herbs this side of the bridge",
         price: "2.50",
         picked_date: "",
@@ -132,49 +131,36 @@ Product.create([
         farmers_profile_id: FarmersProfile.first.id
     },
     {
-        name: "strawberries",
-        image:"",
-        description: "The best, juiciest strawberries around",
-        price: "2.50",
+        name: "oranges",
+        description: "Juiciest oranges around",
+        price: "3",
         picked_date: "",
         active: true,
-        amount_available: 30,
-        unit: "punnet",
+        amount_available: 50,
+        unit: "kg",
         farmers_profile_id: FarmersProfile.first.id
     },
     {
         name: "apples",
-        image:"",
-        description: "Red delicious and granny mays. Crisp and Juicy!",
-        price: "3",
-        picked_date: "",
-        active: true,
-        amount_available: 50,
-        unit: "kg",
-        farmers_profile_id: FarmersProfile.second.id
-    },
-    {
-        name: "oranges",
-        image:"",
-        description: "Juicy and plump",
-        price: "3",
-        picked_date: "",
-        active: true,
-        amount_available: 50,
-        unit: "kg",
-        farmers_profile_id: FarmersProfile.second.id
-    },
-    {
-        name: "oranges",
-        image:"",
-        description: "great as is or in juice",
+        description: "Crisp and juicy",
         price: "2.50",
         picked_date: "",
         active: true,
-        amount_available: 25,
+        amount_available: 35,
         unit: "kg",
-        farmers_profile_id: FarmersProfile.third.id
+        farmers_profile_id: FarmersProfile.second.id
+    },
+    {
+        name: "oranges",
+        description: "Great to eat or juice",
+        price: "2.50",
+        picked_date: "",
+        active: true,
+        amount_available: 45,
+        unit: "kg",
+        farmers_profile_id: FarmersProfile.second.id
     }
 ])
+
 
 p "Created #{Product.count} profiles."
