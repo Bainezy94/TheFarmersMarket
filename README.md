@@ -2,7 +2,7 @@
 
 An app built with Ruby on Rails by [David Baines](https://github.com/Bainezy94), [Jo Dunham](https://github.com/Rainbow-Ninja), [Ewe Lin Loo](https://github.com/elloo).
 
-**Live deployment:** <URL HERE>
+**Live deployment:** https://sleepy-farmers-markets.herokuapp.com/
 
 **GitHub:** [https://github.com/Bainezy94/TheFarmersMarket](https://github.com/Bainezy94/TheFarmersMarket)
 
@@ -45,6 +45,8 @@ Farmer's markets are great places to find the best deals on fresh fruit and vege
 ## Design
 
 ### Process
+
+Our design process involved a few steps including:
 
 1. Brainstorming session: Project and problem space ideation
 2. Entity Relationship Diagram
@@ -122,8 +124,21 @@ HD - Designs a normalised schema (i.e. without data duplication) that facilitate
 
 #### Day 6: July 29, 2019
 
-- Added more seed data
-- Worked on backend for farmer_profile
+- Added ERD to README.md
+- Worked on backend: 
+  - farmer_profile
+  - Orders model
+  - Create join table for orders_products
+  - Dynamic form for orders
+  - Seed data
+- Worked on frontend: 
+  - Added Materialize
+  - Navbar and icons
+  - Headers
+  - Margins
+  - Footer
+  - Toasts
+- Added style guide
 
 ### Trello Screenshots
 
