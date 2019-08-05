@@ -21,7 +21,7 @@ window.onload = () =>
     M.AutoInit();
 };
 
-function initMap(locations)
+function initMap()
 {
     var locations = [
         ['Bondi Beach', -33.890542, 151.274856, 4],
@@ -40,9 +40,9 @@ function initMap(locations)
 
     var infowindow = new google.maps.InfoWindow();
 
-    var marker;
+    var marker, i;
 
-    for (var i = 0; i < locations.length; i++) 
+    for (i = 0; i < locations.length; i++) 
     {  
         marker = new google.maps.Marker(
         {

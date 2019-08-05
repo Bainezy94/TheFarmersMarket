@@ -5,6 +5,7 @@ ruby '2.6.3'
 
 # Custom Gems
 gem 'devise'
+gem 'stripe', :git => 'https://github.com/stripe/stripe-ruby'
 gem 'simple_form'
 gem 'aws-sdk-s3'
 gem 'geocoder'

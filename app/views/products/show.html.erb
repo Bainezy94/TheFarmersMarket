@@ -11,7 +11,7 @@
 
 <p>
   <strong>Image:</strong>
-  <%= @product.image %>
+  <%= image_tag @product.image if @product.image.attached? %>
 </p>
 
 <p>
@@ -29,10 +29,14 @@
   <%= @product.picked_date %>
 </p>
 
-<p>
-  <strong>Active:</strong>
-  <%= @product.active %>
-</p>
+<% if user_signed_in? %>
+  <% if @product.farmers_profile_id == current_user.id %>
+    <p>
+      <strong>Active:</strong>
+      <%= @product.active %>
+    </p>
+  <% end %>
+<% end %>
 
 <p>
   <strong>Amount available:</strong>
