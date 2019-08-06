@@ -2,7 +2,7 @@
 
 An app built with Ruby on Rails by [David Baines](https://github.com/Bainezy94), [Jo Dunham](https://github.com/Rainbow-Ninja), and [Ewe Lin Loo](https://github.com/elloo).
 
-**Live deployment:** <URL HERE>
+**Live deployment:** https://sleepy-farmers-markets.herokuapp.com/
 
 **GitHub:** [https://github.com/Bainezy94/TheFarmersMarket](https://github.com/Bainezy94/TheFarmersMarket)
 
@@ -46,6 +46,8 @@ Farmer's markets are great places to find the best deals on fresh fruit and vege
 ## Design
 
 ### Process
+
+Our design process involved a few steps including:
 
 1. Brainstorming session: Project and problem space ideation
 2. Entity Relationship Diagram
@@ -130,9 +132,48 @@ HD - Designs a normalised schema (i.e. without data duplication) that facilitate
 
 #### Day 6: July 29, 2019
 
-- Added more seed data
-- Worked on backend for farmer_profile
-- Worked more on documentation
+- Added ERD to README.md
+- Worked on backend: 
+  - farmer_profile
+  - Orders model
+  - Create join table for orders_products
+  - Dynamic form for orders
+  - Seed data
+- Worked on frontend: 
+  - Added Materialize
+  - Navbar and icons
+  - Header and footer
+  - Margins
+  - Toasts
+- Added style guide
+
+#### Day 7: July 30, 2019
+
+- Integrated SimpleForm
+- Setup storage bucket
+- Updated order and product models
+- Updated permissions on some buttons to only be visible when signed in
+- Updated overall app styling
+- Add Stripe button
+- Added Geocoder gem
+- Fixed seeds file
+
+#### Day 8: July 31, 2019
+
+- Styled forms for markets and produce
+- Updated user model with role
+- Updated permissions for farmers around produce
+- Added roles data to seed file
+- Configured Geocoder
+- Installed active storage
+- Added mood board to README.md
+
+#### Day 9: August 5, 2019
+
+- Completed maps functionality
+- Completed product seed data
+- Added permissions for several pages
+- Worked on order form
 
 ### Trello Screenshots
 
