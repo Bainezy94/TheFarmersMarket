@@ -54,7 +54,7 @@ Our design process involved a few steps including:
    - User stories
    - User journey/s diagram
 2. [Entity Relationship Diagram](#database-entity-relationship-diagrams)
-3. Wireframing
+3. [Wireframing](#wireframes)
 4. [Moodboarding](#moodboards)
 5. Style guide
 
@@ -112,15 +112,15 @@ HD - Designs a normalised schema (i.e. without data duplication) that facilitate
 
 ### Wireframes
 
+#### Low Fidelity
 
+![Lo-Fi Wireframes](docs/lo_fi_wireframes.png)
 
 ### Moodboards
 
 ![First half of mood board](docs/moodboard_001.png)
 
 ![Second half of mood board](docs/moodboard_002.png)
-
-
 
 ### Style Guide
 
