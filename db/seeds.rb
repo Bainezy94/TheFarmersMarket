@@ -6,10 +6,10 @@
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
 
-# Market.destroy_all
-# User.destroy_all
-# Profile.destroy_all
-# FarmersProfile.destroy_all
+FarmersProfile.destroy_all
+Profile.destroy_all
+User.destroy_all
+Market.destroy_all
 
 Market.create([
     { 
@@ -170,6 +170,5 @@ Product.create([
         farmers_profile_id: FarmersProfile.second.id
     }
 ])
-
 
 p "Created #{Product.count} products."
