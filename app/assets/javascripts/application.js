@@ -21,7 +21,7 @@ window.onload = () =>
     M.AutoInit();
 };
 
-function marketsMap(locationsJSON)
+async function marketsMap(locationsJSON)
 {
     locations = locationsJSON[0];
 
