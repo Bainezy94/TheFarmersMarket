@@ -24,40 +24,36 @@
         <% if product.farmers_profile_id == @farmers_profile.id %>
             <div class="col s12 m6 l4">
                 <div class="card horizontal">
-                <div class="card-image">
-                    <%= image_tag product.image if product.image.attached? %>
-                </div>
-                <div class="card-stacked">
-                    <div class="card-content">
-                        <span><%= product.name %></span>
-                        <p> <%= product.description %> </p>
-                        <span><%= "$#{product.price}" %></span>
-                        <span><%= "/#{product.unit}" %></span>
-                        <span><%= "#{product.amount_available} Available" %></span>
-                        <span><%= product.picked_date %></span>
+                    <div class="card-image">
+                        <%= image_tag product.image if product.image.attached? %>
+                    </div>
+                    <div class="card-stacked">
+                        <div class="card-content">
+                            <span><%= product.name %></span>
+                            <p> <%= product.description %> </p>
+                            <span><%= "$#{product.price}" %></span>
+                            <span><%= "/#{product.unit}" %></span>
+                            <span><%= "#{product.amount_available} Available" %></span>
+                            <span><%= product.picked_date %></span>
+                        </div>
+                        <div class="card-action">
+                            <% if user_signed_in? && current_user.id == @farmers_profile.profile.user.id %>           
+                                <%= link_to 'Edit', edit_product_path(product) %>
+                                <%= link_to 'Destroy', product, method: :delete, data: { confirm: 'Are you sure?' } %>
+                            <% end %>
+                        </div>
                     </div>
                     <div class="card-action">
                         <% if user_signed_in? && current_user.id == @farmers_profile.profile.user.id %>           
                             <%= link_to 'Edit', edit_product_path(product) %>
                             <%= link_to 'Destroy', product, method: :delete, data: { confirm: 'Are you sure?' } %>
+                        <% else %>
+                            <form action="cart/add" method="post">
+                                <input class="qty" type="number" value="0">
+                                <button type="submit" class="waves-effect waves-light btn">Add to Order</button>
+                            </form>
                         <% end %>
                     </div>
-                </div>
-<<<<<<< HEAD
-                <div class="card-action">
-                    <% if user_signed_in? && current_user.id == @farmers_profile.profile.user.id %>           
-                        <%= link_to 'Edit', edit_product_path(product) %>
-                        <%= link_to 'Destroy', product, method: :delete, data: { confirm: 'Are you sure?' } %>
-                    <% else %>
-                        <input id="qty" type="number" value="0">
-                        <button class="waves-effect waves-light btn">Add to Order</button>
-                        <script> 
-                            var quantity = document.getElementById("qty").value
-                            localStorage.setItem("<%= product.id %>", quantity); 
-                        </script>
-                    <% end %>
-=======
->>>>>>> cf53104b2a9c2ca5dba80cb2ab06616c8f402159
                 </div>
             </div>
         <% end %>
