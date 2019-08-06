@@ -14,10 +14,12 @@
  *= require_self
  */
 
-
 :root {
-    --heading-color: #000;
-    --text-color: #000;
+    --background-color: #FFFCED;
+    --theme-color: #A9D127;
+    --heading-color: #519900;
+    --sub-heading-color: #519900;
+    --text-color: #519900;
     --seperator: solid 2px #605F63;
 }
 
@@ -28,15 +30,21 @@
 }
 
 html {
+    background-color: var(--background-color);
     color: var(--text-color);
 }
 
 .nav-wrapper {
     padding-left: 20px;
+    background-color: var(--theme-color);
+}
+
+.page-footer {
+    background-color: var(--theme-color);
 }
 
 body > .container {
-    min-height: calc(100vh - 94px);
+    min-height: calc(100vh - 158px);
 }
 
 footer {
@@ -46,8 +54,33 @@ footer {
 h1 {
     display: inline-block;
     margin: 2.8rem 30px 1.68rem 0;
+    color: var(--heading-color);
+}
+
+h2, h3, h4 {
+    color: var(--sub-heading-color);
+}
+
+.btn, .btn-large, .btn-small {
+    background-color: #4F3518;
+
+    &:hover {
+        background-color: #3a2611;
+    }
+
+    &:focus {
+        background-color: #3a2611;
+    }
 }
 
 .btn-small {
     vertical-align: baseline;
+}
+
+a, .dropdown-content li > a {
+    color: #4F3518;
+}
+
+#marketsMap {
+    height: 400px;
 }

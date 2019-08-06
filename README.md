@@ -1,6 +1,6 @@
 # Sleepy Farmer's Markets
 
-An app built with Ruby on Rails by [David Baines](https://github.com/Bainezy94), [Jo Dunham](https://github.com/Rainbow-Ninja), [Ewe Lin Loo](https://github.com/elloo).
+An app built with Ruby on Rails by [David Baines](https://github.com/Bainezy94), [Jo Dunham](https://github.com/Rainbow-Ninja), and [Ewe Lin Loo](https://github.com/elloo).
 
 **Live deployment:** https://sleepy-farmers-markets.herokuapp.com/
 
@@ -21,6 +21,7 @@ Farmer's markets are great places to find the best deals on fresh fruit and vege
 ##### For Farmers
 
 - See minimum demand for products in advance of sales periods
+- See total profits from online orders
 
 ### Screenshots
 
@@ -50,9 +51,14 @@ Our design process involved a few steps including:
 
 1. Brainstorming session: Project and problem space ideation
 2. Entity Relationship Diagram
-3. Wireframing
+3. Wireframing: Both low fidelity and hi fidelity wireframes
 4. Mood-boarding
-5. Style guide
+
+![First half of mood board](docs/moodboard_001.png)
+
+![Second half of mood board](docs/moodboard_002.png)
+
+1. Style guide
 
 ### User Stories
 
@@ -67,6 +73,8 @@ Our design process involved a few steps including:
 
 
 ### Database Entity Relationship Diagrams
+
+![ERD](docs/erd.png)
 
 D - ERD is complete with appropriately defined entities (models each serve a single purpose and appropriate fields). There may be a little duplication.
 
@@ -174,7 +182,7 @@ HD - Designs a normalised schema (i.e. without data duplication) that facilitate
 
 ### 1. What is the need (i.e. challenge) that you will be addressing in your project?
 
-
+There is a need to make shopping at farmer's markets more appealing. These markets offer fresh produce at excellent value however, they tend to be crowded and the best deals are sold out early. 
 
 ### 2. Identify the problem you’re trying to solve by building this particular marketplace *App*? Why is it a problem that needs solving?
 
