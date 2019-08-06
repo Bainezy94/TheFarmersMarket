@@ -13,7 +13,7 @@
                 </div>
                 <div class="card-action">
                     <%= link_to "Buy from #{farmer.profile["name"]}", farmer %>
-                    <% if user_signed_in? && current_user.id == farmers_profile.profile.user.id %>           
+                    <% if user_signed_in? && current_user.id == farmer.profile.user.id %>           
                         <%= link_to 'Edit', edit_farmers_profile_path(farmer) %>
                         <%= link_to 'Destroy', farmer, method: :delete, data: { confirm: 'Are you sure?' } %>
                     <% end %>
