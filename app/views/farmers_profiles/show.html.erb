@@ -9,7 +9,7 @@
                     <span class="farmerMarket"><%= @farmers_profile.market["name"] %></span>
                     <p><%= @farmers_profile.bio %></p>
                 </div>
-                <% if user_signed_in? && current_user.id == farmers_profile.profile.user.id %> 
+                <% if user_signed_in? && current_user.id == @farmers_profile.profile.user.id %> 
                 <div class="card-action">
                     <%= link_to 'Edit', edit_farmers_profile_path(@farmers_profile) %>
                 </div>
@@ -36,7 +36,7 @@
                     <span><%= product.picked_date %></span>
                 </div>
                 <div class="card-action">
-                    <% if user_signed_in? && current_user.id == farmers_profile.profile.user.id %>           
+                    <% if user_signed_in? && current_user.id == @farmers_profile.profile.user.id %>           
                         <%= link_to 'Edit', edit_product_path(product) %>
                         <%= link_to 'Destroy', product, method: :delete, data: { confirm: 'Are you sure?' } %>
                     <% end %>
