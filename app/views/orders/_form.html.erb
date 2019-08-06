@@ -1,26 +1,41 @@
-<div class="row">
-    <%= simple_form_for @order, :html => {class: "col s12"} do |f| %>
 
-        <%= f.error_notification %>
-        <%= f.error_notification message: f.object.errors[:base].to_sentence if f.object.errors[:base].present? %>
-        <%= f.association :profile, wrapper_html: { class: "input-field col s6" }, required: true %>
+<script>
+    for (let [product_id, qty] of Object.entries(localStorage)) 
+    {
 
-        <%= f.association :farmers_profile, wrapper_html: { class: "input-field col s6" }, required: true %>
-        <%= f.association :products,        wrapper_html: { class: "input-field col s6" }, required: true %>
-        <%= f.input       :volume,          wrapper_html: { class: "input-field col s6" }, input_html: { class: "materialize-textarea" }, required: true %>
+    }
+</script>
 
-        <div class="col s12">
-            <script src="https://checkout.stripe.com/checkout.js"
-                class="stripe-button"
-                data-key="pk_Fhlzwtm9SCx6Uxww5fNXX8CUbwwAc"
-                data-amount="<%= %>"
-                data-name="The Sleepy Farmer's Markets"
-                data-description="Your Order"
-                data-image="/128x128.png">
-            </script>
+<table>
+    <thead>
+        <tr>
+            <th>Product</th>
+            <th>Farmer</th>
+            <th>Price</th>
+            <th>QTY</th>
+            <th>Total</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>Tomatos</td>
+            <td>Jo</td>
+            <td>$0.87</td>
+            <td>3</td>
+            <td>2.61</td>
+        </tr>
+    </tbody>
+</table>
 
-            <%= f.button      :submit %>
-        </div>
-
-    <% end %>
+<div class="col s12">
+    <script src="https://checkout.stripe.com/checkout.js"
+        class="stripe-button"
+        data-key="pk_Fhlzwtm9SCx6Uxww5fNXX8CUbwwAc"
+        data-amount="<%= %>"
+        data-name="The Sleepy Farmer's Markets"
+        data-description="Your Order"
+        data-image="/128x128.png">
+    </script>
 </div>
+
+
