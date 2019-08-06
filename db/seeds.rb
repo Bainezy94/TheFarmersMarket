@@ -86,31 +86,31 @@ Profile.create([
     {
         name: "Admin", 
         phone_number: "9589 0748",
-        avatar: "https://i.pinimg.com/564x/67/5f/39/675f396443d2d193c5e0c03df43be7a1.jpg",
+        avatar: "https://i.pinimg.com/originals/5b/c2/6d/5bc26d1756dda1fe06c113876f492aca.jpg",
         user_id: User.first.id
     },
     {
         name: "John McIntosh", 
         phone_number: "0407 123 645",
-        avatar: "https://i.pinimg.com/564x/0f/51/cb/0f51cbbd9bb73f91dc9220cb2fd1844f.jpg",
+        avatar: "https://pbs.twimg.com/media/DcjHnkeUwAA6yju.jpg",
         user_id: User.second.id
     },
     {
         name: "Asher Michaels", 
         phone_number: "0415 688 721", 
-        avatar: "https://i.pinimg.com/564x/5b/c2/6d/5bc26d1756dda1fe06c113876f492aca.jpg",
+        avatar: "https://resources.stuff.co.nz/content/dam/images/1/8/k/l/h/e/image.related.StuffLandscapeSixteenByNine.620x349.18kg2e.png/1450858299356.jpg",
         user_id: User.third.id
     },
     {
-        name: "Jo-Bob Smith", 
-        phone_number: "0402 123 336", 
+        name: "Jo-Bobby Smith", 
+        phone_number: "0402 223 336", 
         avatar: "https://i.pinimg.com/564x/a6/44/a7/a644a7051d9ba661222e2b413e7d3b71.jpg",
         user_id: User.fourth.id
     },
     {
-        name: "Dave Gumboots", 
+        name: "Davina Gumboots", 
         phone_number: "0402 123 336", 
-        avatar: "https://i.pinimg.com/564x/3d/37/26/3d3726d799c1c2b2438411fa184c5d76.jpg",
+        avatar: "https://www.thespruceeats.com/thmb/LtxYm5Kz7IEZPMOFsr6IN4sgY_o=/2121x1414/filters:fill(auto,1)/Lemonandlimes-GettyImages-713860099-599c64929abed500113f2163.jpg",
         user_id: User.fifth.id
     }
 ])
@@ -123,28 +123,28 @@ FarmersProfile.create([
         profile_id: Profile.second.id, 
         bio: "Freshest herbs in all of Sydney!", 
         stall_name: "Farmer John's Herby Herbs", 
-        images: "https://i.pinimg.com/564x/7c/9c/f6/7c9cf6c5eb3f2d2e019180da78eed296.jpg"
+        images: "https://www.matchingfoodandwine.com/files/blogattachments/top/bunches-of-herbs-%C2%A9-marcin-jucha.jpg"
     },
     {
         market_id: Market.third.id, 
         profile_id: Profile.third.id, 
         bio: "No Berries are as Juicy and plump as ours!", 
         stall_name: "~ Best Berries ~", 
-        images: "https://i.pinimg.com/564x/7c/9c/f6/7c9cf6c5eb3f2d2e019180da78eed296.jpg"
+        images: "https://www.drfuhrman.com/rollups/4bb4704741c780ef9cd22056a220835360b6f5d4456da95bfb237e7652b835f0.jpg"
     },
     {
         market_id: Market.fourth.id, 
         profile_id: Profile.fourth.id, 
         bio: "Apples, oranges, mandarins! Everything you need for a great fruit platter!", 
         stall_name: "Fruity Fruits!", 
-        images: "https://i.pinimg.com/564x/7c/9c/f6/7c9cf6c5eb3f2d2e019180da78eed296.jpg"
+        images: "https://imgc.allpostersimages.com/img/print/posters/jim-richardson-a-cabbage-farmer-on-her-farm_a-G-13026224-4990719.jpg"
     },
     {
         market_id: Market.fifth.id, 
         profile_id: Profile.fifth.id, 
         bio: "Get your vitamin C shots here! Everything you need to live healthy!", 
         stall_name: "Vitamin Fresh!", 
-        images: "https://i.pinimg.com/564x/7c/9c/f6/7c9cf6c5eb3f2d2e019180da78eed296.jpg"
+        images: "https://www.thespruceeats.com/thmb/LtxYm5Kz7IEZPMOFsr6IN4sgY_o=/2121x1414/filters:fill(auto,1)/Lemonandlimes-GettyImages-713860099-599c64929abed500113f2163.jpg"
     }
 ])
 
@@ -279,6 +279,16 @@ Product.create([
         active: true,
         amount_available: 30,
         unit: "kg",
+        farmers_profile_id: FarmersProfile.third.id
+    },
+    {
+        name: "Cabbages",
+        description: "Crunchy cabbage packed full of vitamins",
+        price: "3.50",
+        picked_date: "",
+        active: true,
+        amount_available: 47,
+        unit: "each",
         farmers_profile_id: FarmersProfile.third.id
     },
     {
