@@ -25,42 +25,5 @@
 </p>
 <%= link_to 'Edit', edit_farmers_profile_path(@farmers_profile) %>
 
-
-<table>
-  <thead>
-    <tr>
-      <th>Farmer</th>
-      <th>Name</th>
-      <th>Description</th>
-      <th>Price</th>
-      <th>Unit</th>
-      <th>Amount available</th>
-      <th>Picked date</th>
-      <th>Active</th>
-      <th>QTY</th>
-    </tr>
-  </thead>
-
-  <tbody>
-
-<% @products.each do |product| %>
-    <% if current_user.profile.id == product.farmers_profile.id %>
-        <tr>
-            <td><%= product.farmers_profile.stall_name %></td>
-            <td><%= product.name %></td>
-            <td><%= product.description %></td>
-            <td>$<%= product.price %></td>
-            <td>/<%= product.unit %></td>
-            <td><%= product.amount_available %></td>
-            <td><%= product.picked_date %></td>
-            <td><%= product.active %></td>
-            <td> <input type="text"> </td>
-        </tr>
-    <% end %>
-<% end %>
-  </tbody>
-</table>
-
-
-
-
+<%= link_to 'Make an Order', new_order_path(@farmers_profile) %>
+<%# <a href="/orders/new" class="waves-effect waves-light btn"><i class="material-icons left">local_atm</i>Make an Order</a> %>
