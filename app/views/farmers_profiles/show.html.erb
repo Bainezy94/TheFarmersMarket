@@ -1,59 +1,48 @@
+<section class="banner">
+    <%= image_tag @farmers_profile.images %>
+    <div class="row">
+        <div class="col s5">
+            <div class="card">
+                <div class="card-content">
+                    <span class="card-title"><%= @farmers_profile.stall_name %></span>
+                    <span class="farmerName"><%= @farmers_profile.profile["name"] %></span>
+                    <span class="farmerMarket"><%= @farmers_profile.market["name"] %></span>
+                    <p><%= @farmers_profile.bio %></p>
+                </div>
+                <% if user_signed_in? && current_user.id == @farmers_profile.profile.user.id %> 
+                <div class="card-action">
+                    <%= link_to 'Edit', edit_farmers_profile_path(@farmers_profile) %>
+                </div>
+                <% end %>
+            </div>
+        </div>
+    </div>
+</section>
 
-<p>
-  <strong>Profile:</strong>
-  <%= @farmers_profile.stall_name %>
-</p>
-
-<p>
-  <strong>Image:</strong>
-  <%= @farmers_profile.images %>
-</p>
-
-<p>
-  <strong>Bio:</strong>
-  <%= @farmers_profile.bio %>
-</p>
-
-<p>
-  <strong>Market:</strong>
-  <%= @farmers_profile.market["name"] %>
-</p>
-
-<p>
-  <strong>Stall name:</strong>
-  <%= @farmers_profile.stall_name %>
-</p>
-<% if user_signed_in? && current_user.profile.id == @farmers_profile.profile.id %>
-  <%= link_to 'Edit', edit_farmers_profile_path(@farmers_profile) %>
-<% end %>
-
-<table>
-  <thead>
-  <h5>Welcome to <%= "#{@farmers_profile.stall_name}" %>! What would you like to purchase?</h5>
-    <tr>
-      <th>Name</th>
-      <th>Description</th>
-      <th>Price</th>
-      <th>Unit</th>
-      <th>Amount available</th>
-      <th>Picked date</th>
-      <th>QTY</th>
-    </tr>
-  </thead>
-
-  <tbody>
+<div class="row">
     <% @products.each do |product| %>
-      <% if product.farmers_profile_id == @farmers_profile.id %>
-        <tr>
-          <td><%= product.name %></td>
-          <td><%= product.description %></td>
-          <td>$<%= product.price %></td>
-          <td>/<%= product.unit %></td>
-          <td><%= product.amount_available %></td>
-          <td><%= product.picked_date %></td>
-          <td> <input type="text"> </td>
-        </tr>
-      <% end %>
+         <div class="col s12 m6 l4">
+            <div class="card horizontal">
+            <div class="card-image">
+                <img src="https://lorempixel.com/100/190/nature/6">
+            </div>
+            <div class="card-stacked">
+                <div class="card-content">
+                    <span><%= product.name %></span>
+                    <p> <%= product.description %> </p>
+                    <span><%= "$#{product.price}" %></span>
+                    <span><%= "/#{product.unit}" %></span>
+                    <span><%= "#{product.amount_available} Available" %></span>
+                    <span><%= product.picked_date %></span>
+                </div>
+                <div class="card-action">
+                    <% if user_signed_in? && current_user.id == @farmers_profile.profile.user.id %>           
+                        <%= link_to 'Edit', edit_product_path(product) %>
+                        <%= link_to 'Destroy', product, method: :delete, data: { confirm: 'Are you sure?' } %>
+                    <% end %>
+                </div>
+            </div>
+            </div>
+        </div>
     <% end %>
-  </tbody>
-</table>
+</div>

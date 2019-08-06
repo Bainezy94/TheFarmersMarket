@@ -1,36 +1,28 @@
+<h1>Farmers</h1>
 
-<h1>Farmers Profiles</h1>
-
-<table>
-  <thead>
-    <tr>
-      <th>Stall name</th>
-      <th>Bio</th>
-      <th>Market</th>
-      <th>Image</th>
-           
-      <th colspan="3"></th>
-    </tr>
-  </thead>
-
-  <tbody>
-    <% @farmers_profiles.each do |farmers_profile| %>
-      <tr>
-        <td><%= farmers_profile.stall_name %></td>
-        <td><%= farmers_profile.bio %></td>
-        <td><%= farmers_profile.market["name"] %></td>
-        <td><%= farmers_profile.images %></td>
-        <td><%= link_to 'Show', farmers_profile %></td>
-        <% if user_signed_in? && current_user.id == farmers_profile.profile.user.id %>
-          <td><%= link_to 'Edit', edit_farmers_profile_path(farmers_profile) %></td>
-          <td><%= link_to 'Destroy', farmers_profile, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-        <% end %>
-      </tr>
+<div class="row farmers">
+    <% @farmers_profiles.each do |farmer| %>
+        <div class="col s12 m6 l4">
+            <div class="card">
+                <div class="card-image">
+                    <%= image_tag farmer.images %>
+                    <span class="card-title"> <%= farmer.stall_name %> </span>
+                </div>
+                <div class="card-content">
+                    <p> <%= farmer.bio %> </p>
+                </div>
+                <div class="card-action">
+                    <%= link_to "Buy from #{farmer.profile["name"]}", farmer %>
+                    <% if user_signed_in? && current_user.id == farmer.profile.user.id %>           
+                        <%= link_to 'Edit', edit_farmers_profile_path(farmer) %>
+                        <%= link_to 'Destroy', farmer, method: :delete, data: { confirm: 'Are you sure?' } %>
+                    <% end %>
+                </div>
+            </div>
+        </div>
     <% end %>
-  </tbody>
-</table>
+</div>
 
-<br>
 
 <% if user_signed_in? && current_user.role == "buyer" %>
   <%= link_to 'Sign up to be a Farmer', new_farmers_profile_path %>

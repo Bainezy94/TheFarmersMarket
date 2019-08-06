@@ -86,24 +86,32 @@ Profile.create([
     {
         name: "Admin", 
         phone_number: "9589 0748",
+        avatar: "https://i.pinimg.com/564x/67/5f/39/675f396443d2d193c5e0c03df43be7a1.jpg",
         user_id: User.first.id
     },
     {
         name: "John McIntosh", 
         phone_number: "0407 123 645",
+        avatar: "https://i.pinimg.com/564x/0f/51/cb/0f51cbbd9bb73f91dc9220cb2fd1844f.jpg",
         user_id: User.second.id
     },
     {
         name: "Asher Michaels", 
         phone_number: "0415 688 721", 
-        avatar: "https://www.pinterest.com.au/pin/301107925086810349/",
+        avatar: "https://i.pinimg.com/564x/5b/c2/6d/5bc26d1756dda1fe06c113876f492aca.jpg",
         user_id: User.third.id
     },
     {
         name: "Jo", 
         phone_number: "0402 123 336", 
-        avatar: "https://www.pinterest.com.au/pin/301107925086810342/",
+        avatar: "https://i.pinimg.com/564x/a6/44/a7/a644a7051d9ba661222e2b413e7d3b71.jpg",
         user_id: User.fourth.id
+    },
+    {
+        name: "Dave", 
+        phone_number: "0402 123 336", 
+        avatar: "https://i.pinimg.com/564x/3d/37/26/3d3726d799c1c2b2438411fa184c5d76.jpg",
+        user_id: User.fifth.id
     }
 ])
 
@@ -115,14 +123,35 @@ FarmersProfile.create([
         profile_id: Profile.second.id, 
         bio: "We have the freshest lettuce around, picked fresh the morning of the markets", 
         stall_name: "Farmer Jo's Big Farm", 
-        images: "http://kitchenconfidante.com/simple-sundays-scenes-from-the-ferry-plaza-farmers-market"
+        images: "https://i.pinimg.com/564x/01/1e/cc/011eccf99f574d8ad68edd639e0c4d37.jpg"
     },
     {
-        market_id: Market.first.id, 
-        profile_id: Profile.first.id, 
+        market_id: Market.second.id, 
+        profile_id: Profile.second.id, 
         bio: "Best eggs in all of Sydney!", 
         stall_name: "Farmer John's Chooks", 
-        images: "https://www.pinterest.com.au/pin/301107925086810233/"
+        images: "https://i.pinimg.com/564x/7c/9c/f6/7c9cf6c5eb3f2d2e019180da78eed296.jpg"
+    },
+    {
+        market_id: Market.third.id, 
+        profile_id: Profile.third.id, 
+        bio: "Best eggs in all of Sydney!", 
+        stall_name: "Farmer John's Chooks", 
+        images: "https://i.pinimg.com/564x/7c/9c/f6/7c9cf6c5eb3f2d2e019180da78eed296.jpg"
+    },
+    {
+        market_id: Market.fourth.id, 
+        profile_id: Profile.fourth.id, 
+        bio: "Best eggs in all of Sydney!", 
+        stall_name: "Farmer John's Chooks", 
+        images: "https://i.pinimg.com/564x/7c/9c/f6/7c9cf6c5eb3f2d2e019180da78eed296.jpg"
+    },
+    {
+        market_id: Market.fifth.id, 
+        profile_id: Profile.fifth.id, 
+        bio: "Best eggs in all of Sydney!", 
+        stall_name: "Farmer John's Chooks", 
+        images: "https://i.pinimg.com/564x/7c/9c/f6/7c9cf6c5eb3f2d2e019180da78eed296.jpg"
     }
 ])
 
