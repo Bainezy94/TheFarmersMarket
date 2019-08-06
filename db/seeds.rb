@@ -104,7 +104,7 @@ Profile.create([
     {
         name: "Jo-Bobby Smith", 
         phone_number: "0402 223 336", 
-        avatar: "https://i.pinimg.com/564x/a6/44/a7/a644a7051d9ba661222e2b413e7d3b71.jpg",
+        avatar: "https://imgc.allpostersimages.com/img/print/posters/jim-richardson-a-cabbage-farmer-on-her-farm_a-G-13026224-4990719.jpg",
         user_id: User.fourth.id
     },
     {
@@ -137,7 +137,7 @@ FarmersProfile.create([
         profile_id: Profile.fourth.id, 
         bio: "Apples, oranges, mandarins! Everything you need for a great fruit platter!", 
         stall_name: "Fruity Fruits!", 
-        images: "https://imgc.allpostersimages.com/img/print/posters/jim-richardson-a-cabbage-farmer-on-her-farm_a-G-13026224-4990719.jpg"
+        images: "https://i.pinimg.com/originals/61/06/d2/6106d2dc8692c6b7cec60d0f2bbd1836.png"
     },
     {
         market_id: Market.fifth.id, 
