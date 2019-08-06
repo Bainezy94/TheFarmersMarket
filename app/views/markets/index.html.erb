@@ -1,50 +1,37 @@
-
 <h1>Markets</h1>
 
 <div id="marketsMap"></div>
 
-<table>
-  <thead>
-    <tr>
-      <th>Name</th>
-      <th>Location</th>
-      <th>Bio</th>
-      <th>Opening hours</th>
-      <th colspan="3"></th>
-    </tr>
-  </thead>
-
-  <tbody>
+<div class="row markets">
     <% locations = [] %>
     <% @markets.each do |market| %>
-      <tr>
-        <td><%= market.name %></td>
-        <td><%= market.location %></td>
-        <td><%= market.bio %></td>
-        <td><%= market.opening_hours %></td>
-        <td><%= link_to 'Show', market %></td>
-
-
-        <% if user_signed_in? && current_user.role == "admin" %>
-          <td><%= link_to 'Edit', edit_market_path(market) %></td>
-          <td><%= link_to 'Destroy', market, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-        <% end %>
-      </tr>
-      <% loc = Geocoder.search(market.location) %>
-      <% lat = loc.first.coordinates.first%>
-      <% lng = loc.first.coordinates.second%>
-      <% currentLocation = [market.name, lat, lng] %>
-      <% locations << currentLocation %>
+        <div class="col s12 m6">
+            <div class="card">
+                <div class="card-content">
+                    <span class="card-title"><%= market.name %></span>
+                    <span><%= market.location %></span>
+                    <span><%= market.opening_hours %></span>
+                </div>
+                <div class="card-action">
+                    <%= link_to "Visit #{market.name}", market %>
+                    <% if user_signed_in? && current_user.role == "admin" %>
+                        <%= link_to 'Edit', edit_market_path(market) %>
+                        <%= link_to 'Destroy', market, method: :delete, data: { confirm: 'Are you sure?' } %>
+                    <% end %>
+                </div>
+            </div>
+        </div>
+        <% loc = Geocoder.search(market.location) %>
+        <% lat = loc.first.coordinates.first%>
+        <% lng = loc.first.coordinates.second%>
+        <% currentLocation = [market.name, lat, lng] %>
+        <% locations << currentLocation %>
     <% end %>
-  </tbody>
-</table>
+</div>
 
-<br>
 
 <% if user_signed_in? && current_user.role == "admin" %>
   <%= link_to 'Add New Market', new_market_path %>
 <% end %>
 
-<script> 
-    marketsMap( [<%= raw locations.to_json %>] )
-</script>
+<script> marketsMap( [<%= raw locations.to_json %>] ) </script>
