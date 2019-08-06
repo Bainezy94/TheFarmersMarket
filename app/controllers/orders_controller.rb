@@ -14,6 +14,9 @@ class OrdersController < ApplicationController
 
   # GET /orders/new
   def new
+    puts "#################################################################"
+    puts @farmer
+    puts "#################################################################"
     @order = Order.new
     @product = Product.all
     #need to add /kg or each etc
