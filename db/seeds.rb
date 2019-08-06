@@ -102,13 +102,13 @@ Profile.create([
         user_id: User.third.id
     },
     {
-        name: "Jo", 
+        name: "Jo-Bob Smith", 
         phone_number: "0402 123 336", 
         avatar: "https://i.pinimg.com/564x/a6/44/a7/a644a7051d9ba661222e2b413e7d3b71.jpg",
         user_id: User.fourth.id
     },
     {
-        name: "Dave", 
+        name: "Dave Gumboots", 
         phone_number: "0402 123 336", 
         avatar: "https://i.pinimg.com/564x/3d/37/26/3d3726d799c1c2b2438411fa184c5d76.jpg",
         user_id: User.fifth.id
@@ -119,38 +119,31 @@ p "Created #{Profile.count} profiles."
 
 FarmersProfile.create([
     {
-        market_id: Market.first.id, 
-        profile_id: Profile.second.id, 
-        bio: "We have the freshest lettuce around, picked fresh the morning of the markets", 
-        stall_name: "Farmer Jo's Big Farm", 
-        images: "https://i.pinimg.com/564x/01/1e/cc/011eccf99f574d8ad68edd639e0c4d37.jpg"
-    },
-    {
         market_id: Market.second.id, 
         profile_id: Profile.second.id, 
-        bio: "Best eggs in all of Sydney!", 
-        stall_name: "Farmer John's Chooks", 
+        bio: "Freshest herbs in all of Sydney!", 
+        stall_name: "Farmer John's Herby Herbs", 
         images: "https://i.pinimg.com/564x/7c/9c/f6/7c9cf6c5eb3f2d2e019180da78eed296.jpg"
     },
     {
         market_id: Market.third.id, 
         profile_id: Profile.third.id, 
-        bio: "Best eggs in all of Sydney!", 
-        stall_name: "Farmer John's Chooks", 
+        bio: "No Berries are as Juicy and plump as ours!", 
+        stall_name: "~ Best Berries ~", 
         images: "https://i.pinimg.com/564x/7c/9c/f6/7c9cf6c5eb3f2d2e019180da78eed296.jpg"
     },
     {
         market_id: Market.fourth.id, 
         profile_id: Profile.fourth.id, 
-        bio: "Best eggs in all of Sydney!", 
-        stall_name: "Farmer John's Chooks", 
+        bio: "Apples, oranges, mandarins! Everything you need for a great fruit platter!", 
+        stall_name: "Fruity Fruits!", 
         images: "https://i.pinimg.com/564x/7c/9c/f6/7c9cf6c5eb3f2d2e019180da78eed296.jpg"
     },
     {
         market_id: Market.fifth.id, 
         profile_id: Profile.fifth.id, 
-        bio: "Best eggs in all of Sydney!", 
-        stall_name: "Farmer John's Chooks", 
+        bio: "Get your vitamin C shots here! Everything you need to live healthy!", 
+        stall_name: "Vitamin Fresh!", 
         images: "https://i.pinimg.com/564x/7c/9c/f6/7c9cf6c5eb3f2d2e019180da78eed296.jpg"
     }
 ])
@@ -159,44 +152,154 @@ p "Created #{FarmersProfile.count} farmers."
 
 Product.create([
     {
-        name: "herbs",
+        name: "Parsley",
         description: "The freshest herbs this side of the bridge",
+        price: "2",
+        picked_date: "",
+        active: true,
+        amount_available: 45,
+        unit: "bushel",
+        farmers_profile_id: FarmersProfile.first.id
+    },
+    {
+        name: "Basil",
+        description: "Sweet basil, freshy picked the morning you buy them",
+        price: "3.50",
+        picked_date: "",
+        active: true,
+        amount_available: 50,
+        unit: "bushel",
+        farmers_profile_id: FarmersProfile.first.id
+    },
+    {
+        name: "Thyme",
+        description: "Great in salads",
+        price: "2",
+        picked_date: "",
+        active: true,
+        amount_available: 60,
+        unit: "bushel",
+        farmers_profile_id: FarmersProfile.first.id
+    },
+    {
+        name: "Rosemary",
+        description: "Sweet smelling rosemary, great for winter roasts",
+        price: "1.50",
+        picked_date: "",
+        active: true,
+        amount_available: 65,
+        unit: "bushel",
+        farmers_profile_id: FarmersProfile.first.id
+    },
+    {
+        name: "Strawberries",
+        description: "Huge and juicy",
+        price: "5",
+        picked_date: "",
+        active: true,
+        amount_available: 45,
+        unit: "punnet",
+        farmers_profile_id: FarmersProfile.second.id
+    },
+    {
+        name: "Blueberries",
+        description: "Plump and juicy",
+        price: "6",
+        picked_date: "",
+        active: true,
+        amount_available: 27,
+        unit: "punnet",
+        farmers_profile_id: FarmersProfile.second.id
+    },
+    {
+        name: "Raspberries",
+        description: "Plump, ripe and great to eat",
+        price: "4",
+        picked_date: "",
+        active: true,
+        amount_available: 40,
+        unit: "punnet",
+        farmers_profile_id: FarmersProfile.second.id
+    },
+    {
+        name: "Mulberries",
+        description: "Dripping with juice",
         price: "2.50",
         picked_date: "",
         active: true,
         amount_available: 45,
-        unit: "each",
-        farmers_profile_id: FarmersProfile.first.id
-    },
-    {
-        name: "oranges",
-        description: "Juiciest oranges around",
-        price: "3",
-        picked_date: "",
-        active: true,
-        amount_available: 50,
         unit: "kg",
-        farmers_profile_id: FarmersProfile.first.id
+        farmers_profile_id: FarmersProfile.second.id
     },
     {
-        name: "apples",
+        name: "Apples",
         description: "Crisp and juicy",
         price: "2.50",
         picked_date: "",
         active: true,
         amount_available: 35,
         unit: "kg",
-        farmers_profile_id: FarmersProfile.second.id
+        farmers_profile_id: FarmersProfile.third.id
     },
     {
-        name: "oranges",
+        name: "Oranges",
         description: "Great to eat or juice",
         price: "2.50",
         picked_date: "",
         active: true,
         amount_available: 45,
         unit: "kg",
-        farmers_profile_id: FarmersProfile.second.id
+        farmers_profile_id: FarmersProfile.third.id
+    },
+    {
+        name: "Bananas",
+        description: "Boneless bananas fresh each market",
+        price: "2",
+        picked_date: "",
+        active: true,
+        amount_available: 45,
+        unit: "kg",
+        farmers_profile_id: FarmersProfile.third.id
+    },
+    {
+        name: "Mandarins",
+        description: "Juiciest mandarins around",
+        price: "2.50",
+        picked_date: "",
+        active: true,
+        amount_available: 50,
+        unit: "kg",
+        farmers_profile_id: FarmersProfile.third.id
+    },
+    {
+        name: "Lemons",
+        description: "juicy and yellow, great to fend off those nasty colds in the winter months",
+        price: "3",
+        picked_date: "",
+        active: true,
+        amount_available: 30,
+        unit: "kg",
+        farmers_profile_id: FarmersProfile.third.id
+    },
+    {
+        name: "Lemons",
+        description: "Great for your health",
+        price: "2.50",
+        picked_date: "",
+        active: true,
+        amount_available: 30,
+        unit: "kg",
+        farmers_profile_id: FarmersProfile.fourth.id
+    },
+    {
+        name: "Limes",
+        description: "Great for juicing and cooking",
+        price: "1",
+        picked_date: "",
+        active: true,
+        amount_available: 45,
+        unit: "each",
+        farmers_profile_id: FarmersProfile.fourth.id
     }
 ])
 
