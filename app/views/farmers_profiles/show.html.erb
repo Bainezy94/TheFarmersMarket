@@ -1,7 +1,7 @@
 
 <p>
   <strong>Profile:</strong>
-  <%= @farmers_profile.profile["name"] %>
+  <%= @farmers_profile.stall_name %>
 </p>
 
 <p>
@@ -23,41 +23,38 @@
   <strong>Stall name:</strong>
   <%= @farmers_profile.stall_name %>
 </p>
-<%= link_to 'Edit', edit_farmers_profile_path(@farmers_profile) %>
-
+<% if user_signed_in? && current_user.profile.id == @farmers_profile.profile.id %>
+  <%= link_to 'Edit', edit_farmers_profile_path(@farmers_profile) %>
+<% end %>
 
 <table>
   <thead>
+  <h5>Welcome to <%= "#{@farmers_profile.stall_name}" %>! What would you like to purchase?</h5>
     <tr>
-      <th>Farmer</th>
       <th>Name</th>
       <th>Description</th>
       <th>Price</th>
       <th>Unit</th>
       <th>Amount available</th>
       <th>Picked date</th>
-      <th>Active</th>
       <th>QTY</th>
     </tr>
   </thead>
 
   <tbody>
-
-<% @products.each do |product| %>
-    <% if current_user.profile.id == product.farmers_profile.id %>
+    <% @products.each do |product| %>
+      <% if product.farmers_profile_id == @farmers_profile.id %>
         <tr>
-            <td><%= product.farmers_profile.stall_name %></td>
-            <td><%= product.name %></td>
-            <td><%= product.description %></td>
-            <td>$<%= product.price %></td>
-            <td>/<%= product.unit %></td>
-            <td><%= product.amount_available %></td>
-            <td><%= product.picked_date %></td>
-            <td><%= product.active %></td>
-            <td> <input type="text"> </td>
+          <td><%= product.name %></td>
+          <td><%= product.description %></td>
+          <td>$<%= product.price %></td>
+          <td>/<%= product.unit %></td>
+          <td><%= product.amount_available %></td>
+          <td><%= product.picked_date %></td>
+          <td> <input type="text"> </td>
         </tr>
+      <% end %>
     <% end %>
-<% end %>
   </tbody>
 </table>
 
