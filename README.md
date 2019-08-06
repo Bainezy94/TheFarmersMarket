@@ -1,4 +1,4 @@
-# Sleepy Farmer's Markets
+Sleepy Farmer's Markets
 
 An app built with Ruby on Rails by [David Baines](https://github.com/Bainezy94), [Jo Dunham](https://github.com/Rainbow-Ninja), and [Ewe Lin Loo](https://github.com/elloo).
 
@@ -49,26 +49,44 @@ Farmer's markets are great places to find the best deals on fresh fruit and vege
 
 Our design process involved a few steps including:
 
-1. Brainstorming session: Project and problem space ideation
-2. Entity Relationship Diagram
-3. Wireframing: Both low fidelity and hi fidelity wireframes
-4. Mood-boarding
+1. Brainstorming session 
+   - [Project and problem space ideation](#project-ideation)
+   - User stories
+   - User journey/s diagram
+2. [Entity Relationship Diagram](#database-entity-relationship-diagrams)
+3. Wireframing
+4. [Moodboarding](#moodboards)
+5. Style guide
 
-![First half of mood board](docs/moodboard_001.png)
+### Project Ideation
 
-![Second half of mood board](docs/moodboard_002.png)
+1. Handy Household Heroes
 
-1. Style guide
+   Hero / mythological-themed labour hire for tasks such as dog walking, cleaning, gardening, removals / heavy lifting, carpentry, aquarium care, pool care, lawn mowing, tech support
+
+2. Dumpster Divers Deals
+
+3. Selling people's private data
+
+4. Niche clothes
+
+5. Carpooling
+
+6. Baby stuff
+
+7. Hardware hire
+
+8. Collectible things
+
+9. The Sleepy Farmer's Markets
+
+   A service that allows you to beat the early times / tight crowds involved in shopping at farmer's markets. Alternative names include: Lazy FM, Sleepy FM, FM 4 Night Owls, Sleepy Sower Stalls / Shops / Stops.
 
 ### User Stories
 
 
 
 ### User Journey/s Diagram
-
-
-
-### Wireframes
 
 
 
@@ -91,6 +109,22 @@ HD - Identifies all significant entities, as well as additional entities
 HD - Identifies all relationships / associations in a sophisticated relational model
 
 HD - Designs a normalised schema (i.e. without data duplication) that facilitates extended functionality of the app
+
+### Wireframes
+
+
+
+### Moodboards
+
+![First half of mood board](docs/moodboard_001.png)
+
+![Second half of mood board](docs/moodboard_002.png)
+
+
+
+### Style Guide
+
+
 
 ## Planning Process
 
@@ -174,6 +208,11 @@ HD - Designs a normalised schema (i.e. without data duplication) that facilitate
 - Added permissions for several pages
 - Worked on order form
 
+#### Day 10: August 6, 2019
+
+- Datepicker feature
+- Products display on farmer's page
+
 ### Trello Screenshots
 
 ![Beginning of Trello board](docs/trello_001.png)
@@ -240,7 +279,9 @@ Complete discussion of the project’s models with an understanding of how its a
 
 ### 14. Provide your database schema design.
 
-Flawless,complex, complete, and well thought through ERDs provided
+Database schema design provided above. [Click here](#database-entity-relationship-diagrams) to view.
+
+~~Flawless,complex, complete, and well thought through ERDs provided~~
 
 ### 15. Provide User stories for your *App*.
 
@@ -252,11 +293,21 @@ More than five detailed and well designed wireframes provided, for several diffe
 
 ### 17. Describe the way tasks are allocated and tracked in your project.
 
-Shows significant planning for how tasks are planned and tracked, including a full description of the process and of the tools used
+We used a single [Trello](#trello-screenshots) board to organise, manage and keep track of all the tasks in our project. Within this Trello board, we associated each task card to a user story using a Power-Up called [Epic Cards by Screenful](https://screenful.com/epics-for-trello?utm_source=trello&utm_campaign=epics_powerup). We discussed the importance of each of these user stories and allowed this to direct our project plan.
+
+We used a Trello list for our "User Stories" with the cards on this list in order of importance. Additional lists were used to organise our tasks into "To Dos", "Ongoing / Doing", and sprints of our completed tasks. Some tasks were further broken into sub-tasks using the Checklist feature - this allowed us to keep track of related sub-tasks with one task card. We used the Members feature of each task card to show who worked on what.
+
+Overall, we broke down the entire project into the segments of "Frontend", "Backend" and "Documentation". Each group member was assigned to a different segment and the associated tasks for the entirety of the project. When required, we collaborated on one segment in order to complete sprints. Our progress was tracked and directed on a daily basis during our morning stand-up meetings.
+
+~~Shows significant planning for how tasks are planned and tracked, including a full description of the process and of the tools used~~
 
 ### 18. Discuss how Agile methodology is being implemented in your project.
 
-  Documents comprehensive plan for agile methodology, with extensive evidence of use
+We used Agile methodology to guide our completion of The Sleepy Farmer's Markets. Breaking down our workflow into incremental sprints allowed us to constantly regroup every morning to discuss our progress and our next tasks. From these discussions, we were able to redirect our attention to any remaining uncompleted parts of the current sprint, if needed. Additionally, we were motivated by these sprints as they provided a soft deadline and a small sense of accomplishment when met. 
+
+By the end of the project, we had completed __ sprints. The tasks completed within each sprint can be seen in the appropriate screenshot [here](#trello-screenshots). Each sprint corresponded to a specific feature of our marketplace and spanned over one or two user journeys. We aimed to fulfill our designated high-priority user stories first so that we could quickly develop an MVP. The last __ sprints covered the remaining user stories, related features, and testing.   
+
+ ~~Documents comprehensive plan for agile methodology, with extensive evidence of use~~
 
 ### 19. Provide an overview and description of your Source control process.
 
