@@ -1,4 +1,4 @@
-Sleepy Farmer's Markets
+# Sleepy Farmer's Markets
 
 An app built with Ruby on Rails by [David Baines](https://github.com/Bainezy94), [Jo Dunham](https://github.com/Rainbow-Ninja), and [Ewe Lin Loo](https://github.com/elloo).
 
@@ -303,9 +303,11 @@ Overall, we broke down the entire project into the segments of "Frontend", "Back
 
 ### 18. Discuss how Agile methodology is being implemented in your project.
 
-We used Agile methodology to guide our completion of The Sleepy Farmer's Markets. Breaking down our workflow into incremental sprints allowed us to constantly regroup every morning to discuss our progress and our next tasks. From these discussions, we were able to redirect our attention to any remaining uncompleted parts of the current sprint, if needed. Additionally, we were motivated by these sprints as they provided a soft deadline and a small sense of accomplishment when met. 
+We used Agile methodology to guide our completion of **The Sleepy Farmer's Markets**. This was done by breaking our project into sprints so that each sprint covered one user story and its associated tasks.
 
-By the end of the project, we had completed __ sprints. The tasks completed within each sprint can be seen in the appropriate screenshot [here](#trello-screenshots). Each sprint corresponded to a specific feature of our marketplace and spanned over one or two user journeys. We aimed to fulfill our designated high-priority user stories first so that we could quickly develop an MVP. The last __ sprints covered the remaining user stories, related features, and testing.   
+Using incremental sprints encouraged us to constantly regroup every morning to discuss our progress. From these discussions, we were able to constantly ensure our attention was appropriately focused on completing the current sprint. Additionally, we were motivated by these sprints as they provided a small sense of accomplishment when completed. 
+
+By the end of the project, we had completed __ sprints. The tasks completed within each sprint can be seen in the appropriate screenshot [here](#trello-screenshots). We aimed to fulfill our agreed upon high-priority user stories first so that we could quickly develop an MVP. The last __ sprints covered the remaining user stories, and testing.   
 
  ~~Documents comprehensive plan for agile methodology, with extensive evidence of use~~
 
