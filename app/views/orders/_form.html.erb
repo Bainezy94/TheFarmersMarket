@@ -31,10 +31,13 @@
     <script src="https://checkout.stripe.com/checkout.js"
         class="stripe-button"
         data-key="pk_Fhlzwtm9SCx6Uxww5fNXX8CUbwwAc"
-        data-amount="<%= %>"
+        data-amount= "<%= 87 %>"
         data-name="The Sleepy Farmer's Markets"
         data-description="Your Order"
-        data-image="/128x128.png">
+        data-image="/assets/farm.jpg"
+        data-locale="auto"
+        data-currency="aud"
+        data-email="<%=current_user.email%>">
     </script>
 </div>
 

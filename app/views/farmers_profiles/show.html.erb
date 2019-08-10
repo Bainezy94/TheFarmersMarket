@@ -48,8 +48,8 @@
                             <%= link_to 'Edit', edit_product_path(product) %>
                             <%= link_to 'Destroy', product, method: :delete, data: { confirm: 'Are you sure?' } %>
                         <% else %>
-                            <form action="cart/add" method="post">
-                                <input class="qty" type="number" value="0">
+                            <form action="/orders" method="post">
+                                <input class="qty" type="number" value="1">
                                 <button type="submit" class="waves-effect waves-light btn">Add to Order</button>
                             </form>
                         <% end %>
