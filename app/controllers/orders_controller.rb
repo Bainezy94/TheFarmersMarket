@@ -14,9 +14,19 @@ class OrdersController < ApplicationController
 
   # GET /orders/new
   def new
+    puts "oooooooooooooooooooooooooooooooooooo"
+    puts "im in orders new"
+    puts params
+    puts "oooooooooooooooooooooooooooooooooooo"
+    
     @order = Order.new
-    @product = Product.all
-    #need to add /kg or each etc
+    @product = Product.find_by(params[:product_id])
+    puts "oooooooooooooooooooooooooooooooooooo"
+    puts @product.name
+    puts params[:product_id]
+    puts "oooooooooooooooooooooooooooooooooooo"
+    @farmers_profile = FarmersProfile.find_by_id(params[:farmers_profile_id])
+    @total= @product.price.to_i*params[:Qty].to_i
   end
 
   # GET /orders/1/edit
@@ -26,6 +36,12 @@ class OrdersController < ApplicationController
   # POST /orders
   # POST /orders.json
   def create
+    puts "oooooooooooooooooooooooooooooooooooo"
+    puts "im in orders create"
+    puts params
+    puts "------------------------"
+    puts order_params
+    puts "oooooooooooooooooooooooooooooooooooo"
     @order = Order.new(order_params)
     @order.profile_id = current_user.profile.id
 

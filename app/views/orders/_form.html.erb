@@ -1,4 +1,3 @@
-
 <script>
     for (let [product_id, qty] of Object.entries(localStorage)) 
     {
@@ -18,7 +17,39 @@
     </thead>
     <tbody>
         <tr>
-            <td>Tomatos</td>
+            <td><%= "#{@product.name}" %></td>
+            <td><%= "#{@farmers_profile.stall_name}" %></td>
+            <td><%= "$#{@product.price }" %></td>
+            <td><%= "#{ params[:Qty] }" %></td>
+            <td><%= "$#{@total}" %></td>
+        </tr>
+    </tbody>
+</table>
+ <form action="/orders" method="post">
+    <button type="submit" class="waves-effect waves-light btn">This is Correct</button>
+    <%= hidden_field_tag :authenticity_token, form_authenticity_token %>
+    <%= hidden_field_tag :farmers_profile_id, @farmers_profile.id %>
+    <%= hidden_field_tag :profile_id, current_user.id %>
+    <%= hidden_field_tag :product, @product.id %>
+</form>
+<h5>Is this Correct?</h5>
+<%= link_to 'Yes', orders_path %>
+<%= link_to 'No', session[:return_to] = request.referer %>
+<%
+=begin
+<table>
+    <thead>
+        <tr>
+            <th>Product</th>
+            <th>Farmer</th>
+            <th>Price</th>
+            <th>QTY</th>
+            <th>Total</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>Tomatoes</td>
             <td>Jo</td>
             <td>$0.87</td>
             <td>3</td>
@@ -26,12 +57,13 @@
         </tr>
     </tbody>
 </table>
-
+=end
+%>
 <div class="col s12">
     <script src="https://checkout.stripe.com/checkout.js"
         class="stripe-button"
         data-key="pk_Fhlzwtm9SCx6Uxww5fNXX8CUbwwAc"
-        data-amount= "<%= 87 %>"
+        data-amount= "<%= @total * 100 %>"
         data-name="The Sleepy Farmer's Markets"
         data-description="Your Order"
         data-image="/assets/farm.jpg"
@@ -40,5 +72,3 @@
         data-email="<%=current_user.email%>">
     </script>
 </div>
-
-
