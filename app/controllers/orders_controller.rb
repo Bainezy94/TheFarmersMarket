@@ -20,7 +20,7 @@ class OrdersController < ApplicationController
     puts "oooooooooooooooooooooooooooooooooooo"
     
     @order = Order.new
-    @product = Product.find_by(params[:product_id])
+    @product = Product.find_by_id(params[:product_id])
     puts "oooooooooooooooooooooooooooooooooooo"
     puts @product.name
     puts params[:product_id]
