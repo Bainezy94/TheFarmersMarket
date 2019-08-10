@@ -1,64 +1,23 @@
-<script>
-    for (let [product_id, qty] of Object.entries(localStorage)) 
-    {
 
-    }
-</script>
+<%= simple_form_for(@order) do |f| %>
+  <%= f.error_notification %>
+  <%#= f.error_notification message: f.object.errors[:base].to_sentence if f.object.errors[:base].present? %>
 
-<table>
-    <thead>
-        <tr>
-            <th>Product</th>
-            <th>Farmer</th>
-            <th>Price</th>
-            <th>QTY</th>
-            <th>Total</th>
-        </tr>
-    </thead>
-    <tbody>
-        <tr>
-            <td><%= "#{@product.name}" %></td>
-            <td><%= "#{@farmers_profile.stall_name}" %></td>
-            <td><%= "$#{@product.price }" %></td>
-            <td><%= "#{ params[:Qty] }" %></td>
-            <td><%= "$#{@total}" %></td>
-        </tr>
-    </tbody>
-</table>
- <form action="/orders" method="post">
-    <button type="submit" class="waves-effect waves-light btn">This is Correct</button>
-    <%= hidden_field_tag :authenticity_token, form_authenticity_token %>
-    <%= hidden_field_tag :farmers_profile_id, @farmers_profile.id %>
-    <%= hidden_field_tag :profile_id, current_user.id %>
-    <%= hidden_field_tag :product, @product.id %>
-</form>
-<h5>Is this Correct?</h5>
-<%= link_to 'Yes', orders_path %>
-<%= link_to 'No', session[:return_to] = request.referer %>
-<%
-=begin
-<table>
-    <thead>
-        <tr>
-            <th>Product</th>
-            <th>Farmer</th>
-            <th>Price</th>
-            <th>QTY</th>
-            <th>Total</th>
-        </tr>
-    </thead>
-    <tbody>
-        <tr>
-            <td>Tomatoes</td>
-            <td>Jo</td>
-            <td>$0.87</td>
-            <td>3</td>
-            <td>2.61</td>
-        </tr>
-    </tbody>
-</table>
-=end
-%>
+  <div class="form-inputs">
+    <%= f.input :product, label: 'Product Name', input_html: {value: @product.name} %>
+    <%# @farmer = farmers_profile.find_by_id(params[:farmers_profile_id]) %>
+    <%= f.input :farmers, label: 'Stall Name', input_html: {value: @farmers_profile.stall_name } %>
+    <%= f.input :farmers_id, :as => :hidden, input_html: {value: @farmers_profile.id } %>
+    <%= f.input :price, label: 'Price', input_html: {value: @product.price} %>
+    <%= f.input :volume, label: 'Quantity', input_html: {value: params[:Qty]} %>
+    <%= f.input :total, label: 'Total', input_html: {value: @total} %>
+  </div>
+
+  <div class="form-actions">
+    <%= f.button :submit %>
+  </div>
+<% end %>
+
 <div class="col s12">
     <script src="https://checkout.stripe.com/checkout.js"
         class="stripe-button"

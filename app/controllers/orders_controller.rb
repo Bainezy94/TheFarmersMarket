@@ -21,12 +21,15 @@ class OrdersController < ApplicationController
     
     @order = Order.new
     @product = Product.find_by_id(params[:product_id])
+    @farmers_profile = FarmersProfile.find_by_id(params[:farmers_profile_id])
     puts "oooooooooooooooooooooooooooooooooooo"
     puts @product.name
     puts params[:product_id]
+    puts "sssssssssssssssssssssssss"
+    puts @farmers_profile.stall_name
     puts "oooooooooooooooooooooooooooooooooooo"
-    @farmers_profile = FarmersProfile.find_by_id(params[:farmers_profile_id])
-    @total= @product.price.to_i*params[:Qty].to_i
+
+    @total= @product.price.to_f*params[:Qty].to_f
   end
 
   # GET /orders/1/edit
@@ -44,6 +47,8 @@ class OrdersController < ApplicationController
     puts "oooooooooooooooooooooooooooooooooooo"
     @order = Order.new(order_params)
     @order.profile_id = current_user.profile.id
+    @order.farmers_profile_id = params[:order][:farmers_id]
+    @order.save
 
     respond_to do |format|
       if @order.save
