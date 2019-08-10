@@ -5,6 +5,7 @@
 
   <div class="form-inputs">
     <%= f.input :product, label: 'Product Name', input_html: {value: @product.name} %>
+    <%= f.input :product_id, :as => :hidden, input_html: {value: @product.id } %>
     <%# @farmer = farmers_profile.find_by_id(params[:farmers_profile_id]) %>
     <%= f.input :farmers, label: 'Stall Name', input_html: {value: @farmers_profile.stall_name } %>
     <%= f.input :farmers_id, :as => :hidden, input_html: {value: @farmers_profile.id } %>
@@ -18,16 +19,3 @@
   </div>
 <% end %>
 
-<div class="col s12">
-    <script src="https://checkout.stripe.com/checkout.js"
-        class="stripe-button"
-        data-key="pk_Fhlzwtm9SCx6Uxww5fNXX8CUbwwAc"
-        data-amount= "<%= @total * 100 %>"
-        data-name="The Sleepy Farmer's Markets"
-        data-description="Your Order"
-        data-image="/assets/farm.jpg"
-        data-locale="auto"
-        data-currency="aud"
-        data-email="<%=current_user.email%>">
-    </script>
-</div>

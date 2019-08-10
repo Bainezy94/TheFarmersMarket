@@ -10,6 +10,16 @@ class OrdersController < ApplicationController
   # GET /orders/1
   # GET /orders/1.json
   def show
+    
+    @order.products = Product.where(id: params[:id])
+    puts "oooooooooooooooooooooooooooooooooooo"
+    puts "im in orders show"
+    puts params
+    puts "----------"
+    puts Product.where(id: params[:id])
+    puts "oooooooooooooooooooooooooooooooooooo"
+    p = Product.find_by(id: params[:order][:product_id])
+    # @total= @product.price.to_f*params[:Qty].to_f
   end
 
   # GET /orders/new
@@ -22,13 +32,6 @@ class OrdersController < ApplicationController
     @order = Order.new
     @product = Product.find_by_id(params[:product_id])
     @farmers_profile = FarmersProfile.find_by_id(params[:farmers_profile_id])
-    puts "oooooooooooooooooooooooooooooooooooo"
-    puts @product.name
-    puts params[:product_id]
-    puts "sssssssssssssssssssssssss"
-    puts @farmers_profile.stall_name
-    puts "oooooooooooooooooooooooooooooooooooo"
-
     @total= @product.price.to_f*params[:Qty].to_f
   end
 
@@ -47,7 +50,10 @@ class OrdersController < ApplicationController
     puts "oooooooooooooooooooooooooooooooooooo"
     @order = Order.new(order_params)
     @order.profile_id = current_user.profile.id
+    p = Product.find_by(id: params[:order][:product_id])
     @order.farmers_profile_id = params[:order][:farmers_id]
+    @order.products = Product.where(id: params[:order][:product_id])
+    p.amount_available -= params[:order][:volume].to_d
     @order.save
 
     respond_to do |format|
