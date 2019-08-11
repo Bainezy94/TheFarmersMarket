@@ -130,7 +130,17 @@ HD - Designs a normalised schema (i.e. without data duplication) that facilitate
 
 #### High Fidelity
 
+![Landing](docs/landing.png)
 
+![Farmer's Profiles](docs/farmers.png)
+
+![Markets](docs/markets.png)
+
+![Login / Register](docs/login.png)
+
+![Accounts](docs/account.png)
+
+![Orders](docs/order.png)
 
 ### Moodboards
 
@@ -305,7 +315,7 @@ User stories provided above under "Design". [Click here](#user-stories) to view.
 
 ### 16. Provide Wireframes for your *App*.
 
-More than five detailed and well designed wireframes provided, for several different screen sizes (as required for the app)
+Wireframes provided above under "Design". [Click here](#wireframes) to view.
 
 ### 17. Describe the way tasks are allocated and tracked in your project.
 
