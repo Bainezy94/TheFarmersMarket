@@ -36,21 +36,19 @@
                             <span><%= "#{product.amount_available} Available" %></span>
                             <span><%= product.picked_date %></span>
                         </div>
-                        <div class="card-action">
-                            <% if user_signed_in? && current_user.id == @farmers_profile.profile.user.id %>           
-                                <%= link_to 'Edit', edit_product_path(product) %>
-                                <%= link_to 'Destroy', product, method: :delete, data: { confirm: 'Are you sure?' } %>
-                            <% end %>
-                        </div>
                     </div>
                     <div class="card-action">
                         <% if user_signed_in? && current_user.id == @farmers_profile.profile.user.id %>           
                             <%= link_to 'Edit', edit_product_path(product) %>
                             <%= link_to 'Destroy', product, method: :delete, data: { confirm: 'Are you sure?' } %>
                         <% else %>
-                            <form action="cart/add" method="post">
-                                <input class="qty" type="number" value="0">
+                            <form action="/orders/new" method="get">
+                                <input class="qty" name="Qty" type="number" value="1">
                                 <button type="submit" class="waves-effect waves-light btn">Add to Order</button>
+                                <%= hidden_field_tag :authenticity_token, form_authenticity_token %>
+                                <%= hidden_field_tag :farmers_profile_id, @farmers_profile.id %>
+                                <%= hidden_field_tag :profile_id, current_user.id %>
+                                <%= hidden_field_tag :product_id, product.id %>
                             </form>
                         <% end %>
                     </div>

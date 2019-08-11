@@ -1,41 +1,21 @@
 
-<script>
-    for (let [product_id, qty] of Object.entries(localStorage)) 
-    {
+<%= simple_form_for(@order) do |f| %>
+  <%= f.error_notification %>
+  <%#= f.error_notification message: f.object.errors[:base].to_sentence if f.object.errors[:base].present? %>
 
-    }
-</script>
+  <div class="form-inputs">
+    <%= f.input :product, label: 'Product Name', input_html: {value: @product.name} %>
+    <%= f.input :product_id, :as => :hidden, input_html: {value: @product.id } %>
+    <%# @farmer = farmers_profile.find_by_id(params[:farmers_profile_id]) %>
+    <%= f.input :farmers, label: 'Stall Name', input_html: {value: @farmers_profile.stall_name } %>
+    <%= f.input :farmers_id, :as => :hidden, input_html: {value: @farmers_profile.id } %>
+    <%= f.input :price, label: 'Price', input_html: {value: @product.price} %>
+    <%= f.input :volume, label: 'Quantity', input_html: {value: params[:Qty]} %>
+    <%= f.input :total, label: 'Total', input_html: {value: @total} %>
+  </div>
 
-<table>
-    <thead>
-        <tr>
-            <th>Product</th>
-            <th>Farmer</th>
-            <th>Price</th>
-            <th>QTY</th>
-            <th>Total</th>
-        </tr>
-    </thead>
-    <tbody>
-        <tr>
-            <td>Tomatos</td>
-            <td>Jo</td>
-            <td>$0.87</td>
-            <td>3</td>
-            <td>2.61</td>
-        </tr>
-    </tbody>
-</table>
-
-<div class="col s12">
-    <script src="https://checkout.stripe.com/checkout.js"
-        class="stripe-button"
-        data-key="pk_Fhlzwtm9SCx6Uxww5fNXX8CUbwwAc"
-        data-amount="<%= %>"
-        data-name="The Sleepy Farmer's Markets"
-        data-description="Your Order"
-        data-image="/128x128.png">
-    </script>
-</div>
-
+  <div class="form-actions">
+    <%= f.button :submit %>
+  </div>
+<% end %>
 

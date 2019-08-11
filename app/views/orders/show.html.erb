@@ -5,18 +5,48 @@
 
 <p>
   <strong>Profile:</strong>
-  <%= @order.profile %>
+  <%= @order.profile.name %>
 </p>
 
-<%# <p>
+<p>
   <strong>Product:</strong>
-  <%= @order.product %>
-<%#</p> %>
+  <%= @order.products.last.name %>
+</p>
 
 <p>
-  <strong>Volume:</strong>
+  <strong>Price:</strong>
+  $<%= @order.products.last.price %>
+</p>
+
+<p>
+  <strong>Amount:</strong>
   <%= @order.volume %>
+</p>
+
+<p>
+  <strong>Total:</strong>
+  <% total = @order.products.last.price.to_f * @order.volume.to_f %>
+  $<%= total %>
 </p>
 
 <%= link_to 'Edit', edit_order_path(@order) %> |
 <%= link_to 'Back', orders_path %>
+
+<div class="col s12">
+  <form action="/payment" method="POST">
+    <script src="https://checkout.stripe.com/checkout.js"
+        class="stripe-button"
+        data-key="pk_Fhlzwtm9SCx6Uxww5fNXX8CUbwwAc"
+        data-amount= "<%=  total * 100 %>"
+        data-name="The Sleepy Farmer's Markets"
+        data-description="Your Order"
+        data-image="/assets/farm.jpg"
+        data-locale="auto"
+        data-currency="aud"
+        data-email="<%=current_user.email%>">
+    </script>
+    <%= hidden_field_tag :authenticity_token, form_authenticity_token %> 
+    <%= hidden_field_tag :order_id, @order.id %>
+    <%#= hidden_field_tag :product_id, @product.id %>
+  </form>
+</div>
