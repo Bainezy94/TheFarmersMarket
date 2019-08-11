@@ -10,18 +10,20 @@ An app built with Ruby on Rails by [David Baines](https://github.com/Bainezy94),
 
 ### Problem Definition / Purpose
 
-Farmer's markets are great places to find the best deals on fresh fruit and vegetables. The drawback? Sacrificing quality weekend sleep to work through the tight crowds. Here's where **The Sleepy Farmer's Markets** comes in. With this app, buyers are able to pick-up fresh produce AND enjoy sleeping past peak hours!
+Farmer's markets are great places to find the best deals on fresh fruit and vegetables. The drawback? Sacrificing quality weekend sleep to squeeze through the tight crowds. Here's where **The Sleepy Farmer's Markets** comes in. With this two-sided marketplace, buyers are able to pick-up fresh produce AND enjoy sleeping past peak hours!
 
 ### Functionality / Features
 
 ##### For Buyers
 
-- Order fresh food in advance to be picked up at a priority queue
+- View all markets within the local vicinity.
+- Order fresh food in advance to be picked up at a priority queue.
+- View the current week's deals from local farmers.
 
 ##### For Farmers
 
-- See minimum demand for products in advance of sales periods
-- See total profits from online orders
+- See minimum demand for products in advance of physical trading hours.
+- See total profits from online orders.
 
 ### Screenshots
 
@@ -51,16 +53,18 @@ Our design process involved a few steps including:
 
 1. Brainstorming session 
    - [Project and problem space ideation](#project-ideation)
-   - User stories
+   - [User stories](#user-stories)
    - User journey/s diagram
 2. [Entity Relationship Diagram](#database-entity-relationship-diagrams)
 3. [Wireframing](#wireframes)
 4. [Moodboarding](#moodboards)
-5. Style guide
+5. Creating a Style guide
 
 ### Project Ideation
 
-1. Handy Household Heroes
+Initially, we came up with several different ideas (as listed below). We settled on our final idea ("The Sleepy Farmer's Markets") by playing planning poker.
+
+1. Handy Household Heroes / Gods 'n' Services
 
    Hero / mythological-themed labour hire for tasks such as dog walking, cleaning, gardening, removals / heavy lifting, carpentry, aquarium care, pool care, lawn mowing, tech support
 
@@ -84,7 +88,15 @@ Our design process involved a few steps including:
 
 ### User Stories
 
-
+- As Shania, I want to easily install the application so that I can create a marketplace for local produce
+- As Greg, I want a professional, intuitive and approachable website associated with my goods so that customers feel confidence in my business.
+- As Rachel, I want a no-nonsense approach to listing and displaying my products online so that I can sell more efficiently.
+- As Jo, I want to order produce in advance from farmer's markets so that I don't have to get up at 5am.
+- As Sarah, I want to have a receipt so that I have something to show when picking up my purchases and I can remember who my favourite farmer is.
+- As Sue, I want to read and write reviews about other users - both buyers and farmers - so that I know who is reputable and trustworthy.
+- As Kevin, I want to have an estimate of how much produce to bring to the markets every week so that I can plan in advance.
+- As Bob, I want to view my order history so that I know which stores cater to my food allergies.
+- As Reggie, I want an easy way to keep track of profits so that I can see the income from the website.
 
 ### User Journey/s Diagram
 
@@ -115,6 +127,10 @@ HD - Designs a normalised schema (i.e. without data duplication) that facilitate
 #### Low Fidelity
 
 ![Lo-Fi Wireframes](docs/lo_fi_wireframes.png)
+
+#### High Fidelity
+
+
 
 ### Moodboards
 
@@ -221,9 +237,11 @@ HD - Designs a normalised schema (i.e. without data duplication) that facilitate
 
 ### 1. What is the need (i.e. challenge) that you will be addressing in your project?
 
-There is a need to make shopping at farmer's markets more appealing. These markets offer fresh produce at excellent value however, they tend to be crowded and the best deals are sold out early. 
+There is a need to make shopping at farmer's markets more appealing. 
 
 ### 2. Identify the problem you’re trying to solve by building this particular marketplace *App*? Why is it a problem that needs solving?
+
+These markets offer fresh produce at excellent value however, they tend to be crowded and the best deals are sold out early. 
 
 Demonstrates a full understanding of the problems that exist in a relevant marketplace that needs disrupting
 
@@ -279,13 +297,11 @@ Complete discussion of the project’s models with an understanding of how its a
 
 ### 14. Provide your database schema design.
 
-Database schema design provided above. [Click here](#database-entity-relationship-diagrams) to view.
-
-~~Flawless,complex, complete, and well thought through ERDs provided~~
+Database schema design provided above under "Design". [Click here](#database-entity-relationship-diagrams) to view.
 
 ### 15. Provide User stories for your *App*.
 
-User stories are well thought out, relevant, and comprehensively cover the needs of the app
+User stories provided above under "Design". [Click here](#user-stories) to view.
 
 ### 16. Provide Wireframes for your *App*.
 
@@ -299,27 +315,25 @@ We used a Trello list for our "User Stories" with the cards on this list in orde
 
 Overall, we broke down the entire project into the segments of "Frontend", "Backend" and "Documentation". Each group member was assigned to a different segment and the associated tasks for the entirety of the project. When required, we collaborated on one segment in order to complete sprints. Our progress was tracked and directed on a daily basis during our morning stand-up meetings.
 
-~~Shows significant planning for how tasks are planned and tracked, including a full description of the process and of the tools used~~
-
 ### 18. Discuss how Agile methodology is being implemented in your project.
 
 We used Agile methodology to guide our completion of **The Sleepy Farmer's Markets**. This was done by breaking our project into sprints so that each sprint covered one user story and its associated tasks.
 
 Using incremental sprints encouraged us to constantly regroup every morning to discuss our progress. From these discussions, we were able to constantly ensure our attention was appropriately focused on completing the current sprint. Additionally, we were motivated by these sprints as they provided a small sense of accomplishment when completed. 
 
-By the end of the project, we had completed __ sprints. The tasks completed within each sprint can be seen in the appropriate screenshot [here](#trello-screenshots). We aimed to fulfill our agreed upon high-priority user stories first so that we could quickly develop an MVP. The last __ sprints covered the remaining user stories, and testing.   
-
- ~~Documents comprehensive plan for agile methodology, with extensive evidence of use~~
+By the end of the project, we had completed __ sprints. The tasks completed within each sprint can be seen in the appropriate screenshot [here](#trello-screenshots). We aimed to fulfill our agreed upon high-priority user stories first so that we could quickly develop an MVP. The last __ sprints covered the remaining user stories, and testing.  
 
 ### 19. Provide an overview and description of your Source control process.
 
-P - Basic documented plan for source control use and existing Git source control repository with some project files  
+We used Git with GitHub for source control. 
 
-C - Meets P criteria and has README and gitignore with appropriate content
+[Branches](https://github.com/Bainezy94/TheFarmersMarket/branches) were used to carefully control the quality of our code. Each member of our team would use a separate branch to correspond with a separate feature. [Commits](https://github.com/Bainezy94/TheFarmersMarket/commits/dev) to the branch were pushed to the origin repo and pull requests to the "dev" branch were made on a daily basis, at minimum. Every pull request required a review from another member of the team.  
 
-D - Meets CR criteria and documented plan or evidence for using multiple feature branches
+To address merge conflicts, we made sure to always pull code before we pushed. This meant that any conflicts were solved locally before being pushed to the remote repo.
 
-HD - Meets D criteria and demonstrates frequent commits, merges and pull requests
+Finally, pull requests were intermittently made from the "dev" branch to the "master" branch. This ensured that there was always a backup of our code that we could revert to.
+
+![Source control process](docs/source_control.png)
 
 ### 20. Provide an overview and description of your Testing process.
 
