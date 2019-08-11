@@ -367,10 +367,56 @@ HD - Meets D with clear documentation on the specific methods that will be used 
 
 ### 23. Research what your legal obligations are in relation to handling user data.
 
-P - Basic research performed and basic understanding of legal obligations documented
+According to the Office of the Australian Information Commissioner, there are 13 [Australian Privacy Principles](https://www.oaic.gov.au/privacy/australian-privacy-principles/read-the-australian-privacy-principles/) that describe how user data and personal information must be handled. The areas that the pricinples cover and how these obligations can be met are as follows:
 
-C - Meets P with discussion of one way in which obligations can be met for this project (whether or not they are actually implemented)
+1. Open and transparent management of personal information
 
-D - Meets CR with discussion of alternate approaches to meet obligations and benefits/tradeoffs of each
+   Ideally, our app would have a clear, detailed and up-to-date privacy policy. An additional feature would be to use tooltips to explain briefly why certain pieces of data are required.
 
-HD - Meets D with evidence of discussion of findings and agreement on approach to be used to meet legal obligations
+2. Anonymity and pseudonymity
+
+   Our app should allow individuals the option of not identifying themselves or of using a pseudonym.
+
+3. Collection of solicited information
+
+   Ensure that no sensitive information is collected and only relevant data is retrieved from users.
+
+4. Dealing with unsolicited personal information
+
+	Check [guidelines](https://www.oaic.gov.au/privacy/australian-privacy-principles-guidelines/chapter-4-app-4-dealing-with-unsolicited-personal-information/) for how to deal with unsolicited personal information. 
+
+5. Notification of the collection of personal information
+
+   Notify or ensure individuals are aware of the matters outlined within the [guidelines](https://www.oaic.gov.au/privacy/australian-privacy-principles-guidelines/chapter-5-app-5-notification-of-the-collection-of-personal-information/).
+
+6. Use or disclosure of personal information
+
+   Ensure personal information is only used for the purposes that it was collected for.
+
+7. Direct marketing
+
+   Do not use user information for the purposes of direct marketing.
+
+8. Cross-border disclosure of information
+
+   Do not disclose user information to overseas entities.
+
+9. Adoption, use or disclosure of government-related identifiers
+
+   Do not adopt, use, or disclose government-related identifiers.
+
+10. Quality of personal information
+
+   Ensure that personal information collected remains accurate, up-to-date, and complete. This can be done through periodical emails or notifications on the marketplace. In addition, users are able to edit and update their own information through the "Account" tab at all times.
+
+11. Security of personal information
+
+    Protect personal information from misuse, interference and loss, and from unauthorised access, modification, or disclosure. This can be done with the assistance of an authentication gem such as Devise.
+
+12. Access to personal information
+
+    Allow users to access their personal information through the "Account" tab. This is accessible by all users when they are logged into the marketplace.
+
+13. Correction of personal information
+
+    As wih Principle 10, users should be allowed to edit and correct their own personal information through the "Account" tab, which appears when they are signed in.
