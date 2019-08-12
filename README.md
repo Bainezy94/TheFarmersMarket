@@ -28,25 +28,25 @@ Farmer's markets are great places to find the best deals on fresh fruit and vege
 
 ### Screenshots
 
-![Landing](./docs/Screenshots/landing.png)
+![Landing](./docs/screenshots/landing.png)
 
-![Home](./docs/Screenshots/home.png)
+![Home](./docs/screenshots/home.png)
 
-![Farmers](./docs/Screenshots/farmers.png)
+![Farmers](./docs/screenshots/farmers.png)
 
-![Farmer Profile](./docs/Screenshots/farmer_profile.png)
+![Farmer Profile](./docs/screenshots/farmer_profile.png)
 
-![Order](./docs/Screenshots/order.png)
+![Order](./docs/screenshots/order.png)
 
-![Order List](./docs/Screenshots/order_list.png)
+![Order List](./docs/screenshots/order_list.png)
 
-![Previous Orders](./docs/Screenshots/previous_orders.png)
+![Previous Orders](./docs/screenshots/previous_orders.png)
 
-![Stripe](./docs/Screenshots/stripe.png)
+![Stripe](./docs/screenshots/stripe.png)
 
-![Markets](./docs/Screenshots/markets.png)
+![Markets](./docs/screenshots/markets.png)
 
-![Edit User](./docs/Screenshots/edit_user.png)
+![Edit User](./docs/screenshots/edit_user.png)
 
 ### Tech Stack
 
@@ -314,13 +314,13 @@ Initially, we came up with several different ideas (as listed below). We settled
 
 See [Question 17](#17.-describe-the-way-tasks-are-allocated-and-tracked-in-your-project.) for a detailed explanation of the below screenshots.
 
-![Beginning of Trello board](docs/Trello/trello_001.png)
+![Beginning of Trello board](docs/trello/trello_001.png)
 
-![Trello Sprints](docs/Trello/trello_002.png)
+![Trello Sprints](docs/trello/trello_002.png)
 
-![User Story Card](docs/Trello/trello_003.png)
+![User Story Card](docs/trello/trello_003.png)
 
-![Design checlist](docs/Trello/trello_004.png)
+![Design checlist](docs/trello/trello_004.png)
 
 
 ## Short Answer Questions
