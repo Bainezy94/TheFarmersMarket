@@ -181,11 +181,11 @@ Initially, we came up with several different ideas (as listed below). We settled
 
 #### High Fidelity
 
-![Landing](./docs/Wireframes/hi-fi/landing.png)
+![Landing](./docs/Wireframes/hi-fi/Landing.png)
 
 ![Farmer's Profiles](./docs/Wireframes/hi-fi/farmers.png)
 
-![Markets](./docs/Wireframes/hi-fi/markets.png)
+![Markets](./docs/Wireframes/hi-fi/Markets.png)
 
 ![Login / Register](./docs/Wireframes/hi-fi/login.png)
 
