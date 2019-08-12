@@ -31,19 +31,33 @@ Farmer's markets are great places to find the best deals on fresh fruit and vege
 
 ### Tech Stack
 
-- HTML, CSS, deployment platform, etc
+![Tech stack](docs/techstack.png)
 
-### Setup
+### Instructions 
 
+To use the live deployment, go to: [https://sleepy-farmers-markets.herokuapp.com/home/page](https://sleepy-farmers-markets.herokuapp.com/home/page)
 
+To use locally, perform the following steps in the CLI:
 
-### Configuration
+1. Clone the Git repository locally:
+`git clone https://github.com/Bainezy94/TheFarmersMarket.git`
 
+2. Move into the directory:
+`cd TheFarmersMarket`
 
+3. Install gems
+`bundle install`
 
-### Usage
+4. Ensure PostgreSQL is running and initialize the database:
+`rails db:create`
 
+5. Run migrations
+`rails db:migrate`
 
+6. (Optional) Seed the database
+`rails db:setup`
+
+7. Finally, open up a browser and go to http://localhost:3000
 
 ## Design
 
@@ -54,11 +68,11 @@ Our design process involved a few steps including:
 1. Brainstorming session 
    - [Project and problem space ideation](#project-ideation)
    - [User stories](#user-stories)
-   - User journey/s diagram
+   - [User journey/s diagram](#user-journey/s-diagram)
 2. [Entity Relationship Diagram](#database-entity-relationship-diagrams)
 3. [Wireframing](#wireframes)
 4. [Moodboarding](#moodboards)
-5. Creating a Style guide
+5. Creating a [Style guide](#style-guide)
 
 ### Project Ideation
 
@@ -100,35 +114,15 @@ Initially, we came up with several different ideas (as listed below). We settled
 
 ### User Journey/s Diagram
 
+#### Sketches
 
+![User Journeys Sketches](docs/lo_fi_wireframes.png)
 
 ### Database Entity Relationship Diagrams
 
 ![ERD](docs/erd.png)
 
-D - ERD is complete with appropriately defined entities (models each serve a single purpose and appropriate fields). There may be a little duplication.
-
-HD - Meets D with no duplication and ideal definition of entities.
-
-D - All tables, fields, and relationships adequately represent an appropropriate solution.
-
-HD - Meets D and represents a highly optimised solution.
-
-Documentation provided demonstrates exceptional understanding of relational database model and database infrastructure.
-
-HD - Identifies all significant entities, as well as additional entities
-
-HD - Identifies all relationships / associations in a sophisticated relational model
-
-HD - Designs a normalised schema (i.e. without data duplication) that facilitates extended functionality of the app
-
 ### Wireframes
-
-#### Low Fidelity
-
-![Lo-Fi Wireframes](docs/lo_fi_wireframes.png)
-
-#### High Fidelity
 
 ![Landing](docs/landing.png)
 
@@ -145,12 +139,12 @@ HD - Designs a normalised schema (i.e. without data duplication) that facilitate
 ### Moodboards
 
 ![First half of mood board](docs/moodboard_001.png)
-
 ![Second half of mood board](docs/moodboard_002.png)
 
 ### Style Guide
 
-
+![Style guide intro](docs/styleguide1.png)
+![Style guide](docs/styleguide2.png)
 
 ## Planning Process
 
@@ -247,13 +241,11 @@ HD - Designs a normalised schema (i.e. without data duplication) that facilitate
 
 ### 1. What is the need (i.e. challenge) that you will be addressing in your project?
 
-There is a need to make shopping at farmer's markets more appealing. 
+There is a need to make shopping at local farmer's markets more appealing to a wider audience. This is because giant supermarkets such as Coles and Woolworths occupy [72.5%](https://www.news.com.au/finance/business/retail/woolworths-and-coles-have-taken-over-australians-lives/news-story/344d02196373c4f960a0d0014613ac1c) of the grocery sector, yet only [20%](https://www.smh.com.au/national/shoppers-hunger-for--local-foods-at-supermarkets-20140626-zsnct.html) of consumers said the stores provided a good range. By promoting local farmer's markets, this project supports small Australian businesses and satisfies the consumer need for a wide range of local produce.
 
 ### 2. Identify the problem you’re trying to solve by building this particular marketplace *App*? Why is it a problem that needs solving?
 
 These markets offer fresh produce at excellent value however, they tend to be crowded and the best deals are sold out early. 
-
-Demonstrates a full understanding of the problems that exist in a relevant marketplace that needs disrupting
 
 ### 3. Describe the project will you be conducting and how your *App* will address the needs.
 
@@ -299,7 +291,7 @@ Shows a complete understanding of the data structure of two sided marketplace ap
 
 ### 12. Discuss the database relations to be implemented.
 
-The following is depicted by the [ERD](#database-entity-relationship-diagrams) above: 
+The following is our original plan, as depicted by the [ERD](#database-entity-relationship-diagrams) above: 
 
 - We have markets which only admin can fill in (in order to be listed, markets could call up the admin and pay to be on the app.)
 - Every person using the website needs a user and a profile (every user has one profile). 
@@ -309,7 +301,12 @@ The following is depicted by the [ERD](#database-entity-relationship-diagrams) a
 
 ### 13. Describe your project’s models in terms of the relationships (active record associations) they have with each other.
 
-Complete discussion of the project’s models with an understanding of how its active record associations function
+In actuality, this is how we have implemented things:
+- We have markets which only admin can fill in (markets could call up and pay to be on the app). Markets can have many farmers, and farmers_profile belongs to market.
+- Every person using the website needs a user and a profile (every user has one profile, profile belongs to user). From there, farmers have an extra farmers_profile (farmers_profile belongs to profile, profile has one farmers_profile) 
+- Farmers can upload many products (product belongs to farmers_profile, farmers_profile has many products). A farmer also signs up to be present at one market (belongs to market). There can also be many orders from a farmer (has many orders). Products belong to the farmers profile whom added it, and has and belongs to many orders
+- Every profile can have many orders also (profile has many orders, order belongs to profile, order as belongs to farmers_profile). Each order can have many products and a product belongs to an order (order has and belongs to many products), although the way our orders are set up the user can only order one or more of the same product. Order also belongs to the profile making it and belongs to the farmers profile whom they are ordering from.
+- Reviews although set up as far as the database, is not coded into the app so is currently not an option
 
 ### 14. Provide your database schema design.
 
@@ -363,6 +360,10 @@ HD - Meets D with tests documented or defined for all user stories, extensive us
 
 ### 21. Discuss and analyse requirements related to information system security.
 
+The Devise gem is great for password security and authentication.
+
+The CanCanCan gem is excellent for managing CRUD and applying roles Admin has access to all CRUD, where as a user may only be able to have read rights and blocks users from seeing URLs they do not have permission to use.
+
 P - Basic general documentation on information security requirements
 
 C - Meets P with specific mention of requirements for this project, such as user authentication and protection of sensitive information
@@ -372,6 +373,8 @@ D - Meets CR with discussion of alternative options for information security and
 HD - Meets D with evidence that the best option for information security was chosen
 
 ### 22. Discuss methods you will use to protect information and data.
+
+We used devise for password authentication. We have also added roles that limit visibility for standard users. This isn’t a security feature so much as they could still access the pages if they knew the url. However from a superficial point of view, a standard user is unable to post, delete, or edit products like a farmer; or add markets like admin. Further farmers can only update their own products, not anyone elses.
 
 P - Basic general documentation on methods to protect information and data
 
