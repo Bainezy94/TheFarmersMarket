@@ -28,25 +28,25 @@ Farmer's markets are great places to find the best deals on fresh fruit and vege
 
 ### Screenshots
 
-![Landing](./docs/screenshots/landing.png)
+![Landing](./docs/Screenshots/landing.png)
 
-![Home](./docs/screenshots/home.png)
+![Home](./docs/Screenshots/home.png)
 
-![Farmers](./docs/screenshots/farmers.png)
+![Farmers](./docs/Screenshots/farmers.png)
 
-![Farmer Profile](./docs/screenshots/farmer_profile.png)
+![Farmer Profile](./docs/Screenshots/farmer_profile.png)
 
-![Order](./docs/screenshots/order.png)
+![Order](./docs/Screenshots/order.png)
 
-![Order List](./docs/screenshots/order_list.png)
+![Order List](./docs/Screenshots/order_list.png)
 
-![Previous Orders](./docs/screenshots/previous_orders.png)
+![Previous Orders](./docs/Screenshots/previous_orders.png)
 
-![Stripe](./docs/screenshots/stripe.png)
+![Stripe](./docs/Screenshots/stripe.png)
 
-![Markets](./docs/screenshots/markets.png)
+![Markets](./docs/Screenshots/markets.png)
 
-![Edit User](./docs/screenshots/edit_user.png)
+![Edit User](./docs/Screenshots/edit_user.png)
 
 ### Tech Stack
 
@@ -135,7 +135,7 @@ Initially, we came up with several different ideas (as listed below). We settled
 
 #### Initial Sketches
 
-![User Journeys Sketches](./docs/wireframes/lo-fi/wireframes.png)
+![User Journeys Sketches](./docs/Wireframes/lo-fi/wireframes.png)
 
 #### End Product
 
@@ -150,48 +150,48 @@ Initially, we came up with several different ideas (as listed below). We settled
 
 #### Low Fidelity
 
-![Lo-Fi Wireframes](./docs/wireframes/lo-fi/wireframes.png)
+![Lo-Fi Wireframes](./docs/Wireframes/lo-fi/wireframes.png)
 
 
 #### Medium Fidelity
 
-![](./docs/wireframes/mid-fi/Login-Desktop.png)
-![](./docs/wireframes/mid-fi/Login-Tablet.png)
-![](./docs/wireframes/mid-fi/Login-Mobile.png)
+![](./docs/Wireframes/mid-fi/Login-Desktop.png)
+![](./docs/Wireframes/mid-fi/Login-Tablet.png)
+![](./docs/Wireframes/mid-fi/Login-Mobile.png)
 
-![](./docs/wireframes/mid-fi/FarmersMarket-Desktop.png)
-![](./docs/wireframes/mid-fi/FarmersMarket-Tablet.png)
-![](./docs/wireframes/mid-fi/FarmersMarket-Mobile.png)
+![](./docs/Wireframes/mid-fi/FarmersMarket-Desktop.png)
+![](./docs/Wireframes/mid-fi/FarmersMarket-Tablet.png)
+![](./docs/Wireframes/mid-fi/FarmersMarket-Mobile.png)
 
-![](./docs/wireframes/mid-fi/Farmers-Desktop.png)
-![](./docs/wireframes/mid-fi/Farmers-Tablet.png)
-![](./docs/wireframes/mid-fi/Farmers-Mobile.png)
+![](./docs/Wireframes/mid-fi/Farmers-Desktop.png)
+![](./docs/Wireframes/mid-fi/Farmers-Tablet.png)
+![](./docs/Wireframes/mid-fi/Farmers-Mobile.png)
 
-![](./docs/wireframes/mid-fi/Markets-Desktop.png)
-![](./docs/wireframes/mid-fi/Markets-Tablet.png)
-![](./docs/wireframes/mid-fi/Markets-Mobile.png)
+![](./docs/Wireframes/mid-fi/Markets-Desktop.png)
+![](./docs/Wireframes/mid-fi/Markets-Tablet.png)
+![](./docs/Wireframes/mid-fi/Markets-Mobile.png)
 
-![](./docs/wireframes/mid-fi/Orders-Desktop.png)
-![](./docs/wireframes/mid-fi/Orders-Tablet.png)
-![](./docs/wireframes/mid-fi/Orders-Mobile.png)
+![](./docs/Wireframes/mid-fi/Orders-Desktop.png)
+![](./docs/Wireframes/mid-fi/Orders-Tablet.png)
+![](./docs/Wireframes/mid-fi/Orders-Mobile.png)
 
-![](./docs/wireframes/mid-fi/Products-Desktop.png)
-![](./docs/wireframes/mid-fi/Products-Tablet.png)
-![](./docs/wireframes/mid-fi/Products-Mobile.png)
+![](./docs/Wireframes/mid-fi/Products-Desktop.png)
+![](./docs/Wireframes/mid-fi/Products-Tablet.png)
+![](./docs/Wireframes/mid-fi/Products-Mobile.png)
 
 #### High Fidelity
 
-![Landing](./docs/wireframes/hi-fi/landing.png)
+![Landing](./docs/Wireframes/hi-fi/landing.png)
 
-![Farmer's Profiles](./docs/wireframes/hi-fi/farmers.png)
+![Farmer's Profiles](./docs/Wireframes/hi-fi/farmers.png)
 
-![Markets](./docs/wireframes/hi-fi/markets.png)
+![Markets](./docs/Wireframes/hi-fi/markets.png)
 
-![Login / Register](./docs/wireframes/hi-fi/login.png)
+![Login / Register](./docs/Wireframes/hi-fi/login.png)
 
-![Accounts](./docs/wireframes/hi-fi/account.png)
+![Accounts](./docs/Wireframes/hi-fi/account.png)
 
-![Orders](./docs/wireframes/hi-fi/order.png)
+![Orders](./docs/Wireframes/hi-fi/order.png)
 
 
 ### Moodboards
@@ -314,13 +314,13 @@ Initially, we came up with several different ideas (as listed below). We settled
 
 See [Question 17](#17.-describe-the-way-tasks-are-allocated-and-tracked-in-your-project.) for a detailed explanation of the below screenshots.
 
-![Beginning of Trello board](docs/trello/trello_001.png)
+![Beginning of Trello board](docs/Trello/trello_001.png)
 
-![Trello Sprints](docs/trello/trello_002.png)
+![Trello Sprints](docs/Trello/trello_002.png)
 
-![User Story Card](docs/trello/trello_003.png)
+![User Story Card](docs/Trello/trello_003.png)
 
-![Design checlist](docs/trello/trello_004.png)
+![Design checlist](docs/Trello/trello_004.png)
 
 
 ## Short Answer Questions
