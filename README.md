@@ -191,7 +191,7 @@ Initially, we came up with several different ideas (as listed below). We settled
 
 ![Accounts](./docs/Wireframes/hi-fi/account.png)
 
-![Orders](./docs/Wireframes/hi-fi/order.png)
+![Orders](./docs/Wireframes/hi-fi/Order.png)
 
 
 ### Moodboards
