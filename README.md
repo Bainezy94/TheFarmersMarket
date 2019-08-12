@@ -159,6 +159,42 @@ Initially, we came up with several different ideas (as listed below). We settled
 
 ![Orders](docs/order.png)
 
+![Farmers - Desktop](/Users/ewelinloo/Documents/Studies/EweLinLoo_A2-1/TheFarmersMarket/docs/Wireframes/Farmers - Desktop.png)
+
+![Farmers - Mobile](/Users/ewelinloo/Documents/Studies/EweLinLoo_A2-1/TheFarmersMarket/docs/Wireframes/Farmers - Mobile.png)
+
+![Farmers - Tablet](/Users/ewelinloo/Documents/Studies/EweLinLoo_A2-1/TheFarmersMarket/docs/Wireframes/Farmers - Tablet.png)
+
+![Farmers Market - Desktop](/Users/ewelinloo/Documents/Studies/EweLinLoo_A2-1/TheFarmersMarket/docs/Wireframes/Farmers Market - Desktop.png)
+
+![Farmers Market - Mobile](/Users/ewelinloo/Documents/Studies/EweLinLoo_A2-1/TheFarmersMarket/docs/Wireframes/Farmers Market - Mobile.png)
+
+![Farmers Market - Tablet](/Users/ewelinloo/Documents/Studies/EweLinLoo_A2-1/TheFarmersMarket/docs/Wireframes/Farmers Market - Tablet.png)
+
+![Login - Desktop](/Users/ewelinloo/Documents/Studies/EweLinLoo_A2-1/TheFarmersMarket/docs/Wireframes/Login - Desktop.png)
+
+![Login - Mobile](/Users/ewelinloo/Documents/Studies/EweLinLoo_A2-1/TheFarmersMarket/docs/Wireframes/Login - Mobile.png)
+
+![Login - Tablet](/Users/ewelinloo/Documents/Studies/EweLinLoo_A2-1/TheFarmersMarket/docs/Wireframes/Login - Tablet.png)
+
+![Markets - Desktop](/Users/ewelinloo/Documents/Studies/EweLinLoo_A2-1/TheFarmersMarket/docs/Wireframes/Markets - Desktop.png)
+
+![Markets - Mobile](/Users/ewelinloo/Documents/Studies/EweLinLoo_A2-1/TheFarmersMarket/docs/Wireframes/Markets - Mobile.png)
+
+![Markets - Tablet](/Users/ewelinloo/Documents/Studies/EweLinLoo_A2-1/TheFarmersMarket/docs/Wireframes/Markets - Tablet.png)
+
+![Orders - Desktop](/Users/ewelinloo/Documents/Studies/EweLinLoo_A2-1/TheFarmersMarket/docs/Wireframes/Orders - Desktop.png)
+
+![Orders - Mobile](/Users/ewelinloo/Documents/Studies/EweLinLoo_A2-1/TheFarmersMarket/docs/Wireframes/Orders - Mobile.png)
+
+![Orders - Tablet](/Users/ewelinloo/Documents/Studies/EweLinLoo_A2-1/TheFarmersMarket/docs/Wireframes/Orders - Tablet.png)
+
+![Products - Desktop](/Users/ewelinloo/Documents/Studies/EweLinLoo_A2-1/TheFarmersMarket/docs/Wireframes/Products - Desktop.png)
+
+![Products - Mobile](/Users/ewelinloo/Documents/Studies/EweLinLoo_A2-1/TheFarmersMarket/docs/Wireframes/Products - Mobile.png)
+
+![Products - Tablet](/Users/ewelinloo/Documents/Studies/EweLinLoo_A2-1/TheFarmersMarket/docs/Wireframes/Products - Tablet.png)
+
 ### Moodboards
 
 ![First half of mood board](docs/moodboard_001.png)
