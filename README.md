@@ -139,7 +139,7 @@ Initially, we came up with several different ideas (as listed below). We settled
 
 #### End Product
 
-
+![User flow](docs/user_flow.png)
 
 ### Database Entity Relationship Diagrams
 
