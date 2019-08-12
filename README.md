@@ -28,7 +28,25 @@ Farmer's markets are great places to find the best deals on fresh fruit and vege
 
 ### Screenshots
 
+![Landing](docs/Screenshots/landing.png)
 
+![Home](docs/Screenshots/home.png)
+
+![Farmers](docs/Screenshots/farmers.png)
+
+![Farmer Profile](docs/Screenshots/farmer_profile.png)
+
+![Order](docs/Screenshots/order.png)
+
+![Order List](docs/Screenshots/order_list.png)
+
+![Previous Orders](docs/Screenshots/previous_orders.png)
+
+### ![Stripe](docs/Screenshots/stripe.png)
+
+![Markets](docs/Screenshots/markets.png)
+
+![Edit User](docs/Screenshots/edit_user.png)
 
 ### Tech Stack
 
