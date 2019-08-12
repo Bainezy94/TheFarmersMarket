@@ -1,6 +1,10 @@
 class ApplicationController < ActionController::Base
-    # before_action :authenticate_user!
+    before_action :authenticate_user!
     before_action :set_user_type
+
+    rescue_from CanCan::AccessDenied do |exception|
+        redirect_to root_url, :alert => exception.message
+    end
 
     def set_user_type   
         @user_type = params[:user_type]

@@ -1,32 +1,25 @@
-<%= form_with(model: profile, local: true) do |form| %>
-  <% if profile.errors.any? %>
-    <div id="error_explanation">
-      <h2><%= pluralize(profile.errors.count, "error") %> prohibited this profile from being saved:</h2>
+<div class="row">
+    <%= simple_form_for @profile, :html => {class: "col s6"} do |f| %>
+        <%= f.error_notification %>
+        <%= f.error_notification message: f.object.errors[:base].to_sentence if f.object.errors[:base].present? %>
 
-      <ul>
-      <% profile.errors.full_messages.each do |message| %>
-        <li><%= message %></li>
-      <% end %>
-      </ul>
-    </div>
-  <% end %>
+        <div class="form-inputs">
+            <%= f.input :name, wrapper_html: { class: "input-field col s12" } %>
+            <%= f.input :phone_number, wrapper_html: { class: "input-field col s12" }%>
 
-  <div class="field">
-    <%= form.label :name %>
-    <%= form.text_field :name %>
-  </div>
-
-  <div class="field">
-    <%= form.label :avatar %>
-    <%= form.file_field :avatar %>
-  </div>
-
-  <div class="field">
-    <%= form.label :phone_number %>
-    <%= form.text_field :phone_number %>
-  </div>
-
-  <div class="actions">
-    <%= form.submit %>
-  </div>
-<% end %>
+            <div class="file-field input-field col s12">
+                <div class="btn">
+                    <span>Picture</span>
+                    <%= f.file_field :avatar, label: false %>
+                </div>
+                    <div class="file-path-wrapper">
+                    <input class="file-path validate" type="text">
+                </div>
+            </div>
+        </div>
+    
+        <div class="form-actions">
+            <%= f.button :submit %>
+        </div>
+    <% end %>
+</div>

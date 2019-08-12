@@ -1,26 +1,21 @@
 <div class="row">
     <%= simple_form_for @order, :html => {class: "col s12"} do |f| %>
-
         <%= f.error_notification %>
         <%= f.error_notification message: f.object.errors[:base].to_sentence if f.object.errors[:base].present? %>
-        <%= f.association :profile, wrapper_html: { class: "input-field col s6" }, required: true %>
 
-        <%= f.association :farmers_profile, wrapper_html: { class: "input-field col s6" }, required: true %>
-        <%= f.association :products,        wrapper_html: { class: "input-field col s6" }, required: true %>
-        <%= f.input       :volume,          wrapper_html: { class: "input-field col s6" }, input_html: { class: "materialize-textarea" }, required: true %>
+        <div class="form-inputs">
+            <%= f.input :product, label: 'Product Name', input_html: {value: @product.name}, wrapper_html: { class: "input-field col s6" }, readonly: true%>
+            <%= f.input :farmers, label: 'Stall Name',   input_html: {value: @farmers_profile.stall_name }, wrapper_html: { class: "input-field col s6" }, readonly: true %>
+            <%= f.input :price,   label: 'Price',        input_html: {value: @product.price}, wrapper_html: { class: "input-field col s6" }, readonly: true %>
+            <%= f.input :volume,  label: 'Quantity',     input_html: {value: params[:Qty]},   wrapper_html: { class: "input-field col s6" }, readonly: true %>
+            <%= f.input :total,   label: 'Total',        input_html: {value: @total},         readonly: true %>
 
-        <div class="col s12">
-            <script src="https://checkout.stripe.com/checkout.js"
-            class="stripe-button"
-            data-key="pk_Fhlzwtm9SCx6Uxww5fNXX8CUbwwAc"
-            data-amount="product.cost"
-            data-name="The Sleepy Farmer's Markets"
-            data-description="2 widgets ($20.00)"
-            data-image="/128x128.png">
-            </script>
-
-            <%= f.button      :submit %>
+            <%= f.input :product_id, :as => :hidden, input_html: {value: @product.id }, readonly: true %>
+            <%= f.input :farmers_id, :as => :hidden, input_html: {value: @farmers_profile.id }, readonly: true %>
         </div>
-
+    
+        <div class="form-actions">
+            <%= f.button :submit %>
+        </div>
     <% end %>
 </div>

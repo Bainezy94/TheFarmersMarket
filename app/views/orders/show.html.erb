@@ -1,22 +1,42 @@
-<p>
-  <strong>Farmer:</strong>
-  <%= @order.farmers_profile.stall_name %>
-</p>
+<h2><%= @order.farmers_profile.stall_name %></h2>
 
-<p>
-  <strong>Profile:</strong>
-  <%= @order.profile %>
-</p>
-
-<%# <p>
-  <strong>Product:</strong>
-  <%= @order.product %>
-<%#</p> %>
-
-<p>
-  <strong>Volume:</strong>
-  <%= @order.volume %>
-</p>
+<table>
+    <thead>
+        <tr>
+            <th>Product</th>
+            <th>Price</th>
+            <th>Quantity</th>
+            <th>Total</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td><%= @order.products.last.name %></td>
+            <td><%= @order.products.last.price %></td>
+            <td><%= @order.volume %></td>
+            <% total = @order.products.last.price.to_f * @order.volume.to_f %>
+            <td>$<%= total %></td>
+        </tr>
+    </tbody>
+</table>
 
 <%= link_to 'Edit', edit_order_path(@order) %> |
 <%= link_to 'Back', orders_path %>
+
+<div class="col s12">
+  <form action="/payment" method="POST">
+    <script src="https://checkout.stripe.com/checkout.js"
+        class="stripe-button"
+        data-key="pk_Fhlzwtm9SCx6Uxww5fNXX8CUbwwAc"
+        data-amount= "<%=  total * 100 %>"
+        data-name="The Sleepy Farmer's Markets"
+        data-description="Your Order"
+        data-image="/assets/farm.jpg"
+        data-locale="auto"
+        data-currency="aud"
+        data-email="<%=current_user.email%>">
+    </script>
+    <%= hidden_field_tag :authenticity_token, form_authenticity_token %> 
+    <%= hidden_field_tag :order_id, @order.id %>
+  </form>
+</div>

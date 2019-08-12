@@ -1,5 +1,5 @@
 class FarmersProfilesController < ApplicationController
-  before_action :set_farmers_profile, only: [:show, :edit, :update, :destroy]
+    load_and_authorize_resource
 
   # GET /farmers_profiles
   # GET /farmers_profiles.json
@@ -10,6 +10,7 @@ class FarmersProfilesController < ApplicationController
   # GET /farmers_profiles/1
   # GET /farmers_profiles/1.json
   def show
+    @order = Order.new
     @products = Product.all
   end
 

@@ -28,29 +28,29 @@ Farmer's markets are great places to find the best deals on fresh fruit and vege
 
 ### Screenshots
 
-![Landing](docs/Screenshots/landing.png)
+![Landing](./docs/Screenshots/landing.png)
 
-![Home](docs/Screenshots/home.png)
+![Home](./docs/Screenshots/home.png)
 
-![Farmers](docs/Screenshots/farmers.png)
+![Farmers](./docs/Screenshots/farmers.png)
 
-![Farmer Profile](docs/Screenshots/farmer_profile.png)
+![Farmer Profile](./docs/Screenshots/farmer_profile.png)
 
-![Order](docs/Screenshots/order.png)
+![Order](./docs/Screenshots/order.png)
 
-![Order List](docs/Screenshots/order_list.png)
+![Order List](./docs/Screenshots/order_list.png)
 
-![Previous Orders](docs/Screenshots/previous_orders.png)
+![Previous Orders](./docs/Screenshots/previous_orders.png)
 
-### ![Stripe](docs/Screenshots/stripe.png)
+![Stripe](./docs/Screenshots/stripe.png)
 
-![Markets](docs/Screenshots/markets.png)
+![Markets](./docs/Screenshots/markets.png)
 
-![Edit User](docs/Screenshots/edit_user.png)
+![Edit User](./docs/Screenshots/edit_user.png)
 
 ### Tech Stack
 
-![Tech stack](docs/techstack.png)
+![Tech stack](./docs/techstack.png)
 
 ### Instructions 
 
@@ -135,77 +135,74 @@ Initially, we came up with several different ideas (as listed below). We settled
 
 #### Initial Sketches
 
-![User Journeys Sketches](docs/lo_fi_wireframes.png)
+![User Journeys Sketches](./docs/wireframes/lo-fi/wireframes.png)
 
 #### End Product
 
-![User flow](docs/user_flow.png)
+![User flow](./docs/user_flow.png)
 
 ### Database Entity Relationship Diagrams
 
-![ERD](docs/erd.png)
+![ERD](./docs/erd.png)
 
 ### Wireframes
 
-![Landing](docs/Landing.png)
 
-![Farmer's Profiles](docs/farmers.png)
+#### Low Fidelity
 
-![Markets](docs/Markets.png)
+![Lo-Fi Wireframes](./docs/wireframes/lo-fi/wireframes.png)
 
-![Login / Register](docs/login.png)
 
-![Accounts](docs/account.png)
+#### Medium Fidelity
 
-![Orders](docs/Order.png)
+![](./docs/wireframes/mid-fi/Login-Desktop.png)
+![](./docs/wireframes/mid-fi/Login-Tablet.png)
+![](./docs/wireframes/mid-fi/Login-Mobile.png)
 
-![Farmers - Desktop](docs/Wireframes/Farmers - Desktop.png)
+![](./docs/wireframes/mid-fi/FarmersMarket-Desktop.png)
+![](./docs/wireframes/mid-fi/FarmersMarket-Tablet.png)
+![](./docs/wireframes/mid-fi/FarmersMarket-Mobile.png)
 
-![Farmers - Mobile](docs/Wireframes/Farmers - Mobile.png)
+![](./docs/wireframes/mid-fi/Farmers-Desktop.png)
+![](./docs/wireframes/mid-fi/Farmers-Tablet.png)
+![](./docs/wireframes/mid-fi/Farmers-Mobile.png)
 
-![Farmers - Tablet](docs/Wireframes/Farmers - Tablet.png)
+![](./docs/wireframes/mid-fi/Markets-Desktop.png)
+![](./docs/wireframes/mid-fi/Markets-Tablet.png)
+![](./docs/wireframes/mid-fi/Markets-Mobile.png)
 
-![Farmers Market - Desktop](docs/Wireframes/Farmers Market - Desktop.png)
+![](./docs/wireframes/mid-fi/Orders-Desktop.png)
+![](./docs/wireframes/mid-fi/Orders-Tablet.png)
+![](./docs/wireframes/mid-fi/Orders-Mobile.png)
 
-![Farmers Market - Mobile](docs/Wireframes/Farmers Market - Mobile.png)
+![](./docs/wireframes/mid-fi/Products-Desktop.png)
+![](./docs/wireframes/mid-fi/Products-Tablet.png)
+![](./docs/wireframes/mid-fi/Products-Mobile.png)
 
-![Farmers Market - Tablet](docs/Wireframes/Farmers Market - Tablet.png)
+#### High Fidelity
 
-![Login - Desktop](docs/Wireframes/Login - Desktop.png)
+![Landing](./docs/wireframes/hi-fi/landing.png)
 
-![Login - Mobile](docs/Wireframes/Login - Mobile.png)
+![Farmer's Profiles](./docs/wireframes/hi-fi/farmers.png)
 
-![Login - Tablet](docs/Wireframes/Login - Tablet.png)
+![Markets](./docs/wireframes/hi-fi/markets.png)
 
-![Markets - Desktop](docs/Wireframes/Markets - Desktop.png)
+![Login / Register](./docs/wireframes/hi-fi/login.png)
 
-![Markets - Mobile](docs/Wireframes/Markets - Mobile.png)
+![Accounts](./docs/wireframes/hi-fi/account.png)
 
-![Markets - Tablet](docs/Wireframes/Markets - Tablet.png)
+![Orders](./docs/wireframes/hi-fi/order.png)
 
-![Orders - Desktop](docs/Wireframes/Orders - Desktop.png)
-
-![Orders - Mobile](docs/Wireframes/Orders - Mobile.png)
-
-![Orders - Tablet](docs/Wireframes/Orders - Tablet.png)
-
-![Products - Desktop](docs/Wireframes/Products - Desktop.png)
-
-![Products - Mobile](docs/Wireframes/Products - Mobile.png)
-
-![Products - Tablet](docs/Wireframes/Products - Tablet.png)
 
 ### Moodboards
 
-![First half of mood board](docs/moodboard_001.png)
-
-![Second half of mood board](docs/moodboard_002.png)
+![First half of mood board](./docs/moodboard_001.png)
+![Second half of mood board](./docs/moodboard_002.png)
 
 ### Style Guide
 
-![Style guide intro](docs/styleguide1.png)
-
-![Style guide](docs/styleguide2.png)
+![Style guide intro](./docs/styleguide1.png)
+![Style guide](./docs/styleguide2.png)
 
 ## Planning Process
 
@@ -324,6 +321,7 @@ See [Question 17](#17.-describe-the-way-tasks-are-allocated-and-tracked-in-your-
 ![User Story Card](docs/Trello/trello_003.png)
 
 ![Design checlist](docs/Trello/trello_004.png)
+
 
 ## Short Answer Questions
 
@@ -450,7 +448,7 @@ To address merge conflicts, we made sure to always pull code before we pushed. T
 
 Finally, pull requests were intermittently made from the "dev" branch to the "master" branch. This ensured that there was always a backup of our code that we could revert to.
 
-![Source control process](docs/source_control.png)
+![Source control process](./docs/source_control.png)
 
 ### 20. Provide an overview and description of your Testing process.
 
