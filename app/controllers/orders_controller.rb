@@ -5,7 +5,6 @@ class OrdersController < ApplicationController
   # GET /orders.json
   def index
     @orders = Order.all
-
   end
  
   # GET /orders/1
@@ -72,7 +71,16 @@ class OrdersController < ApplicationController
   # DELETE /orders/1
   # DELETE /orders/1.json
   def destroy
+    #find product being deleted and add it back to amount available
+    @order_needed = OrdersProduct.find_by(order_id: params[:id])
+    @product_id = @order_needed.product_id
+    @product = Product.find_by_id(@product_id)
+    amount = @product.amount_available.to_i
+    order_amount = @order.volume.to_i
+    add_back = amount + order_amount
+    @product.amount_available = add_back
     @order.destroy
+
     respond_to do |format|
       format.html { redirect_to orders_url, notice: 'Order was successfully destroyed.' }
       format.json { head :no_content }
