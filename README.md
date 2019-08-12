@@ -22,28 +22,61 @@ Farmer's markets are great places to find the best deals on fresh fruit and vege
 
 ##### For Farmers
 
-- See minimum demand for products in advance of physical trading hours.
+- See a minimum demand for products in advance of physical trading hours.
 - See total profits from online orders.
+- Gain further exposure to potential buyers.
 
 ### Screenshots
 
+![Landing](docs/Screenshots/landing.png)
 
+![Home](docs/Screenshots/home.png)
+
+![Farmers](docs/Screenshots/farmers.png)
+
+![Farmer Profile](docs/Screenshots/farmer_profile.png)
+
+![Order](docs/Screenshots/order.png)
+
+![Order List](docs/Screenshots/order_list.png)
+
+![Previous Orders](docs/Screenshots/previous_orders.png)
+
+### ![Stripe](docs/Screenshots/stripe.png)
+
+![Markets](docs/Screenshots/markets.png)
+
+![Edit User](docs/Screenshots/edit_user.png)
 
 ### Tech Stack
 
-- HTML, CSS, deployment platform, etc
+![Tech stack](docs/techstack.png)
 
-### Setup
+### Instructions 
 
+To use the live deployment, go to: [https://sleepy-farmers-markets.herokuapp.com/home/page](https://sleepy-farmers-markets.herokuapp.com/home/page)
 
+To use locally, perform the following steps in the CLI:
 
-### Configuration
+1. Clone the Git repository locally:
+`git clone https://github.com/Bainezy94/TheFarmersMarket.git`
 
+2. Move into the directory:
+`cd TheFarmersMarket`
 
+3. Install gems
+`bundle install`
 
-### Usage
+4. Ensure PostgreSQL is running and initialize the database:
+`rails db:create`
 
+5. Run migrations
+`rails db:migrate`
 
+6. (Optional) Seed the database
+`rails db:setup`
+
+7. Finally, open up a browser and go to http://localhost:3000
 
 ## Design
 
@@ -54,11 +87,11 @@ Our design process involved a few steps including:
 1. Brainstorming session 
    - [Project and problem space ideation](#project-ideation)
    - [User stories](#user-stories)
-   - User journey/s diagram
+   - [User journey/s diagram](#user-journey/s-diagram)
 2. [Entity Relationship Diagram](#database-entity-relationship-diagrams)
 3. [Wireframing](#wireframes)
 4. [Moodboarding](#moodboards)
-5. Creating a Style guide
+5. Creating a [Style guide](#style-guide)
 
 ### Project Ideation
 
@@ -98,37 +131,21 @@ Initially, we came up with several different ideas (as listed below). We settled
 - As Bob, I want to view my order history so that I know which stores cater to my food allergies.
 - As Reggie, I want an easy way to keep track of profits so that I can see the income from the website.
 
-### User Journey/s Diagram
+### User Flow Diagram
 
+#### Initial Sketches
 
+![User Journeys Sketches](docs/lo_fi_wireframes.png)
+
+#### End Product
+
+![User flow](docs/user_flow.png)
 
 ### Database Entity Relationship Diagrams
 
 ![ERD](docs/erd.png)
 
-D - ERD is complete with appropriately defined entities (models each serve a single purpose and appropriate fields). There may be a little duplication.
-
-HD - Meets D with no duplication and ideal definition of entities.
-
-D - All tables, fields, and relationships adequately represent an appropropriate solution.
-
-HD - Meets D and represents a highly optimised solution.
-
-Documentation provided demonstrates exceptional understanding of relational database model and database infrastructure.
-
-HD - Identifies all significant entities, as well as additional entities
-
-HD - Identifies all relationships / associations in a sophisticated relational model
-
-HD - Designs a normalised schema (i.e. without data duplication) that facilitates extended functionality of the app
-
 ### Wireframes
-
-#### Low Fidelity
-
-![Lo-Fi Wireframes](docs/lo_fi_wireframes.png)
-
-#### High Fidelity
 
 ![Landing](docs/landing.png)
 
@@ -142,15 +159,51 @@ HD - Designs a normalised schema (i.e. without data duplication) that facilitate
 
 ![Orders](docs/order.png)
 
+![Farmers - Desktop](/Users/ewelinloo/Documents/Studies/EweLinLoo_A2-1/TheFarmersMarket/docs/Wireframes/Farmers - Desktop.png)
+
+![Farmers - Mobile](/Users/ewelinloo/Documents/Studies/EweLinLoo_A2-1/TheFarmersMarket/docs/Wireframes/Farmers - Mobile.png)
+
+![Farmers - Tablet](/Users/ewelinloo/Documents/Studies/EweLinLoo_A2-1/TheFarmersMarket/docs/Wireframes/Farmers - Tablet.png)
+
+![Farmers Market - Desktop](/Users/ewelinloo/Documents/Studies/EweLinLoo_A2-1/TheFarmersMarket/docs/Wireframes/Farmers Market - Desktop.png)
+
+![Farmers Market - Mobile](/Users/ewelinloo/Documents/Studies/EweLinLoo_A2-1/TheFarmersMarket/docs/Wireframes/Farmers Market - Mobile.png)
+
+![Farmers Market - Tablet](/Users/ewelinloo/Documents/Studies/EweLinLoo_A2-1/TheFarmersMarket/docs/Wireframes/Farmers Market - Tablet.png)
+
+![Login - Desktop](/Users/ewelinloo/Documents/Studies/EweLinLoo_A2-1/TheFarmersMarket/docs/Wireframes/Login - Desktop.png)
+
+![Login - Mobile](/Users/ewelinloo/Documents/Studies/EweLinLoo_A2-1/TheFarmersMarket/docs/Wireframes/Login - Mobile.png)
+
+![Login - Tablet](/Users/ewelinloo/Documents/Studies/EweLinLoo_A2-1/TheFarmersMarket/docs/Wireframes/Login - Tablet.png)
+
+![Markets - Desktop](/Users/ewelinloo/Documents/Studies/EweLinLoo_A2-1/TheFarmersMarket/docs/Wireframes/Markets - Desktop.png)
+
+![Markets - Mobile](/Users/ewelinloo/Documents/Studies/EweLinLoo_A2-1/TheFarmersMarket/docs/Wireframes/Markets - Mobile.png)
+
+![Markets - Tablet](/Users/ewelinloo/Documents/Studies/EweLinLoo_A2-1/TheFarmersMarket/docs/Wireframes/Markets - Tablet.png)
+
+![Orders - Desktop](/Users/ewelinloo/Documents/Studies/EweLinLoo_A2-1/TheFarmersMarket/docs/Wireframes/Orders - Desktop.png)
+
+![Orders - Mobile](/Users/ewelinloo/Documents/Studies/EweLinLoo_A2-1/TheFarmersMarket/docs/Wireframes/Orders - Mobile.png)
+
+![Orders - Tablet](/Users/ewelinloo/Documents/Studies/EweLinLoo_A2-1/TheFarmersMarket/docs/Wireframes/Orders - Tablet.png)
+
+![Products - Desktop](/Users/ewelinloo/Documents/Studies/EweLinLoo_A2-1/TheFarmersMarket/docs/Wireframes/Products - Desktop.png)
+
+![Products - Mobile](/Users/ewelinloo/Documents/Studies/EweLinLoo_A2-1/TheFarmersMarket/docs/Wireframes/Products - Mobile.png)
+
+![Products - Tablet](/Users/ewelinloo/Documents/Studies/EweLinLoo_A2-1/TheFarmersMarket/docs/Wireframes/Products - Tablet.png)
+
 ### Moodboards
 
 ![First half of mood board](docs/moodboard_001.png)
-
 ![Second half of mood board](docs/moodboard_002.png)
 
 ### Style Guide
 
-
+![Style guide intro](docs/styleguide1.png)
+![Style guide](docs/styleguide2.png)
 
 ## Planning Process
 
@@ -247,63 +300,88 @@ HD - Designs a normalised schema (i.e. without data duplication) that facilitate
 
 ### 1. What is the need (i.e. challenge) that you will be addressing in your project?
 
-There is a need to make shopping at farmer's markets more appealing. 
+There is a need to make shopping at local farmer's markets more appealing to a wider audience. This is because supermarket giants such as Coles and Woolworths occupy [72.5%](https://www.news.com.au/finance/business/retail/woolworths-and-coles-have-taken-over-australians-lives/news-story/344d02196373c4f960a0d0014613ac1c) of the grocery sector, yet only [20%](https://www.smh.com.au/national/shoppers-hunger-for--local-foods-at-supermarkets-20140626-zsnct.html) of consumers said the stores provided a good range. By promoting local farmer's markets, this project supports small Australian businesses and satisfies the consumer need for a wide range of local produce.
 
 ### 2. Identify the problem you’re trying to solve by building this particular marketplace *App*? Why is it a problem that needs solving?
 
-These markets offer fresh produce at excellent value however, they tend to be crowded and the best deals are sold out early. 
-
-Demonstrates a full understanding of the problems that exist in a relevant marketplace that needs disrupting
+Local farmer's markets offer fresh produce at excellent value however, they tend to be crowded and the best deals are sold out early. In addition, trading hours tend to be within a narrow window of time, typically only on Saturday or Sunday. These are problems that need solving as small businesses at local farmer's markets need more communal support in order to survive against dominant supermarkets. From a higher viewpoint, if the problems involved with shopping at a local farmer's market are not addressed, this could mean more reliance on the import of overseas produce. This could have implications for Australia's economy and political relations.
 
 ### 3. Describe the project will you be conducting and how your *App* will address the needs.
 
+**The Sleepy Farmer's Markets** aims to broaden the range of consumers that farmer's markets and organic markets appeal to. Specifically, it targets people who are more likely to enjoy sleeping in than going out early on the weekends. Buyers simply need to login and place an order. This order is then set aside to be picked up before the market closes.
 
+On the other side, farmers simply need to sign in and register a farmer profile. They are then able to list the amount of produce they will be bringing to the markets and what price they are selling for. The available amount shown to buyers is reduced every time an order is placed
 
 ### 4. Describe the network infrastructure the *App* may be based on.
 
-Show a full understanding of the hosting infrastructure
+Our app is hosted on Heroku using a postgres database. It has an AWS bucket to store uploaded images.
 
 ### 5. Identify and describe the software to be used in your *App.*
 
-Complete a detailed description of the software used in the app
+The software used in our app are: 
+- HTML5 – setting up the structure of our website 
+- CSS, SASS and  Materialize  - styling for the webpage
+- Heroku – hosting our webapp 
+- Postgres – our relational database 
+- Google API – to map locations of markets
+- JavaScript – used in conjunction with Google maps API to mark the farmers market locations 
+- AWS – stores images uploaded by users 
+- Ruby and Rails – what the entire app is written in 
+- Stripe – payments and security around payments 
+- Devise – authentication around logins
 
 ### 6. Identify the database to be used in your *App* and provide a justification for your choice.
 
-Full discussion of the database used, including an excellent assessment of the pros and cons of this type of database
+PostgreSQL is the database we used We chose this over SQLite as our users can upload images and data as needed which, if using SQLite, would get very bulky, very quickly and slow down our app. PostgreSQL is also significantly larger allowing us to grow as a business. PostgreSQL also has many built in authentications and is easily scalable.
 
 ### 7. Identify and describe the production database setup (i.e. postgres instance).
 
-Gives a complete description of the database setup in production
+We are using Heroku Postgres for production. We set our development environment prior to making it live and ran heroku commands to set up the database 
 
 ### 8. Describe the architecture of your *App*.
 
-Shows almost flawless understanding of the high level structure of the app
+Rails is considered opinionated software and was created with the belief that there is a "best" way to do things. MVC architecture is the Rails way of placing convention over configuration. MVC refers to Model-View-Controller, where the code is separated according to its features and concerns. Models handle data and business logic through Active Record. Views handle the GUI and presentation. Controllers are considered the "brains" of the app and link the Models with the Views. They receive requests from browsers and retrieve data from Models to be sent to the Views. Overall, MVC architecture encourages the implicit use of the principles of DRY (Don't Repeat Yourself). As a result, Rails code tends to be easily maintainable, efficient and clean.
 
 ### 9. Explain the different high-level components (abstractions) in your *App*.
 
-Precisely explains and shows understanding of the different high-level components of the app
+The user must have a profile to use the app (much like facebook). Upon log in they may look at the markets available near them seeing them on a map. [Our actual intent was to be able to then click on those markets and see the farmers available at those markets and order from there, but time ran out]. 
+
+Users may also choose by farmer if they know of a particular farmer they have used previously and want to shop from again. [In the future, we would like an alphabetized dropdown list to make searches for farmers easier]. 
+
+When going into a farmer the user will see what is available to purchase. They can make an order between zero and the amount available [in the future, we will have multiple things being added to cart, at this point users can only order multiple of one item]. Upon adding to cart the user confirms their order. From there the user can pay with card right then, or pay in cash on pickup.
+
+From there the user may pick up their delivery at any time during the opening hours of the market. They don’t need to be up early and you can skip all the lines. It also gives the farmer a good idea of the amount of produce they will need and gives them a baseline income as well as further exposure.
 
 ### 10. Detail any third party services that your *App* will use.
 
-Includes a complete and detailed description of third party services used in the app
+We have opted to use Heroku to host our site. 
+
+AWS is our bucket used to store uploaded images from the users
+
+We have integrated a Google API and Geocoder gem to plot the addresses of our markets so the user can see which market is closest to them
 
 ### 11. Describe (in general terms) the data structure of marketplace apps that are similar to your own (e.g. eBay, Airbnb).
 
-Shows a complete understanding of the data structure of two sided marketplace apps
-
-[Doorstep Organics](https://www.doorsteporganics.com.au/)
-
-[Your Grocer](https://www.yourgrocer.com.au/)
-
-[Coles](https://shop.coles.com.au/a/a-national/home)
+We had a look at apps like uber eats where you can scan the restaurant available (in our case our farmers). You can then click on the restaurant and see their menu and what is available to eat (in this case click on the farmer and see the products they have available and how many they have), then click and order (as you can with our app).
 
 ### 12. Discuss the database relations to be implemented.
 
-Provides coherent discussion of the database relations, with reference to the ERD
+The following is our original plan, as depicted by the [ERD](#database-entity-relationship-diagrams) above: 
+
+- We have markets which only admin can fill in (in order to be listed, markets could call up the admin and pay to be on the app.)
+- Every person using the website needs a user and a profile (every user has one profile). 
+  - From there, farmers have an extra farmers_profile as well. This allows them to upload their products. A farmer also signs up to be present at one market.
+- Every profile can have many orders and each order can have many products.
+- Each farmers_profile and profile can have many reviews left – so users can comment on good or bad farmers, and farmers can comment on whether users are reliable.
 
 ### 13. Describe your project’s models in terms of the relationships (active record associations) they have with each other.
 
-Complete discussion of the project’s models with an understanding of how its active record associations function
+In actuality, this is how we have implemented things:
+- We have markets which only admin can fill in (markets could call up and pay to be on the app). Markets can have many farmers, and farmers_profile belongs to market.
+- Every person using the website needs a user and a profile (every user has one profile, profile belongs to user). From there, farmers have an extra farmers_profile (farmers_profile belongs to profile, profile has one farmers_profile) 
+- Farmers can upload many products (product belongs to farmers_profile, farmers_profile has many products). A farmer also signs up to be present at one market (belongs to market). There can also be many orders from a farmer (has many orders). Products belong to the farmers profile whom added it, and has and belongs to many orders
+- Every profile can have many orders also (profile has many orders, order belongs to profile, order as belongs to farmers_profile). Each order can have many products and a product belongs to an order (order has and belongs to many products), although the way our orders are set up the user can only order one or more of the same product. Order also belongs to the profile making it and belongs to the farmers profile whom they are ordering from.
+- Reviews although set up as far as the database, is not coded into the app so is currently not an option
 
 ### 14. Provide your database schema design.
 
@@ -331,7 +409,7 @@ We used Agile methodology to guide our completion of **The Sleepy Farmer's Marke
 
 Using incremental sprints encouraged us to constantly regroup every morning to discuss our progress. From these discussions, we were able to constantly ensure our attention was appropriately focused on completing the current sprint. Additionally, we were motivated by these sprints as they provided a small sense of accomplishment when completed. 
 
-By the end of the project, we had completed __ sprints. The tasks completed within each sprint can be seen in the appropriate screenshot [here](#trello-screenshots). We aimed to fulfill our agreed upon high-priority user stories first so that we could quickly develop an MVP. The last __ sprints covered the remaining user stories, and testing.  
+By the end of the project, we had completed 3 sprints. The tasks completed within each sprint can be seen in the appropriate screenshot [here](#trello-screenshots). We aimed to fulfill our high-priority user stories first so that we could quickly develop an MVP.
 
 ### 19. Provide an overview and description of your Source control process.
 
@@ -347,33 +425,17 @@ Finally, pull requests were intermittently made from the "dev" branch to the "ma
 
 ### 20. Provide an overview and description of your Testing process.
 
-P - Basic general documentation about the types of testing that will be used and testing process
-
-C - Meets P with description of specific test scenarios for some user stories and description of automated (unit) testing
-
-D - Meets CR with tests implemented on code implemented thus far with results for tests executed thus far
-
-HD - Meets D with tests documented or defined for all user stories, extensive use of unit testing on code completed thus far, and well organized test results
+We conducted a round of manual user testing by asking one of the educators to pretend to be a user. During this process, we received useful feedback on areas that had been overlooked and that were broken. We were then able to fix these bugs based on the results of our user testing. 
 
 ### 21. Discuss and analyse requirements related to information system security.
 
-P - Basic general documentation on information security requirements
+The Devise gem is great for password security and authentication.
 
-C - Meets P with specific mention of requirements for this project, such as user authentication and protection of sensitive information
-
-D - Meets CR with discussion of alternative options for information security and benefits/tradeoffs of each
-
-HD - Meets D with evidence that the best option for information security was chosen
+The CanCanCan gem is excellent for managing CRUD and applying roles. Admin has access to all CRUD, whereas a user may only be able to have read rights and it blocks users from seeing URLs they do not have permission to use.
 
 ### 22. Discuss methods you will use to protect information and data.
 
-P - Basic general documentation on methods to protect information and data
-
-C - Meets P with specific design for implementing basic user login authentication for this project
-
-D - Meets CR with discussion of alternative options for protecting information and data and benefits/tradeoffs of each
-
-HD - Meets D with clear documentation on the specific methods that will be used for this project to protect information and data and why these methods were chosen
+We used devise for password authentication. We have also added roles that limit visibility for standard users. This isn’t a security feature so much as they could still access the pages if they knew the url. However from a superficial point of view, a standard user is unable to post, delete, or edit products like a farmer; or add markets like admin. Further farmers can only update their own products, not anyone elses.
 
 ### 23. Research what your legal obligations are in relation to handling user data.
 
