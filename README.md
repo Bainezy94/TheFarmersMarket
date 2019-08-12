@@ -33,17 +33,17 @@ Farmer's markets are great places to find the best deals on fresh fruit and vege
 
 - HTML, CSS, deployment platform, etc
 
-### Setup
+### Local Setup
 
+Clone the repo:
+`git clone https://github.com/Bainezy94/TheFarmersMarket.git`
 
-
-### Configuration
-
-
-
-### Usage
-
-
+`cd TheFarmersMarket`
+`bundle install`
+`rails db:create`
+`rails db:migrate`
+`rails db:seed`
+Open web browser to http://localhost:3000
 
 ## Design
 
@@ -126,21 +126,48 @@ HD - Designs a normalised schema (i.e. without data duplication) that facilitate
 
 #### Low Fidelity
 
-![Lo-Fi Wireframes](docs/lo_fi_wireframes.png)
+![Lo-Fi Wireframes](docs/wireframes/lo-fi/wireframes.png)
+
+#### Medium Fidelity
+
+![](docs/wireframes/mid-fi/Login-Desktop.png)
+![](docs/wireframes/mid-fi/Login-Tablet.png)
+![](docs/wireframes/mid-fi/Login-Mobile.png)
+
+![](docs/wireframes/mid-fi/FarmersMarket-Desktop.png)
+![](docs/wireframes/mid-fi/FarmersMarket-Tablet.png)
+![](docs/wireframes/mid-fi/FarmersMarket-Mobile.png)
+
+![](docs/wireframes/mid-fi/Farmers-Desktop.png)
+![](docs/wireframes/mid-fi/Farmers-Tablet.png)
+![](docs/wireframes/mid-fi/Farmers-Mobile.png)
+
+![](docs/wireframes/mid-fi/Markets-Desktop.png)
+![](docs/wireframes/mid-fi/Markets-Tablet.png)
+![](docs/wireframes/mid-fi/Markets-Mobile.png)
+
+![](docs/wireframes/mid-fi/Orders-Desktop.png)
+![](docs/wireframes/mid-fi/Orders-Tablet.png)
+![](docs/wireframes/mid-fi/Orders-Mobile.png)
+
+![](docs/wireframes/mid-fi/Products-Desktop.png)
+![](docs/wireframes/mid-fi/Products-Tablet.png)
+![](docs/wireframes/mid-fi/Products-Mobile.png)
+
 
 #### High Fidelity
 
-![Landing](docs/landing.png)
+![Landing](docs/wireframes/hi-fi/landing.png)
 
-![Farmer's Profiles](docs/farmers.png)
+![Farmer's Profiles](docs/wireframes/hi-fi/farmers.png)
 
-![Markets](docs/markets.png)
+![Markets](docs/wireframes/hi-fi/markets.png)
 
-![Login / Register](docs/login.png)
+![Login / Register](docs/wireframes/hi-fi/login.png)
 
-![Accounts](docs/account.png)
+![Accounts](docs/wireframes/hi-fi/account.png)
 
-![Orders](docs/order.png)
+![Orders](docs/wireframes/hi-fi/order.png)
 
 ### Moodboards
 
@@ -149,7 +176,7 @@ HD - Designs a normalised schema (i.e. without data duplication) that facilitate
 ![Second half of mood board](docs/moodboard_002.png)
 
 ### Style Guide
-
+![Style Guide](docs/StyleGuide.png)
 
 
 ## Planning Process
