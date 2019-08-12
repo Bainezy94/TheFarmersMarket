@@ -59,22 +59,22 @@ To use the live deployment, go to: [https://sleepy-farmers-markets.herokuapp.com
 To use locally, perform the following steps in the CLI:
 
 1. Clone the Git repository locally:
-`git clone https://github.com/Bainezy94/TheFarmersMarket.git`
+```git clone https://github.com/Bainezy94/TheFarmersMarket.git```
 
 2. Move into the directory:
-`cd TheFarmersMarket`
+```cd TheFarmersMarket```
 
 3. Install gems
-`bundle install`
+```bundle install```
 
 4. Ensure PostgreSQL is running and initialize the database:
-`rails db:create`
+```rails db:create```
 
 5. Run migrations
-`rails db:migrate`
+```rails db:migrate```
 
 6. (Optional) Seed the database
-`rails db:setup`
+```rails db:setup```
 
 7. Finally, open up a browser and go to http://localhost:3000
 
@@ -147,62 +147,64 @@ Initially, we came up with several different ideas (as listed below). We settled
 
 ### Wireframes
 
-![Landing](docs/landing.png)
+![Landing](docs/Landing.png)
 
 ![Farmer's Profiles](docs/farmers.png)
 
-![Markets](docs/markets.png)
+![Markets](docs/Markets.png)
 
 ![Login / Register](docs/login.png)
 
 ![Accounts](docs/account.png)
 
-![Orders](docs/order.png)
+![Orders](docs/Order.png)
 
-![Farmers - Desktop](/Users/ewelinloo/Documents/Studies/EweLinLoo_A2-1/TheFarmersMarket/docs/Wireframes/Farmers - Desktop.png)
+![Farmers - Desktop](docs/Wireframes/Farmers - Desktop.png)
 
-![Farmers - Mobile](/Users/ewelinloo/Documents/Studies/EweLinLoo_A2-1/TheFarmersMarket/docs/Wireframes/Farmers - Mobile.png)
+![Farmers - Mobile](docs/Wireframes/Farmers - Mobile.png)
 
-![Farmers - Tablet](/Users/ewelinloo/Documents/Studies/EweLinLoo_A2-1/TheFarmersMarket/docs/Wireframes/Farmers - Tablet.png)
+![Farmers - Tablet](docs/Wireframes/Farmers - Tablet.png)
 
-![Farmers Market - Desktop](/Users/ewelinloo/Documents/Studies/EweLinLoo_A2-1/TheFarmersMarket/docs/Wireframes/Farmers Market - Desktop.png)
+![Farmers Market - Desktop](docs/Wireframes/Farmers Market - Desktop.png)
 
-![Farmers Market - Mobile](/Users/ewelinloo/Documents/Studies/EweLinLoo_A2-1/TheFarmersMarket/docs/Wireframes/Farmers Market - Mobile.png)
+![Farmers Market - Mobile](docs/Wireframes/Farmers Market - Mobile.png)
 
-![Farmers Market - Tablet](/Users/ewelinloo/Documents/Studies/EweLinLoo_A2-1/TheFarmersMarket/docs/Wireframes/Farmers Market - Tablet.png)
+![Farmers Market - Tablet](docs/Wireframes/Farmers Market - Tablet.png)
 
-![Login - Desktop](/Users/ewelinloo/Documents/Studies/EweLinLoo_A2-1/TheFarmersMarket/docs/Wireframes/Login - Desktop.png)
+![Login - Desktop](docs/Wireframes/Login - Desktop.png)
 
-![Login - Mobile](/Users/ewelinloo/Documents/Studies/EweLinLoo_A2-1/TheFarmersMarket/docs/Wireframes/Login - Mobile.png)
+![Login - Mobile](docs/Wireframes/Login - Mobile.png)
 
-![Login - Tablet](/Users/ewelinloo/Documents/Studies/EweLinLoo_A2-1/TheFarmersMarket/docs/Wireframes/Login - Tablet.png)
+![Login - Tablet](docs/Wireframes/Login - Tablet.png)
 
-![Markets - Desktop](/Users/ewelinloo/Documents/Studies/EweLinLoo_A2-1/TheFarmersMarket/docs/Wireframes/Markets - Desktop.png)
+![Markets - Desktop](docs/Wireframes/Markets - Desktop.png)
 
-![Markets - Mobile](/Users/ewelinloo/Documents/Studies/EweLinLoo_A2-1/TheFarmersMarket/docs/Wireframes/Markets - Mobile.png)
+![Markets - Mobile](docs/Wireframes/Markets - Mobile.png)
 
-![Markets - Tablet](/Users/ewelinloo/Documents/Studies/EweLinLoo_A2-1/TheFarmersMarket/docs/Wireframes/Markets - Tablet.png)
+![Markets - Tablet](docs/Wireframes/Markets - Tablet.png)
 
-![Orders - Desktop](/Users/ewelinloo/Documents/Studies/EweLinLoo_A2-1/TheFarmersMarket/docs/Wireframes/Orders - Desktop.png)
+![Orders - Desktop](docs/Wireframes/Orders - Desktop.png)
 
-![Orders - Mobile](/Users/ewelinloo/Documents/Studies/EweLinLoo_A2-1/TheFarmersMarket/docs/Wireframes/Orders - Mobile.png)
+![Orders - Mobile](docs/Wireframes/Orders - Mobile.png)
 
-![Orders - Tablet](/Users/ewelinloo/Documents/Studies/EweLinLoo_A2-1/TheFarmersMarket/docs/Wireframes/Orders - Tablet.png)
+![Orders - Tablet](docs/Wireframes/Orders - Tablet.png)
 
-![Products - Desktop](/Users/ewelinloo/Documents/Studies/EweLinLoo_A2-1/TheFarmersMarket/docs/Wireframes/Products - Desktop.png)
+![Products - Desktop](docs/Wireframes/Products - Desktop.png)
 
-![Products - Mobile](/Users/ewelinloo/Documents/Studies/EweLinLoo_A2-1/TheFarmersMarket/docs/Wireframes/Products - Mobile.png)
+![Products - Mobile](docs/Wireframes/Products - Mobile.png)
 
-![Products - Tablet](/Users/ewelinloo/Documents/Studies/EweLinLoo_A2-1/TheFarmersMarket/docs/Wireframes/Products - Tablet.png)
+![Products - Tablet](docs/Wireframes/Products - Tablet.png)
 
 ### Moodboards
 
 ![First half of mood board](docs/moodboard_001.png)
+
 ![Second half of mood board](docs/moodboard_002.png)
 
 ### Style Guide
 
 ![Style guide intro](docs/styleguide1.png)
+
 ![Style guide](docs/styleguide2.png)
 
 ## Planning Process
