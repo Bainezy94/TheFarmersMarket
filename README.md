@@ -131,11 +131,15 @@ Initially, we came up with several different ideas (as listed below). We settled
 - As Bob, I want to view my order history so that I know which stores cater to my food allergies.
 - As Reggie, I want an easy way to keep track of profits so that I can see the income from the website.
 
-### User Journey/s Diagram
+### User Flow Diagram
 
-#### Sketches
+#### Initial Sketches
 
 ![User Journeys Sketches](docs/lo_fi_wireframes.png)
+
+#### End Product
+
+
 
 ### Database Entity Relationship Diagrams
 
