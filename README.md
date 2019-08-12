@@ -299,7 +299,13 @@ Shows a complete understanding of the data structure of two sided marketplace ap
 
 ### 12. Discuss the database relations to be implemented.
 
-Provides coherent discussion of the database relations, with reference to the ERD
+The following is depicted by the [ERD](#database-entity-relationship-diagrams) above: 
+
+- We have markets which only admin can fill in (in order to be listed, markets could call up the admin and pay to be on the app.)
+- Every person using the website needs a user and a profile (every user has one profile). 
+  - From there, farmers have an extra farmers_profile as well. This allows them to upload their products. A farmer also signs up to be present at one market.
+- Every profile can have many orders and each order can have many products.
+- Each farmers_profile and profile can have many reviews left – so users can comment on good or bad farmers, and farmers can comment on whether users are reliable.
 
 ### 13. Describe your project’s models in terms of the relationships (active record associations) they have with each other.
 
