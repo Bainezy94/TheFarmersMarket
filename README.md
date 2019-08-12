@@ -59,22 +59,22 @@ To use the live deployment, go to: [https://sleepy-farmers-markets.herokuapp.com
 To use locally, perform the following steps in the CLI:
 
 1. Clone the Git repository locally:
-`git clone https://github.com/Bainezy94/TheFarmersMarket.git`
+```git clone https://github.com/Bainezy94/TheFarmersMarket.git```
 
 2. Move into the directory:
-`cd TheFarmersMarket`
+```cd TheFarmersMarket```
 
 3. Install gems
-`bundle install`
+```bundle install```
 
 4. Ensure PostgreSQL is running and initialize the database:
-`rails db:create`
+```rails db:create```
 
 5. Run migrations
-`rails db:migrate`
+```rails db:migrate```
 
 6. (Optional) Seed the database
-`rails db:setup`
+```rails db:setup```
 
 7. Finally, open up a browser and go to http://localhost:3000
 
@@ -147,9 +147,11 @@ Initially, we came up with several different ideas (as listed below). We settled
 
 ### Wireframes
 
+
 #### Low Fidelity
 
 ![Lo-Fi Wireframes](./docs/wireframes/lo-fi/wireframes.png)
+
 
 #### Medium Fidelity
 
@@ -289,9 +291,37 @@ Initially, we came up with several different ideas (as listed below). We settled
 - Datepicker feature
 - Products display on farmer's page
 
+#### Day 11: August 7, 2019
+
+- Minor work on documentation
+
+#### Day 12: August 10, 2019
+
+- Worked on orders
+
+#### Day 13: August 11, 2019
+
+- Users must sign-in on arrival
+- Orders can now be added
+
+#### Day 14: August 12, 2019
+
+- Payment system is working
+- Styling finished off
+- Documentation finished off
+
 ### Trello Screenshots
 
-![Beginning of Trello board](./docs/trello_001.png)
+See [Question 17](#17.-describe-the-way-tasks-are-allocated-and-tracked-in-your-project.) for a detailed explanation of the below screenshots.
+
+![Beginning of Trello board](docs/Trello/trello_001.png)
+
+![Trello Sprints](docs/Trello/trello_002.png)
+
+![User Story Card](docs/Trello/trello_003.png)
+
+![Design checlist](docs/Trello/trello_004.png)
+
 
 ## Short Answer Questions
 
