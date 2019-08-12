@@ -24,6 +24,7 @@ Farmer's markets are great places to find the best deals on fresh fruit and vege
 
 - See a minimum demand for products in advance of physical trading hours.
 - See total profits from online orders.
+- Gain further exposure to potential buyers.
 
 ### Screenshots
 
@@ -281,25 +282,29 @@ We are using Heroku Postgres for production. We set our development environment 
 
 ### 8. Describe the architecture of your *App*.
 
-Shows almost flawless understanding of the high level structure of the app
+Rails is considered opinionated software and was created with the belief that there is a "best" way to do things. MVC architecture is the Rails way of placing convention over configuration. MVC refers to Model-View-Controller, where the code is separated according to its features and concerns. Models handle data and business logic through Active Record. Views handle the GUI and presentation. Controllers are considered the "brains" of the app and link the Models with the Views. They receive requests from browsers and retrieve data from Models to be sent to the Views. Overall, MVC architecture encourages the implicit use of the principles of DRY (Don't Repeat Yourself). As a result, Rails code tends to be easily maintainable, efficient and clean.
 
 ### 9. Explain the different high-level components (abstractions) in your *App*.
 
-Precisely explains and shows understanding of the different high-level components of the app
+The user must have a profile to use the app (much like facebook). Upon log in they may look at the markets available near them seeing them on a map. [Our actual intent was to be able to then click on those markets and see the farmers available at those markets and order from there, but time ran out]. 
+
+Users may also choose by farmer if they know of a particular farmer they have used previously and want to shop from again. [In the future, we would like an alphabetized dropdown list to make searches for farmers easier]. 
+
+When going into a farmer the user will see what is available to purchase. They can make an order between zero and the amount available [in the future, we will have multiple things being added to cart, at this point users can only order multiple of one item]. Upon adding to cart the user confirms their order. From there the user can pay with card right then, or pay in cash on pickup.
+
+From there the user may pick up their delivery at any time during the opening hours of the market. They don’t need to be up early and you can skip all the lines. It also gives the farmer a good idea of the amount of produce they will need and gives them a baseline income as well as further exposure.
 
 ### 10. Detail any third party services that your *App* will use.
 
-Includes a complete and detailed description of third party services used in the app
+We have opted to use Heroku to host our site. 
+
+AWS is our bucket used to store uploaded images from the users
+
+We have integrated a Google API and Geocoder gem to plot the addresses of our markets so the user can see which market is closest to them
 
 ### 11. Describe (in general terms) the data structure of marketplace apps that are similar to your own (e.g. eBay, Airbnb).
 
-Shows a complete understanding of the data structure of two sided marketplace apps
-
-[Doorstep Organics](https://www.doorsteporganics.com.au/)
-
-[Your Grocer](https://www.yourgrocer.com.au/)
-
-[Coles](https://shop.coles.com.au/a/a-national/home)
+We had a look at apps like uber eats where you can scan the restaurant available (in our case our farmers). You can then click on the restaurant and see their menu and what is available to eat (in this case click on the farmer and see the products they have available and how many they have), then click and order (as you can with our app).
 
 ### 12. Discuss the database relations to be implemented.
 
@@ -346,7 +351,7 @@ We used Agile methodology to guide our completion of **The Sleepy Farmer's Marke
 
 Using incremental sprints encouraged us to constantly regroup every morning to discuss our progress. From these discussions, we were able to constantly ensure our attention was appropriately focused on completing the current sprint. Additionally, we were motivated by these sprints as they provided a small sense of accomplishment when completed. 
 
-By the end of the project, we had completed __ sprints. The tasks completed within each sprint can be seen in the appropriate screenshot [here](#trello-screenshots). We aimed to fulfill our agreed upon high-priority user stories first so that we could quickly develop an MVP. The last __ sprints covered the remaining user stories, and testing.  
+By the end of the project, we had completed 3 sprints. The tasks completed within each sprint can be seen in the appropriate screenshot [here](#trello-screenshots). We aimed to fulfill our high-priority user stories first so that we could quickly develop an MVP.
 
 ### 19. Provide an overview and description of your Source control process.
 
@@ -362,39 +367,17 @@ Finally, pull requests were intermittently made from the "dev" branch to the "ma
 
 ### 20. Provide an overview and description of your Testing process.
 
-P - Basic general documentation about the types of testing that will be used and testing process
-
-C - Meets P with description of specific test scenarios for some user stories and description of automated (unit) testing
-
-D - Meets CR with tests implemented on code implemented thus far with results for tests executed thus far
-
-HD - Meets D with tests documented or defined for all user stories, extensive use of unit testing on code completed thus far, and well organized test results
+We conducted a round of manual user testing by asking one of the educators to pretend to be a user. During this process, we received useful feedback on areas that had been overlooked and that were broken. We were then able to fix these bugs based on the results of our user testing. 
 
 ### 21. Discuss and analyse requirements related to information system security.
 
 The Devise gem is great for password security and authentication.
 
-The CanCanCan gem is excellent for managing CRUD and applying roles Admin has access to all CRUD, where as a user may only be able to have read rights and blocks users from seeing URLs they do not have permission to use.
-
-P - Basic general documentation on information security requirements
-
-C - Meets P with specific mention of requirements for this project, such as user authentication and protection of sensitive information
-
-D - Meets CR with discussion of alternative options for information security and benefits/tradeoffs of each
-
-HD - Meets D with evidence that the best option for information security was chosen
+The CanCanCan gem is excellent for managing CRUD and applying roles. Admin has access to all CRUD, whereas a user may only be able to have read rights and it blocks users from seeing URLs they do not have permission to use.
 
 ### 22. Discuss methods you will use to protect information and data.
 
 We used devise for password authentication. We have also added roles that limit visibility for standard users. This isn’t a security feature so much as they could still access the pages if they knew the url. However from a superficial point of view, a standard user is unable to post, delete, or edit products like a farmer; or add markets like admin. Further farmers can only update their own products, not anyone elses.
-
-P - Basic general documentation on methods to protect information and data
-
-C - Meets P with specific design for implementing basic user login authentication for this project
-
-D - Meets CR with discussion of alternative options for protecting information and data and benefits/tradeoffs of each
-
-HD - Meets D with clear documentation on the specific methods that will be used for this project to protect information and data and why these methods were chosen
 
 ### 23. Research what your legal obligations are in relation to handling user data.
 
