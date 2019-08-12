@@ -22,7 +22,7 @@ Farmer's markets are great places to find the best deals on fresh fruit and vege
 
 ##### For Farmers
 
-- See minimum demand for products in advance of physical trading hours.
+- See a minimum demand for products in advance of physical trading hours.
 - See total profits from online orders.
 
 ### Screenshots
@@ -241,31 +241,43 @@ Initially, we came up with several different ideas (as listed below). We settled
 
 ### 1. What is the need (i.e. challenge) that you will be addressing in your project?
 
-There is a need to make shopping at local farmer's markets more appealing to a wider audience. This is because giant supermarkets such as Coles and Woolworths occupy [72.5%](https://www.news.com.au/finance/business/retail/woolworths-and-coles-have-taken-over-australians-lives/news-story/344d02196373c4f960a0d0014613ac1c) of the grocery sector, yet only [20%](https://www.smh.com.au/national/shoppers-hunger-for--local-foods-at-supermarkets-20140626-zsnct.html) of consumers said the stores provided a good range. By promoting local farmer's markets, this project supports small Australian businesses and satisfies the consumer need for a wide range of local produce.
+There is a need to make shopping at local farmer's markets more appealing to a wider audience. This is because supermarket giants such as Coles and Woolworths occupy [72.5%](https://www.news.com.au/finance/business/retail/woolworths-and-coles-have-taken-over-australians-lives/news-story/344d02196373c4f960a0d0014613ac1c) of the grocery sector, yet only [20%](https://www.smh.com.au/national/shoppers-hunger-for--local-foods-at-supermarkets-20140626-zsnct.html) of consumers said the stores provided a good range. By promoting local farmer's markets, this project supports small Australian businesses and satisfies the consumer need for a wide range of local produce.
 
 ### 2. Identify the problem you’re trying to solve by building this particular marketplace *App*? Why is it a problem that needs solving?
 
-These markets offer fresh produce at excellent value however, they tend to be crowded and the best deals are sold out early. 
+Local farmer's markets offer fresh produce at excellent value however, they tend to be crowded and the best deals are sold out early. In addition, trading hours tend to be within a narrow window of time, typically only on Saturday or Sunday. These are problems that need solving as small businesses at local farmer's markets need more communal support in order to survive against dominant supermarkets. From a higher viewpoint, if the problems involved with shopping at a local farmer's market are not addressed, this could mean more reliance on the import of overseas produce. This could have implications for Australia's economy and political relations.
 
 ### 3. Describe the project will you be conducting and how your *App* will address the needs.
 
+**The Sleepy Farmer's Markets** aims to broaden the range of consumers that farmer's markets and organic markets appeal to. Specifically, it targets people who are more likely to enjoy sleeping in than going out early on the weekends. Buyers simply need to login and place an order. This order is then set aside to be picked up before the market closes.
 
+On the other side, farmers simply need to sign in and register a farmer profile. They are then able to list the amount of produce they will be bringing to the markets and what price they are selling for. The available amount shown to buyers is reduced every time an order is placed
 
 ### 4. Describe the network infrastructure the *App* may be based on.
 
-Show a full understanding of the hosting infrastructure
+Our app is hosted on Heroku using a postgres database. It has an AWS bucket to store uploaded images.
 
 ### 5. Identify and describe the software to be used in your *App.*
 
-Complete a detailed description of the software used in the app
+The software used in our app are: 
+- HTML5 – setting up the structure of our website 
+- CSS, SASS and  Materialize  - styling for the webpage
+- Heroku – hosting our webapp 
+- Postgres – our relational database 
+- Google API – to map locations of markets
+- JavaScript – used in conjunction with Google maps API to mark the farmers market locations 
+- AWS – stores images uploaded by users 
+- Ruby and Rails – what the entire app is written in 
+- Stripe – payments and security around payments 
+- Devise – authentication around logins
 
 ### 6. Identify the database to be used in your *App* and provide a justification for your choice.
 
-Full discussion of the database used, including an excellent assessment of the pros and cons of this type of database
+PostgreSQL is the database we used We chose this over SQLite as our users can upload images and data as needed which, if using SQLite, would get very bulky, very quickly and slow down our app. PostgreSQL is also significantly larger allowing us to grow as a business. PostgreSQL also has many built in authentications and is easily scalable.
 
 ### 7. Identify and describe the production database setup (i.e. postgres instance).
 
-Gives a complete description of the database setup in production
+We are using Heroku Postgres for production. We set our development environment prior to making it live and ran heroku commands to set up the database 
 
 ### 8. Describe the architecture of your *App*.
 
