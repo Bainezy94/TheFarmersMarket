@@ -44,7 +44,7 @@
                             <%= link_to 'Destroy', product, method: :delete, data: { confirm: 'Are you sure?' } %>
                         <% else %>
                             <form action="/orders/new" method="get">
-                                <%= number_field_tag 'Qty', nil, value: 0, min: 1, max: "#{amount}" %>
+                                <%= number_field_tag 'Qty', nil, value: 1, min: 1, max: "#{amount}" %>
                                 <button type="submit" class="waves-effect waves-light btn">Add to Order</button>
                                 <%= hidden_field_tag :authenticity_token, form_authenticity_token %>
                                 <%= hidden_field_tag :farmers_profile_id, @farmers_profile.id %>
