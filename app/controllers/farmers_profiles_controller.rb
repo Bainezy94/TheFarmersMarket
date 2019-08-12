@@ -1,5 +1,5 @@
 class FarmersProfilesController < ApplicationController
-  before_action :set_farmers_profile, only: [:show, :edit, :update, :destroy]
+    load_and_authorize_resource
 
   # GET /farmers_profiles
   # GET /farmers_profiles.json
