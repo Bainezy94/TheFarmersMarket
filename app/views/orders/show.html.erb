@@ -1,33 +1,24 @@
-<p>
-  <strong>Farmer:</strong>
-  <%= @order.farmers_profile.stall_name %>
-</p>
+<h2><%= @order.farmers_profile.stall_name %></h2>
 
-<p>
-  <strong>Profile:</strong>
-  <%= @order.profile.name %>
-</p>
-
-<p>
-  <strong>Product:</strong>
-  <%= @order.products.last.name %>
-</p>
-
-<p>
-  <strong>Price:</strong>
-  $<%= @order.products.last.price %>
-</p>
-
-<p>
-  <strong>Amount:</strong>
-  <%= @order.volume %>
-</p>
-
-<p>
-  <strong>Total:</strong>
-  <% total = @order.products.last.price.to_f * @order.volume.to_f %>
-  $<%= total %>
-</p>
+<table>
+    <thead>
+        <tr>
+            <th>Product</th>
+            <th>Price</th>
+            <th>Quantity</th>
+            <th>Total</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td><%= @order.products.last.name %></td>
+            <td><%= @order.products.last.price %></td>
+            <td><%= @order.volume %></td>
+            <% total = @order.products.last.price.to_f * @order.volume.to_f %>
+            <td>$<%= total %></td>
+        </tr>
+    </tbody>
+</table>
 
 <%= link_to 'Edit', edit_order_path(@order) %> |
 <%= link_to 'Back', orders_path %>
