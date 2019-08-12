@@ -1,25 +1,21 @@
-<h2>Sign up</h2>
+<section class="loginBackground">
 
-<%= simple_form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
-  <%= f.error_notification %>
+</section>
 
-  <div class="form-inputs">
-    <%= f.input :email,
-                required: true,
-                autofocus: true,
-                input_html: { autocomplete: "email" }%>
-    <%= f.input :password,
-                required: true,
-                hint: ("#{@minimum_password_length} characters minimum" if @minimum_password_length),
-                input_html: { autocomplete: "new-password" } %>
-    <%= f.input :password_confirmation,
-                required: true,
-                input_html: { autocomplete: "new-password" } %>
-  </div>
+<section class="login">
+    <h2>Sign up</h2>
 
-  <div class="form-actions">
-    <%= f.button :submit, "Sign up" %>
-  </div>
-<% end %>
+    <div class="row">
+        <%= simple_form_for(resource, :html => {class: "col s12"}, as: resource_name, url: registration_path(resource_name)) do |f| %>
+            <div class="form-inputs">
+                <%= f.input :email,    wrapper_html: { class: "input-field col s12" }, required: true, autofocus: true, input_html: { autocomplete: "email" }%>
+                <%= f.input :password, wrapper_html: { class: "input-field col s12" }, required: true, hint: ("#{@minimum_password_length} characters minimum" if @minimum_password_length), input_html: { autocomplete: "new-password" } %>
+                <%= f.input :password_confirmation, wrapper_html: { class: "input-field col s12" }, required: true, input_html: { autocomplete: "new-password" } %>
+            </div>
 
-<%= render "devise/shared/links" %>
+            <div class="form-actions">
+                <%= f.button :submit, "Sign Up" %>
+            </div>
+        <% end %>
+    </div>
+</section>
