@@ -1,5 +1,5 @@
 class ProfilesController < ApplicationController
-    load_and_authorize_resource
+    before_action :set_profile, only: [:show, :edit, :update, :destroy]
     
   # GET /profiles
   # GET /profiles.json
@@ -29,7 +29,6 @@ class ProfilesController < ApplicationController
     @profile.user_id = current_user.id
     @profile.save
     current_user.update(role: 0)
-    # current_user.role = 0
 
     respond_to do |format|
       if @profile.save

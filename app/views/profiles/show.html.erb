@@ -1,20 +1,8 @@
+<h2><%= @profile.name %></h2>
 
-<p>
-  <strong>Name:</strong>
-  <%= @profile.name %>
-</p>
 
-<p>
-  <strong>Avatar:</strong>
-  <% if @profile.avatar.present? %>
-    <%= @profile.avatar %>
-  <% end %>
-</p>
+<h3><%= @profile.phone_number %></h3>
 
-<p>
-  <strong>Phone number:</strong>
-  <%= @profile.phone_number %>
-</p>
 
 <%= link_to 'Edit', edit_profile_path(@profile) %> |
 <%= link_to 'Back', profiles_path %>
